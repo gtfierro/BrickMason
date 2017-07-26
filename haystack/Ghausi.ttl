@@ -236,10 +236,26 @@ bldg:Electric_Sub_Meter_1_MSBA_Power_kW a brick:Power_Meter ;
         bldg:Room_1043 ;
     bf:measures bldg:Electric_Sub_Meter_1 .
 
+bldg:Electric_Sub_Meter_1_MSBA_kWh_Delivered a brick:Electric_Meter ;
+    bf:isPointOf bldg:Electric_Sub_Meter_1,
+        bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#Electric_Sub_Meter_1_Usage_(C)> a brick:Electric_Meter ;
+    bf:isPointOf bldg:Electric_Sub_Meter_1,
+        bldg:Room_1043 .
+
 bldg:Electric_Sub_Meter_2_Demand a brick:Power_Meter ;
     bf:isPointOf bldg:Electric_Sub_Meter_2,
         bldg:Room_1043 ;
     bf:measures bldg:Electric_Sub_Meter_2 .
+
+bldg:Electric_Sub_Meter_2_MSBB_kWh_Delivered a brick:Electric_Meter ;
+    bf:isPointOf bldg:Electric_Sub_Meter_2,
+        bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#Electric_Sub_Meter_2_Usage_(C)> a brick:Electric_Meter ;
+    bf:isPointOf bldg:Electric_Sub_Meter_2,
+        bldg:Room_1043 .
 
 bldg:Exhaust_Fan_System_Plenum_Pressure a brick:Air_pressure_Sensor ;
     bf:isPointOf bldg:Exhaust_Fan_System,
@@ -353,6 +369,22 @@ bldg:Ghausi_Site_Electric_Meter_Total_Demand a brick:Power_Meter ;
     bf:isPointOf bldg:Ghausi_Site_Electric_Meter,
         bldg:Room_1043 ;
     bf:measures bldg:Ghausi_Site_Electric_Meter .
+
+<http://buildsys.org/ontologies/bldg#Ghausi_Site_Electric_Meter_Total_kBTU_(C)> a brick:Electric_Meter ;
+    bf:isPointOf bldg:Ghausi_Site_Electric_Meter,
+        bldg:Room_1043 .
+
+bldg:Ghausi_Site_Electric_Meter_Total_kWh a brick:Electric_Meter ;
+    bf:isPointOf bldg:Ghausi_Site_Electric_Meter,
+        bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#Ghausi_Site_Electric_Meter_Total_kWh_(2)> a brick:Electric_Meter ;
+    bf:isPointOf bldg:Ghausi_Site_Electric_Meter,
+        bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#Ghausi_Site_Electric_Meter_Total_kWh_(3)> a brick:Electric_Meter ;
+    bf:isPointOf bldg:Ghausi_Site_Electric_Meter,
+        bldg:Room_1043 .
 
 bldg:Hot_Water_System_Condenser_Water_Supply_Temp a brick:Temperature_Sensor ;
     bf:isPointOf bldg:Hot_Water_System,

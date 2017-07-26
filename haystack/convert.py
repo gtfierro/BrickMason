@@ -107,6 +107,8 @@ sensortags = [
     {'sensor','zone.1','air','pressure'},
     {'sensor','air','pressure'},
 
+    {'sensor','energy'},
+
     {'sensor','occ','status'},
 
     {'sensor','power'},
@@ -134,6 +136,7 @@ sensortypes = [
     BRICK.Zone_Air_pressure_Sensor,
     BRICK.Air_pressure_Sensor,
 
+    BRICK.Electric_Meter,
     BRICK.Occupancy_Sensor,
     BRICK.Power_Meter,
     BRICK.Speed_Sensor,
@@ -149,7 +152,7 @@ def get_sensors():
         row = row[1] # get the actual Series
         tags = set(row[row=='M'].keys())
         a = False
-        if 'energy' in tags:
+        if 'Lab Zone Air Temp' in row['id']:
             print row[row.notnull()]
         for idx, ts in enumerate(sensortags):
             if ts.intersection(tags) == ts:
