@@ -1,4 +1,5 @@
 import re
+from collections import defaultdict
 from ifcschemareader import IfcSchema
 
 IFCLINE_RE = re.compile("#(\d+)[ ]?=[ ]?(.*?)\((.*)\);[\\r]?$")
@@ -30,14 +31,14 @@ class IfcFile:
         Returns 2 dictionaries, entById and entsByName
         """
         entById = {}
-        entsByName = {}
+        entsByName = defaultdict(set)
         for line in self.file:
             e = self.parseLine(line)
             if e:
                 entById[int(e["id"])] = e
                 ids = e.get(e["name"],[])
                 ids.append(e["id"])
-                entsByName[e["name"]] = list(set(ids))
+                entsByName[e["name"]] = entsByName[e["name"]].union(set(ids))
                 
         return [entById, entsByName]
 
