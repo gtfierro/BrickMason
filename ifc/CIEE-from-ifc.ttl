@@ -1,0 +1,233 @@
+@prefix bf: <https://brickschema.org/schema/1.0.1/BrickFrame#> .
+@prefix bldg: <http://buildsys.org/ontologies/bldg#> .
+@prefix brick: <https://brickschema.org/schema/1.0.1/Brick#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+bldg:Level_1 a brick:Floor ;
+    bf:hasPart bldg:Bathroom19,
+        <http://buildsys.org/ontologies/bldg#Bathroom:_Men20>,
+        <http://buildsys.org/ontologies/bldg#Bathroom:_Women21>,
+        bldg:Conference_Room2,
+        bldg:Copy_Room22,
+        bldg:Kitchen3,
+        bldg:Office1,
+        bldg:Office10,
+        bldg:Office11,
+        bldg:Office12,
+        bldg:Office13,
+        bldg:Office14,
+        bldg:Office15,
+        bldg:Office16,
+        bldg:Office17,
+        bldg:Office4,
+        bldg:Office5,
+        bldg:Office6,
+        bldg:Office7,
+        bldg:Office8,
+        bldg:Office9,
+        bldg:Open_Office23,
+        bldg:Space1,
+        bldg:Space10,
+        bldg:Space11,
+        bldg:Space12,
+        bldg:Space13,
+        bldg:Space14,
+        bldg:Space15,
+        bldg:Space16,
+        bldg:Space17,
+        bldg:Space18,
+        bldg:Space19,
+        bldg:Space2,
+        bldg:Space20,
+        bldg:Space21,
+        bldg:Space22,
+        bldg:Space23,
+        bldg:Space24,
+        bldg:Space25,
+        bldg:Space26,
+        bldg:Space27,
+        bldg:Space28,
+        bldg:Space3,
+        bldg:Space30,
+        bldg:Space31,
+        bldg:Space32,
+        bldg:Space33,
+        bldg:Space34,
+        bldg:Space35,
+        bldg:Space36,
+        bldg:Space4,
+        bldg:Space5,
+        bldg:Space6,
+        bldg:Space7,
+        bldg:Space8,
+        bldg:Space9,
+        bldg:Stor18 .
+
+bldg:Level_2 a brick:Floor .
+
+bldg:Bathroom19 a brick:Room .
+
+<http://buildsys.org/ontologies/bldg#Bathroom:_Men20> a brick:Room .
+
+<http://buildsys.org/ontologies/bldg#Bathroom:_Women21> a brick:Room .
+
+bldg:Conference_Room2 a brick:Room .
+
+bldg:Copy_Room22 a brick:Room .
+
+bldg:Kitchen3 a brick:Room .
+
+bldg:Office1 a brick:Room .
+
+bldg:Office10 a brick:Room .
+
+bldg:Office11 a brick:Room .
+
+bldg:Office12 a brick:Room .
+
+bldg:Office13 a brick:Room .
+
+bldg:Office14 a brick:Room .
+
+bldg:Office15 a brick:Room .
+
+bldg:Office16 a brick:Room .
+
+bldg:Office17 a brick:Room .
+
+bldg:Office4 a brick:Room .
+
+bldg:Office5 a brick:Room .
+
+bldg:Office6 a brick:Room .
+
+bldg:Office7 a brick:Room .
+
+bldg:Office8 a brick:Room .
+
+bldg:Office9 a brick:Room .
+
+bldg:Open_Office23 a brick:Room .
+
+bldg:Space1 a brick:Room ;
+    bf:isPartOf <http://buildsys.org/ontologies/bldg#269588> .
+
+bldg:Space10 a brick:Room ;
+    bf:isPartOf <http://buildsys.org/ontologies/bldg#269564> .
+
+bldg:Space11 a brick:Room ;
+    bf:isPartOf <http://buildsys.org/ontologies/bldg#269564> .
+
+bldg:Space12 a brick:Room ;
+    bf:isPartOf <http://buildsys.org/ontologies/bldg#269600> .
+
+bldg:Space13 a brick:Room ;
+    bf:isPartOf <http://buildsys.org/ontologies/bldg#269600> .
+
+bldg:Space14 a brick:Room ;
+    bf:isPartOf <http://buildsys.org/ontologies/bldg#269576> .
+
+bldg:Space15 a brick:Room ;
+    bf:isPartOf <http://buildsys.org/ontologies/bldg#269612> .
+
+bldg:Space16 a brick:Room ;
+    bf:isPartOf <http://buildsys.org/ontologies/bldg#269552> .
+
+bldg:Space17 a brick:Room ;
+    bf:isPartOf <http://buildsys.org/ontologies/bldg#269552> .
+
+bldg:Space18 a brick:Room ;
+    bf:isPartOf <http://buildsys.org/ontologies/bldg#269576> .
+
+bldg:Space19 a brick:Room ;
+    bf:isPartOf <http://buildsys.org/ontologies/bldg#269552> .
+
+bldg:Space2 a brick:Room ;
+    bf:isPartOf <http://buildsys.org/ontologies/bldg#269588> .
+
+bldg:Space20 a brick:Room ;
+    bf:isPartOf <http://buildsys.org/ontologies/bldg#269552> .
+
+bldg:Space21 a brick:Room ;
+    bf:isPartOf <http://buildsys.org/ontologies/bldg#269552> .
+
+bldg:Space22 a brick:Room ;
+    bf:isPartOf <http://buildsys.org/ontologies/bldg#269552> .
+
+bldg:Space23 a brick:Room ;
+    bf:isPartOf <http://buildsys.org/ontologies/bldg#269576> .
+
+bldg:Space24 a brick:Room ;
+    bf:isPartOf <http://buildsys.org/ontologies/bldg#269576> .
+
+bldg:Space25 a brick:Room ;
+    bf:isPartOf <http://buildsys.org/ontologies/bldg#269600> .
+
+bldg:Space26 a brick:Room ;
+    bf:isPartOf <http://buildsys.org/ontologies/bldg#269612> .
+
+bldg:Space27 a brick:Room ;
+    bf:isPartOf <http://buildsys.org/ontologies/bldg#269612> .
+
+bldg:Space28 a brick:Room ;
+    bf:isPartOf <http://buildsys.org/ontologies/bldg#269552> .
+
+bldg:Space3 a brick:Room ;
+    bf:isPartOf <http://buildsys.org/ontologies/bldg#269588> .
+
+bldg:Space30 a brick:Room ;
+    bf:isPartOf <http://buildsys.org/ontologies/bldg#269552> .
+
+bldg:Space31 a brick:Room ;
+    bf:isPartOf <http://buildsys.org/ontologies/bldg#269552> .
+
+bldg:Space32 a brick:Room ;
+    bf:isPartOf <http://buildsys.org/ontologies/bldg#269576> .
+
+bldg:Space33 a brick:Room ;
+    bf:isPartOf <http://buildsys.org/ontologies/bldg#269588> .
+
+bldg:Space34 a brick:Room ;
+    bf:isPartOf <http://buildsys.org/ontologies/bldg#269612> .
+
+bldg:Space35 a brick:Room ;
+    bf:isPartOf <http://buildsys.org/ontologies/bldg#269600> .
+
+bldg:Space36 a brick:Room ;
+    bf:isPartOf <http://buildsys.org/ontologies/bldg#269588> .
+
+bldg:Space4 a brick:Room ;
+    bf:isPartOf <http://buildsys.org/ontologies/bldg#269588> .
+
+bldg:Space5 a brick:Room ;
+    bf:isPartOf <http://buildsys.org/ontologies/bldg#269588> .
+
+bldg:Space6 a brick:Room ;
+    bf:isPartOf <http://buildsys.org/ontologies/bldg#269588> .
+
+bldg:Space7 a brick:Room ;
+    bf:isPartOf <http://buildsys.org/ontologies/bldg#269564> .
+
+bldg:Space8 a brick:Room ;
+    bf:isPartOf <http://buildsys.org/ontologies/bldg#269564> .
+
+bldg:Space9 a brick:Room ;
+    bf:isPartOf <http://buildsys.org/ontologies/bldg#269564> .
+
+bldg:Stor18 a brick:Room .
+
+<http://buildsys.org/ontologies/bldg#269600> a brick:HVAC_ZONE .
+
+<http://buildsys.org/ontologies/bldg#269612> a brick:HVAC_ZONE .
+
+<http://buildsys.org/ontologies/bldg#269564> a brick:HVAC_ZONE .
+
+<http://buildsys.org/ontologies/bldg#269576> a brick:HVAC_ZONE .
+
+<http://buildsys.org/ontologies/bldg#269588> a brick:HVAC_ZONE .
+
+<http://buildsys.org/ontologies/bldg#269552> a brick:HVAC_ZONE .
+
