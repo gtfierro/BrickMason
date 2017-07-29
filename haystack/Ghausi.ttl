@@ -31,9 +31,25 @@ bldg:AHU_01_Supply_Air_Pressure a brick:Discharge_Air_pressure_Sensor ;
     bf:isPointOf bldg:AHU_01,
         bldg:Room_1043 .
 
+bldg:AHU_01_Supply_Air_Pressure_Fan_DP a brick:Discharge_Air_Static_Pressure_Setpoint ;
+    bf:controls bldg:AHU_01 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:AHU_01_Supply_Air_Pressure_Filter_DP a brick:Discharge_Air_Static_Pressure_Setpoint ;
+    bf:controls bldg:AHU_01 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:AHU_01_Supply_Air_Pressure_Sp a brick:Discharge_Air_Static_Pressure_Setpoint ;
+    bf:controls bldg:AHU_01 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:AHU_01_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:AHU_01,
         bldg:Room_1043 .
+
+bldg:AHU_01_Supply_Air_Temp_Sp a brick:Supply_Air_Temperature_Setpoint ;
+    bf:controls bldg:AHU_01 ;
+    bf:isPointOf bldg:Room_1043 .
 
 <http://buildsys.org/ontologies/bldg#AHU_01_Total_Power_(C)> a brick:Power_Meter ;
     bf:isPointOf bldg:AHU_01,
@@ -65,9 +81,25 @@ bldg:AHU_02_Supply_Air_Pressure a brick:Discharge_Air_pressure_Sensor ;
     bf:isPointOf bldg:AHU_02,
         bldg:Room_1043 .
 
+bldg:AHU_02_Supply_Air_Pressure_Fan_DP a brick:Discharge_Air_Static_Pressure_Setpoint ;
+    bf:controls bldg:AHU_02 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:AHU_02_Supply_Air_Pressure_Filter_DP a brick:Discharge_Air_Static_Pressure_Setpoint ;
+    bf:controls bldg:AHU_02 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:AHU_02_Supply_Air_Pressure_Sp a brick:Discharge_Air_Static_Pressure_Setpoint ;
+    bf:controls bldg:AHU_02 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:AHU_02_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:AHU_02,
         bldg:Room_1043 .
+
+bldg:AHU_02_Supply_Air_Temp_Sp a brick:Supply_Air_Temperature_Setpoint ;
+    bf:controls bldg:AHU_02 ;
+    bf:isPointOf bldg:Room_1043 .
 
 <http://buildsys.org/ontologies/bldg#AHU_02_Total_Power_(C)> a brick:Power_Meter ;
     bf:isPointOf bldg:AHU_02,
@@ -77,6 +109,10 @@ bldg:AHU_02_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
 bldg:AHU_03_Average_Zone_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:AHU_03,
         bldg:Room_1043 .
+
+bldg:AHU_03_Mixed_Air_Sp a brick:Mixed_Air_Setpoint ;
+    bf:controls bldg:AHU_03 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:AHU_03_Mixed_Air_Temp a brick:Air_Temperature_Sensor ;
     bf:isPointOf bldg:AHU_03,
@@ -94,9 +130,21 @@ bldg:AHU_03_Supply_Air_Pressure a brick:Discharge_Air_pressure_Sensor ;
     bf:isPointOf bldg:AHU_03,
         bldg:Room_1043 .
 
+bldg:AHU_03_Supply_Air_Pressure_Filter_DP a brick:Discharge_Air_Static_Pressure_Setpoint ;
+    bf:controls bldg:AHU_03 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:AHU_03_Supply_Air_Pressure_Sp a brick:Discharge_Air_Static_Pressure_Setpoint ;
+    bf:controls bldg:AHU_03 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:AHU_03_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:AHU_03,
         bldg:Room_1043 .
+
+bldg:AHU_03_Supply_Air_Temp_Sp a brick:Supply_Air_Temperature_Setpoint ;
+    bf:controls bldg:AHU_03 ;
+    bf:isPointOf bldg:Room_1043 .
 
 <http://buildsys.org/ontologies/bldg#AHU_03_Supply_Fan_Power_Savings_(C)> a brick:Power_Meter ;
     bf:isPointOf bldg:AHU_03,
@@ -115,6 +163,10 @@ bldg:AHU_03_Virtual_Outside_Air_Temp a brick:Outside_Air_Temperature_Sensor ;
 bldg:AHU_04_Average_Zone_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:AHU_04,
         bldg:Room_1043 .
+
+bldg:AHU_04_Mixed_Air_Sp a brick:Mixed_Air_Setpoint ;
+    bf:controls bldg:AHU_04 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:AHU_04_Mixed_Air_Temp a brick:Air_Temperature_Sensor ;
     bf:isPointOf bldg:AHU_04,
@@ -136,9 +188,21 @@ bldg:AHU_04_Supply_Air_Pressure a brick:Discharge_Air_pressure_Sensor ;
     bf:isPointOf bldg:AHU_04,
         bldg:Room_1043 .
 
+bldg:AHU_04_Supply_Air_Pressure_Filter_DP a brick:Discharge_Air_Static_Pressure_Setpoint ;
+    bf:controls bldg:AHU_04 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:AHU_04_Supply_Air_Pressure_Sp a brick:Discharge_Air_Static_Pressure_Setpoint ;
+    bf:controls bldg:AHU_04 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:AHU_04_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:AHU_04,
         bldg:Room_1043 .
+
+bldg:AHU_04_Supply_Air_Temp_Sp a brick:Supply_Air_Temperature_Setpoint ;
+    bf:controls bldg:AHU_04 ;
+    bf:isPointOf bldg:Room_1043 .
 
 <http://buildsys.org/ontologies/bldg#AHU_04_Supply_Fan_Power_Savings_(C)> a brick:Power_Meter ;
     bf:isPointOf bldg:AHU_04,
@@ -153,6 +217,10 @@ bldg:AHU_04_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
 bldg:AHU_05_Average_Zone_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:AHU_05,
         bldg:Room_1043 .
+
+bldg:AHU_05_Mixed_Air_Sp a brick:Mixed_Air_Setpoint ;
+    bf:controls bldg:AHU_05 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:AHU_05_Mixed_Air_Temp a brick:Air_Temperature_Sensor ;
     bf:isPointOf bldg:AHU_05,
@@ -174,9 +242,21 @@ bldg:AHU_05_Supply_Air_Pressure a brick:Discharge_Air_pressure_Sensor ;
     bf:isPointOf bldg:AHU_05,
         bldg:Room_1043 .
 
+bldg:AHU_05_Supply_Air_Pressure_Filter_DP a brick:Discharge_Air_Static_Pressure_Setpoint ;
+    bf:controls bldg:AHU_05 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:AHU_05_Supply_Air_Pressure_Sp a brick:Discharge_Air_Static_Pressure_Setpoint ;
+    bf:controls bldg:AHU_05 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:AHU_05_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:AHU_05,
         bldg:Room_1043 .
+
+bldg:AHU_05_Supply_Air_Temp_Sp a brick:Supply_Air_Temperature_Setpoint ;
+    bf:controls bldg:AHU_05 ;
+    bf:isPointOf bldg:Room_1043 .
 
 <http://buildsys.org/ontologies/bldg#AHU_05_Supply_Fan_Power_Savings_(C)> a brick:Power_Meter ;
     bf:isPointOf bldg:AHU_05,
@@ -270,6 +350,14 @@ bldg:FCU_01_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:FCU_01,
         bldg:Room_1043 .
 
+<http://buildsys.org/ontologies/bldg#FCU_01_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:FCU_01 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#FCU_01_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:FCU_01 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:FCU_01_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:FCU_01,
         bldg:Room_1043 .
@@ -282,6 +370,14 @@ bldg:FCU_01_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
 bldg:FCU_02_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:FCU_02,
         bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#FCU_02_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:FCU_02 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#FCU_02_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:FCU_02 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:FCU_02_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:FCU_02,
@@ -296,6 +392,14 @@ bldg:FCU_03_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:FCU_03,
         bldg:Room_1043 .
 
+<http://buildsys.org/ontologies/bldg#FCU_03_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:FCU_03 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#FCU_03_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:FCU_03 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:FCU_03_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:FCU_03,
         bldg:Room_1043 .
@@ -308,6 +412,14 @@ bldg:FCU_03_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
 bldg:FCU_04_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:FCU_04,
         bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#FCU_04_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:FCU_04 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#FCU_04_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:FCU_04 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:FCU_04_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:FCU_04,
@@ -322,6 +434,14 @@ bldg:FCU_05_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:FCU_05,
         bldg:Room_1043 .
 
+<http://buildsys.org/ontologies/bldg#FCU_05_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:FCU_05 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#FCU_05_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:FCU_05 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:FCU_05_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:FCU_05,
         bldg:Room_1043 .
@@ -334,6 +454,14 @@ bldg:FCU_05_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
 bldg:FCU_06_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:FCU_06,
         bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#FCU_06_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:FCU_06 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#FCU_06_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:FCU_06 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:FCU_06_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:FCU_06,
@@ -348,6 +476,14 @@ bldg:FCU_07_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:FCU_07,
         bldg:Room_1043 .
 
+<http://buildsys.org/ontologies/bldg#FCU_07_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:FCU_07 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#FCU_07_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:FCU_07 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:FCU_07_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:FCU_07,
         bldg:Room_1043 .
@@ -360,6 +496,14 @@ bldg:FCU_07_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
 bldg:FCU_08_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:FCU_08,
         bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#FCU_08_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:FCU_08 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#FCU_08_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:FCU_08 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:FCU_08_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:FCU_08,
@@ -462,9 +606,17 @@ bldg:VAV_1_01_Rm_1105_Air_Volume_Differential_Flow a brick:Discharge_Air_Flow_Se
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_1_01_Rm_1105 .
 
+bldg:VAV_1_01_Rm_1105_General_Exhaust_Air_Flow_Sp a brick:VAV_Exhaust_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_1_01_Rm_1105 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_1_01_Rm_1105_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_1_01_Rm_1105 .
+
+bldg:VAV_1_01_Rm_1105_Supply_Air_Flow_Sp a brick:VAV_Discharge_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_1_01_Rm_1105 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_1_01_Rm_1105_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
@@ -482,6 +634,10 @@ bldg:VAV_1_01_Rm_1105_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_1_01_Rm_1105 .
 
+bldg:VAV_1_01_Rm_1105_Zone_Air_Temp_Sp a brick:Zone_Air_Temperature_Setpoint ;
+    bf:controls bldg:VAV_1_01_Rm_1105 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_1_02_Rm_1113_Air_Volume_Differential_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_1_02_Rm_1113 .
@@ -490,6 +646,10 @@ bldg:VAV_1_02_Rm_1113_General_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_1_02_Rm_1113 .
 
+bldg:VAV_1_02_Rm_1113_General_Exhaust_Air_Flow_Sp a brick:VAV_Exhaust_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_1_02_Rm_1113 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_1_02_Rm_1113_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_1_02_Rm_1113 .
@@ -497,6 +657,10 @@ bldg:VAV_1_02_Rm_1113_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
 bldg:VAV_1_02_Rm_1113_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_1_02_Rm_1113 .
+
+bldg:VAV_1_02_Rm_1113_Supply_Air_Flow_Sp a brick:VAV_Discharge_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_1_02_Rm_1113 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_1_02_Rm_1113_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
@@ -514,6 +678,10 @@ bldg:VAV_1_02_Rm_1113_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_1_02_Rm_1113 .
 
+bldg:VAV_1_02_Rm_1113_Zone_Air_Temp_Sp a brick:Zone_Air_Temperature_Setpoint ;
+    bf:controls bldg:VAV_1_02_Rm_1113 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_1_03_Rm_1114A_Air_Volume_Differential_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_1_03_Rm_1114A .
@@ -522,6 +690,10 @@ bldg:VAV_1_03_Rm_1114A_General_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_1_03_Rm_1114A .
 
+bldg:VAV_1_03_Rm_1114A_General_Exhaust_Air_Flow_Sp a brick:VAV_Exhaust_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_1_03_Rm_1114A ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_1_03_Rm_1114A_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_1_03_Rm_1114A .
@@ -529,6 +701,10 @@ bldg:VAV_1_03_Rm_1114A_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
 bldg:VAV_1_03_Rm_1114A_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_1_03_Rm_1114A .
+
+bldg:VAV_1_03_Rm_1114A_Supply_Air_Flow_Sp a brick:VAV_Discharge_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_1_03_Rm_1114A ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_1_03_Rm_1114A_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
@@ -546,6 +722,10 @@ bldg:VAV_1_03_Rm_1114A_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_1_03_Rm_1114A .
 
+bldg:VAV_1_03_Rm_1114A_Zone_Air_Temp_Sp a brick:Zone_Air_Temperature_Setpoint ;
+    bf:controls bldg:VAV_1_03_Rm_1114A ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_1_04_Rm_1114B_Air_Volume_Differential_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_1_04_Rm_1114B .
@@ -554,6 +734,10 @@ bldg:VAV_1_04_Rm_1114B_General_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_1_04_Rm_1114B .
 
+bldg:VAV_1_04_Rm_1114B_General_Exhaust_Air_Flow_Sp a brick:VAV_Exhaust_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_1_04_Rm_1114B ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_1_04_Rm_1114B_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_1_04_Rm_1114B .
@@ -561,6 +745,10 @@ bldg:VAV_1_04_Rm_1114B_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
 bldg:VAV_1_04_Rm_1114B_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_1_04_Rm_1114B .
+
+bldg:VAV_1_04_Rm_1114B_Supply_Air_Flow_Sp a brick:VAV_Discharge_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_1_04_Rm_1114B ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_1_04_Rm_1114B_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
@@ -578,6 +766,10 @@ bldg:VAV_1_04_Rm_1114B_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_1_04_Rm_1114B .
 
+bldg:VAV_1_04_Rm_1114B_Zone_Air_Temp_Sp a brick:Zone_Air_Temperature_Setpoint ;
+    bf:controls bldg:VAV_1_04_Rm_1114B ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_1_05_Rm_1122_Air_Volume_Differential_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_1_05_Rm_1122 .
@@ -586,6 +778,10 @@ bldg:VAV_1_05_Rm_1122_General_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_1_05_Rm_1122 .
 
+bldg:VAV_1_05_Rm_1122_General_Exhaust_Air_Flow_Sp a brick:VAV_Exhaust_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_1_05_Rm_1122 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_1_05_Rm_1122_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_1_05_Rm_1122 .
@@ -593,6 +789,10 @@ bldg:VAV_1_05_Rm_1122_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
 bldg:VAV_1_05_Rm_1122_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_1_05_Rm_1122 .
+
+bldg:VAV_1_05_Rm_1122_Supply_Air_Flow_Sp a brick:VAV_Discharge_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_1_05_Rm_1122 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_1_05_Rm_1122_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
@@ -610,6 +810,10 @@ bldg:VAV_1_05_Rm_1122_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_1_05_Rm_1122 .
 
+bldg:VAV_1_05_Rm_1122_Zone_Air_Temp_Sp a brick:Zone_Air_Temperature_Setpoint ;
+    bf:controls bldg:VAV_1_05_Rm_1122 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_1_06_Rm_1123A_Air_Volume_Differential_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_1_06_Rm_1123A .
@@ -618,6 +822,10 @@ bldg:VAV_1_06_Rm_1123A_General_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_1_06_Rm_1123A .
 
+bldg:VAV_1_06_Rm_1123A_General_Exhaust_Air_Flow_Sp a brick:VAV_Exhaust_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_1_06_Rm_1123A ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_1_06_Rm_1123A_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_1_06_Rm_1123A .
@@ -625,6 +833,10 @@ bldg:VAV_1_06_Rm_1123A_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
 bldg:VAV_1_06_Rm_1123A_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_1_06_Rm_1123A .
+
+bldg:VAV_1_06_Rm_1123A_Supply_Air_Flow_Sp a brick:VAV_Discharge_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_1_06_Rm_1123A ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_1_06_Rm_1123A_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
@@ -642,6 +854,10 @@ bldg:VAV_1_06_Rm_1123A_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_1_06_Rm_1123A .
 
+bldg:VAV_1_06_Rm_1123A_Zone_Air_Temp_Sp a brick:Zone_Air_Temperature_Setpoint ;
+    bf:controls bldg:VAV_1_06_Rm_1123A ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_1_07_Rm_1123B_Air_Volume_Differential_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_1_07_Rm_1123B .
@@ -650,6 +866,10 @@ bldg:VAV_1_07_Rm_1123B_General_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_1_07_Rm_1123B .
 
+bldg:VAV_1_07_Rm_1123B_General_Exhaust_Air_Flow_Sp a brick:VAV_Exhaust_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_1_07_Rm_1123B ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_1_07_Rm_1123B_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_1_07_Rm_1123B .
@@ -657,6 +877,10 @@ bldg:VAV_1_07_Rm_1123B_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
 bldg:VAV_1_07_Rm_1123B_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_1_07_Rm_1123B .
+
+bldg:VAV_1_07_Rm_1123B_Supply_Air_Flow_Sp a brick:VAV_Discharge_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_1_07_Rm_1123B ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_1_07_Rm_1123B_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
@@ -674,6 +898,10 @@ bldg:VAV_1_07_Rm_1123B_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_1_07_Rm_1123B .
 
+bldg:VAV_1_07_Rm_1123B_Zone_Air_Temp_Sp a brick:Zone_Air_Temperature_Setpoint ;
+    bf:controls bldg:VAV_1_07_Rm_1123B ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_1_08_Rm_1124A_Air_Volume_Differential_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_1_08_Rm_1124A .
@@ -682,6 +910,10 @@ bldg:VAV_1_08_Rm_1124A_General_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_1_08_Rm_1124A .
 
+bldg:VAV_1_08_Rm_1124A_General_Exhaust_Air_Flow_Sp a brick:VAV_Exhaust_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_1_08_Rm_1124A ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_1_08_Rm_1124A_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_1_08_Rm_1124A .
@@ -689,6 +921,10 @@ bldg:VAV_1_08_Rm_1124A_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
 bldg:VAV_1_08_Rm_1124A_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_1_08_Rm_1124A .
+
+bldg:VAV_1_08_Rm_1124A_Supply_Air_Flow_Sp a brick:VAV_Discharge_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_1_08_Rm_1124A ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_1_08_Rm_1124A_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
@@ -706,6 +942,10 @@ bldg:VAV_1_08_Rm_1124A_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_1_08_Rm_1124A .
 
+bldg:VAV_1_08_Rm_1124A_Zone_Air_Temp_Sp a brick:Zone_Air_Temperature_Setpoint ;
+    bf:controls bldg:VAV_1_08_Rm_1124A ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_1_09_Rm_1124B_Air_Volume_Differential_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_1_09_Rm_1124B .
@@ -714,6 +954,10 @@ bldg:VAV_1_09_Rm_1124B_General_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_1_09_Rm_1124B .
 
+bldg:VAV_1_09_Rm_1124B_General_Exhaust_Air_Flow_Sp a brick:VAV_Exhaust_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_1_09_Rm_1124B ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_1_09_Rm_1124B_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_1_09_Rm_1124B .
@@ -721,6 +965,10 @@ bldg:VAV_1_09_Rm_1124B_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
 bldg:VAV_1_09_Rm_1124B_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_1_09_Rm_1124B .
+
+bldg:VAV_1_09_Rm_1124B_Supply_Air_Flow_Sp a brick:VAV_Discharge_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_1_09_Rm_1124B ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_1_09_Rm_1124B_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
@@ -738,6 +986,10 @@ bldg:VAV_1_09_Rm_1124B_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_1_09_Rm_1124B .
 
+bldg:VAV_1_09_Rm_1124B_Zone_Air_Temp_Sp a brick:Zone_Air_Temperature_Setpoint ;
+    bf:controls bldg:VAV_1_09_Rm_1124B ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_2_01_Rm_2101_Air_Volume_Differential_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_01_Rm_2101 .
@@ -746,6 +998,10 @@ bldg:VAV_2_01_Rm_2101_General_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_01_Rm_2101 .
 
+bldg:VAV_2_01_Rm_2101_General_Exhaust_Air_Flow_Sp a brick:VAV_Exhaust_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_2_01_Rm_2101 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_2_01_Rm_2101_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_01_Rm_2101 .
@@ -753,6 +1009,10 @@ bldg:VAV_2_01_Rm_2101_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
 bldg:VAV_2_01_Rm_2101_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_01_Rm_2101 .
+
+bldg:VAV_2_01_Rm_2101_Supply_Air_Flow_Sp a brick:VAV_Discharge_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_2_01_Rm_2101 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_2_01_Rm_2101_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
@@ -770,6 +1030,10 @@ bldg:VAV_2_01_Rm_2101_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_01_Rm_2101 .
 
+bldg:VAV_2_01_Rm_2101_Zone_Air_Temp_Sp a brick:Zone_Air_Temperature_Setpoint ;
+    bf:controls bldg:VAV_2_01_Rm_2101 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_2_02_Rm_2102_Air_Volume_Differential_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_02_Rm_2102 .
@@ -778,6 +1042,10 @@ bldg:VAV_2_02_Rm_2102_General_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_02_Rm_2102 .
 
+bldg:VAV_2_02_Rm_2102_General_Exhaust_Air_Flow_Sp a brick:VAV_Exhaust_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_2_02_Rm_2102 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_2_02_Rm_2102_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_02_Rm_2102 .
@@ -785,6 +1053,10 @@ bldg:VAV_2_02_Rm_2102_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
 bldg:VAV_2_02_Rm_2102_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_02_Rm_2102 .
+
+bldg:VAV_2_02_Rm_2102_Supply_Air_Flow_Sp a brick:VAV_Discharge_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_2_02_Rm_2102 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_2_02_Rm_2102_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
@@ -802,6 +1074,10 @@ bldg:VAV_2_02_Rm_2102_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_02_Rm_2102 .
 
+bldg:VAV_2_02_Rm_2102_Zone_Air_Temp_Sp a brick:Zone_Air_Temperature_Setpoint ;
+    bf:controls bldg:VAV_2_02_Rm_2102 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_2_03_Rm_2104_Air_Volume_Differential_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_03_Rm_2104 .
@@ -810,6 +1086,10 @@ bldg:VAV_2_03_Rm_2104_General_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_03_Rm_2104 .
 
+bldg:VAV_2_03_Rm_2104_General_Exhaust_Air_Flow_Sp a brick:VAV_Exhaust_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_2_03_Rm_2104 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_2_03_Rm_2104_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_03_Rm_2104 .
@@ -817,6 +1097,10 @@ bldg:VAV_2_03_Rm_2104_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
 bldg:VAV_2_03_Rm_2104_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_03_Rm_2104 .
+
+bldg:VAV_2_03_Rm_2104_Supply_Air_Flow_Sp a brick:VAV_Discharge_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_2_03_Rm_2104 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_2_03_Rm_2104_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
@@ -834,6 +1118,10 @@ bldg:VAV_2_03_Rm_2104_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_03_Rm_2104 .
 
+bldg:VAV_2_03_Rm_2104_Zone_Air_Temp_Sp a brick:Zone_Air_Temperature_Setpoint ;
+    bf:controls bldg:VAV_2_03_Rm_2104 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_2_04_Rm_2105_Air_Volume_Differential_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_04_Rm_2105 .
@@ -842,6 +1130,10 @@ bldg:VAV_2_04_Rm_2105_General_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_04_Rm_2105 .
 
+bldg:VAV_2_04_Rm_2105_General_Exhaust_Air_Flow_Sp a brick:VAV_Exhaust_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_2_04_Rm_2105 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_2_04_Rm_2105_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_04_Rm_2105 .
@@ -849,6 +1141,10 @@ bldg:VAV_2_04_Rm_2105_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
 bldg:VAV_2_04_Rm_2105_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_04_Rm_2105 .
+
+bldg:VAV_2_04_Rm_2105_Supply_Air_Flow_Sp a brick:VAV_Discharge_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_2_04_Rm_2105 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_2_04_Rm_2105_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
@@ -866,6 +1162,10 @@ bldg:VAV_2_04_Rm_2105_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_04_Rm_2105 .
 
+bldg:VAV_2_04_Rm_2105_Zone_Air_Temp_Sp a brick:Zone_Air_Temperature_Setpoint ;
+    bf:controls bldg:VAV_2_04_Rm_2105 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_2_05_Rm_2109_Air_Volume_Differential_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_05_Rm_2109 .
@@ -874,6 +1174,10 @@ bldg:VAV_2_05_Rm_2109_General_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_05_Rm_2109 .
 
+bldg:VAV_2_05_Rm_2109_General_Exhaust_Air_Flow_Sp a brick:VAV_Exhaust_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_2_05_Rm_2109 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_2_05_Rm_2109_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_05_Rm_2109 .
@@ -881,6 +1185,10 @@ bldg:VAV_2_05_Rm_2109_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
 bldg:VAV_2_05_Rm_2109_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_05_Rm_2109 .
+
+bldg:VAV_2_05_Rm_2109_Supply_Air_Flow_Sp a brick:VAV_Discharge_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_2_05_Rm_2109 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_2_05_Rm_2109_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
@@ -898,6 +1206,10 @@ bldg:VAV_2_05_Rm_2109_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_05_Rm_2109 .
 
+bldg:VAV_2_05_Rm_2109_Zone_Air_Temp_Sp a brick:Zone_Air_Temperature_Setpoint ;
+    bf:controls bldg:VAV_2_05_Rm_2109 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_2_06_Rm_2110A_Air_Volume_Differential_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_06_Rm_2110A .
@@ -906,6 +1218,10 @@ bldg:VAV_2_06_Rm_2110A_General_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_06_Rm_2110A .
 
+bldg:VAV_2_06_Rm_2110A_General_Exhaust_Air_Flow_Sp a brick:VAV_Exhaust_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_2_06_Rm_2110A ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_2_06_Rm_2110A_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_06_Rm_2110A .
@@ -913,6 +1229,10 @@ bldg:VAV_2_06_Rm_2110A_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
 bldg:VAV_2_06_Rm_2110A_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_06_Rm_2110A .
+
+bldg:VAV_2_06_Rm_2110A_Supply_Air_Flow_Sp a brick:VAV_Discharge_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_2_06_Rm_2110A ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_2_06_Rm_2110A_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
@@ -930,6 +1250,10 @@ bldg:VAV_2_06_Rm_2110A_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_06_Rm_2110A .
 
+bldg:VAV_2_06_Rm_2110A_Zone_Air_Temp_Sp a brick:Zone_Air_Temperature_Setpoint ;
+    bf:controls bldg:VAV_2_06_Rm_2110A ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_2_07_Rm_2110B_Air_Volume_Differential_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_07_Rm_2110B .
@@ -938,6 +1262,10 @@ bldg:VAV_2_07_Rm_2110B_General_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_07_Rm_2110B .
 
+bldg:VAV_2_07_Rm_2110B_General_Exhaust_Air_Flow_Sp a brick:VAV_Exhaust_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_2_07_Rm_2110B ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_2_07_Rm_2110B_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_07_Rm_2110B .
@@ -945,6 +1273,10 @@ bldg:VAV_2_07_Rm_2110B_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
 bldg:VAV_2_07_Rm_2110B_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_07_Rm_2110B .
+
+bldg:VAV_2_07_Rm_2110B_Supply_Air_Flow_Sp a brick:VAV_Discharge_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_2_07_Rm_2110B ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_2_07_Rm_2110B_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
@@ -962,6 +1294,10 @@ bldg:VAV_2_07_Rm_2110B_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_07_Rm_2110B .
 
+bldg:VAV_2_07_Rm_2110B_Zone_Air_Temp_Sp a brick:Zone_Air_Temperature_Setpoint ;
+    bf:controls bldg:VAV_2_07_Rm_2110B ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_2_08_Rm_2113A_Air_Volume_Differential_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_08_Rm_2113A .
@@ -970,6 +1306,10 @@ bldg:VAV_2_08_Rm_2113A_General_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_08_Rm_2113A .
 
+bldg:VAV_2_08_Rm_2113A_General_Exhaust_Air_Flow_Sp a brick:VAV_Exhaust_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_2_08_Rm_2113A ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_2_08_Rm_2113A_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_08_Rm_2113A .
@@ -977,6 +1317,10 @@ bldg:VAV_2_08_Rm_2113A_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
 bldg:VAV_2_08_Rm_2113A_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_08_Rm_2113A .
+
+bldg:VAV_2_08_Rm_2113A_Supply_Air_Flow_Sp a brick:VAV_Discharge_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_2_08_Rm_2113A ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_2_08_Rm_2113A_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
@@ -994,6 +1338,10 @@ bldg:VAV_2_08_Rm_2113A_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_08_Rm_2113A .
 
+bldg:VAV_2_08_Rm_2113A_Zone_Air_Temp_Sp a brick:Zone_Air_Temperature_Setpoint ;
+    bf:controls bldg:VAV_2_08_Rm_2113A ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_2_09_Rm_2113B_Air_Volume_Differential_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_09_Rm_2113B .
@@ -1002,6 +1350,10 @@ bldg:VAV_2_09_Rm_2113B_General_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_09_Rm_2113B .
 
+bldg:VAV_2_09_Rm_2113B_General_Exhaust_Air_Flow_Sp a brick:VAV_Exhaust_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_2_09_Rm_2113B ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_2_09_Rm_2113B_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_09_Rm_2113B .
@@ -1009,6 +1361,10 @@ bldg:VAV_2_09_Rm_2113B_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
 bldg:VAV_2_09_Rm_2113B_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_09_Rm_2113B .
+
+bldg:VAV_2_09_Rm_2113B_Supply_Air_Flow_Sp a brick:VAV_Discharge_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_2_09_Rm_2113B ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_2_09_Rm_2113B_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
@@ -1026,6 +1382,10 @@ bldg:VAV_2_09_Rm_2113B_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_09_Rm_2113B .
 
+bldg:VAV_2_09_Rm_2113B_Zone_Air_Temp_Sp a brick:Zone_Air_Temperature_Setpoint ;
+    bf:controls bldg:VAV_2_09_Rm_2113B ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_2_10_Rm_2116A_Air_Volume_Differential_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_10_Rm_2116A .
@@ -1034,6 +1394,10 @@ bldg:VAV_2_10_Rm_2116A_General_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_10_Rm_2116A .
 
+bldg:VAV_2_10_Rm_2116A_General_Exhaust_Air_Flow_Sp a brick:VAV_Exhaust_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_2_10_Rm_2116A ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_2_10_Rm_2116A_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_10_Rm_2116A .
@@ -1041,6 +1405,10 @@ bldg:VAV_2_10_Rm_2116A_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
 bldg:VAV_2_10_Rm_2116A_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_10_Rm_2116A .
+
+bldg:VAV_2_10_Rm_2116A_Supply_Air_Flow_Sp a brick:VAV_Discharge_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_2_10_Rm_2116A ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_2_10_Rm_2116A_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
@@ -1058,6 +1426,10 @@ bldg:VAV_2_10_Rm_2116A_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_10_Rm_2116A .
 
+bldg:VAV_2_10_Rm_2116A_Zone_Air_Temp_Sp a brick:Zone_Air_Temperature_Setpoint ;
+    bf:controls bldg:VAV_2_10_Rm_2116A ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_2_11_Rm_2116B_Air_Volume_Differential_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_11_Rm_2116B .
@@ -1066,6 +1438,10 @@ bldg:VAV_2_11_Rm_2116B_General_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_11_Rm_2116B .
 
+bldg:VAV_2_11_Rm_2116B_General_Exhaust_Air_Flow_Sp a brick:VAV_Exhaust_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_2_11_Rm_2116B ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_2_11_Rm_2116B_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_11_Rm_2116B .
@@ -1073,6 +1449,10 @@ bldg:VAV_2_11_Rm_2116B_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
 bldg:VAV_2_11_Rm_2116B_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_11_Rm_2116B .
+
+bldg:VAV_2_11_Rm_2116B_Supply_Air_Flow_Sp a brick:VAV_Discharge_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_2_11_Rm_2116B ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_2_11_Rm_2116B_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
@@ -1090,6 +1470,10 @@ bldg:VAV_2_11_Rm_2116B_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_11_Rm_2116B .
 
+bldg:VAV_2_11_Rm_2116B_Zone_Air_Temp_Sp a brick:Zone_Air_Temperature_Setpoint ;
+    bf:controls bldg:VAV_2_11_Rm_2116B ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_2_12_Rm_2119A_Air_Volume_Differential_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_12_Rm_2119A .
@@ -1098,6 +1482,10 @@ bldg:VAV_2_12_Rm_2119A_General_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_12_Rm_2119A .
 
+bldg:VAV_2_12_Rm_2119A_General_Exhaust_Air_Flow_Sp a brick:VAV_Exhaust_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_2_12_Rm_2119A ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_2_12_Rm_2119A_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_12_Rm_2119A .
@@ -1105,6 +1493,10 @@ bldg:VAV_2_12_Rm_2119A_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
 bldg:VAV_2_12_Rm_2119A_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_12_Rm_2119A .
+
+bldg:VAV_2_12_Rm_2119A_Supply_Air_Flow_Sp a brick:VAV_Discharge_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_2_12_Rm_2119A ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_2_12_Rm_2119A_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
@@ -1122,6 +1514,10 @@ bldg:VAV_2_12_Rm_2119A_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_12_Rm_2119A .
 
+bldg:VAV_2_12_Rm_2119A_Zone_Air_Temp_Sp a brick:Zone_Air_Temperature_Setpoint ;
+    bf:controls bldg:VAV_2_12_Rm_2119A ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_2_13_Rm_2119B_Air_Volume_Differential_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_13_Rm_2119B .
@@ -1130,6 +1526,10 @@ bldg:VAV_2_13_Rm_2119B_General_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_13_Rm_2119B .
 
+bldg:VAV_2_13_Rm_2119B_General_Exhaust_Air_Flow_Sp a brick:VAV_Exhaust_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_2_13_Rm_2119B ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_2_13_Rm_2119B_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_13_Rm_2119B .
@@ -1137,6 +1537,10 @@ bldg:VAV_2_13_Rm_2119B_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
 bldg:VAV_2_13_Rm_2119B_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_13_Rm_2119B .
+
+bldg:VAV_2_13_Rm_2119B_Supply_Air_Flow_Sp a brick:VAV_Discharge_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_2_13_Rm_2119B ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_2_13_Rm_2119B_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
@@ -1154,6 +1558,10 @@ bldg:VAV_2_13_Rm_2119B_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_13_Rm_2119B .
 
+bldg:VAV_2_13_Rm_2119B_Zone_Air_Temp_Sp a brick:Zone_Air_Temperature_Setpoint ;
+    bf:controls bldg:VAV_2_13_Rm_2119B ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_2_14_Rm_2122_Air_Volume_Differential_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_14_Rm_2122 .
@@ -1162,6 +1570,10 @@ bldg:VAV_2_14_Rm_2122_General_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_14_Rm_2122 .
 
+bldg:VAV_2_14_Rm_2122_General_Exhaust_Air_Flow_Sp a brick:VAV_Exhaust_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_2_14_Rm_2122 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_2_14_Rm_2122_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_14_Rm_2122 .
@@ -1169,6 +1581,10 @@ bldg:VAV_2_14_Rm_2122_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
 bldg:VAV_2_14_Rm_2122_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_14_Rm_2122 .
+
+bldg:VAV_2_14_Rm_2122_Supply_Air_Flow_Sp a brick:VAV_Discharge_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_2_14_Rm_2122 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_2_14_Rm_2122_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
@@ -1186,6 +1602,10 @@ bldg:VAV_2_14_Rm_2122_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_14_Rm_2122 .
 
+bldg:VAV_2_14_Rm_2122_Zone_Air_Temp_Sp a brick:Zone_Air_Temperature_Setpoint ;
+    bf:controls bldg:VAV_2_14_Rm_2122 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_2_15_Rm_2122A_Air_Volume_Differential_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_15_Rm_2122A .
@@ -1194,6 +1614,10 @@ bldg:VAV_2_15_Rm_2122A_General_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_15_Rm_2122A .
 
+bldg:VAV_2_15_Rm_2122A_General_Exhaust_Air_Flow_Sp a brick:VAV_Exhaust_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_2_15_Rm_2122A ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_2_15_Rm_2122A_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_15_Rm_2122A .
@@ -1201,6 +1625,10 @@ bldg:VAV_2_15_Rm_2122A_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
 bldg:VAV_2_15_Rm_2122A_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_15_Rm_2122A .
+
+bldg:VAV_2_15_Rm_2122A_Supply_Air_Flow_Sp a brick:VAV_Discharge_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_2_15_Rm_2122A ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_2_15_Rm_2122A_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
@@ -1218,6 +1646,10 @@ bldg:VAV_2_15_Rm_2122A_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_15_Rm_2122A .
 
+bldg:VAV_2_15_Rm_2122A_Zone_Air_Temp_Sp a brick:Zone_Air_Temperature_Setpoint ;
+    bf:controls bldg:VAV_2_15_Rm_2122A ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_2_16_Rm_2125_Air_Volume_Differential_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_16_Rm_2125 .
@@ -1226,6 +1658,10 @@ bldg:VAV_2_16_Rm_2125_General_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_16_Rm_2125 .
 
+bldg:VAV_2_16_Rm_2125_General_Exhaust_Air_Flow_Sp a brick:VAV_Exhaust_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_2_16_Rm_2125 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_2_16_Rm_2125_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_16_Rm_2125 .
@@ -1233,6 +1669,10 @@ bldg:VAV_2_16_Rm_2125_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
 bldg:VAV_2_16_Rm_2125_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_16_Rm_2125 .
+
+bldg:VAV_2_16_Rm_2125_Supply_Air_Flow_Sp a brick:VAV_Discharge_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_2_16_Rm_2125 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_2_16_Rm_2125_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
@@ -1250,6 +1690,10 @@ bldg:VAV_2_16_Rm_2125_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_16_Rm_2125 .
 
+bldg:VAV_2_16_Rm_2125_Zone_Air_Temp_Sp a brick:Zone_Air_Temperature_Setpoint ;
+    bf:controls bldg:VAV_2_16_Rm_2125 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_2_17_Rm_2126_Air_Volume_Differential_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_17_Rm_2126 .
@@ -1258,6 +1702,10 @@ bldg:VAV_2_17_Rm_2126_General_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_17_Rm_2126 .
 
+bldg:VAV_2_17_Rm_2126_General_Exhaust_Air_Flow_Sp a brick:VAV_Exhaust_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_2_17_Rm_2126 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_2_17_Rm_2126_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_17_Rm_2126 .
@@ -1265,6 +1713,10 @@ bldg:VAV_2_17_Rm_2126_Hood_Exhaust_Air_Flow a brick:Air_Flow_Sensor ;
 bldg:VAV_2_17_Rm_2126_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_17_Rm_2126 .
+
+bldg:VAV_2_17_Rm_2126_Supply_Air_Flow_Sp a brick:VAV_Discharge_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_2_17_Rm_2126 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_2_17_Rm_2126_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
@@ -1282,6 +1734,26 @@ bldg:VAV_2_17_Rm_2126_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_2_17_Rm_2126 .
 
+bldg:VAV_2_17_Rm_2126_Zone_Air_Temp_Sp a brick:Zone_Air_Temperature_Setpoint ;
+    bf:controls bldg:VAV_2_17_Rm_2126 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_01_Rm_3043_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_01_Rm_3043 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_01_Rm_3043_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_01_Rm_3043 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_01_Rm_3043_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_01_Rm_3043 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_01_Rm_3043_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_01_Rm_3043 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_3_01_Rm_3043_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
     bf:isPointOf bldg:VAV_3_01_Rm_3043 .
@@ -1290,13 +1762,41 @@ bldg:VAV_3_01_Rm_3043_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_01_Rm_3043 .
 
+bldg:VAV_3_01_Rm_3043_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_01_Rm_3043 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_3_01_Rm_3043_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_01_Rm_3043 .
 
+<http://buildsys.org/ontologies/bldg#VAV_3_01_Rm_3043_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_3_01_Rm_3043 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_3_01_Rm_3043_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_3_01_Rm_3043 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_3_01_Rm_3043_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_01_Rm_3043 .
+
+bldg:VAV_3_02_Rm_3049_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_02_Rm_3049 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_02_Rm_3049_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_02_Rm_3049 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_02_Rm_3049_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_02_Rm_3049 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_02_Rm_3049_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_02_Rm_3049 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_3_02_Rm_3049_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -1306,13 +1806,41 @@ bldg:VAV_3_02_Rm_3049_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_02_Rm_3049 .
 
+bldg:VAV_3_02_Rm_3049_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_02_Rm_3049 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_3_02_Rm_3049_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_02_Rm_3049 .
 
+<http://buildsys.org/ontologies/bldg#VAV_3_02_Rm_3049_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_3_02_Rm_3049 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_3_02_Rm_3049_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_3_02_Rm_3049 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_3_02_Rm_3049_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_02_Rm_3049 .
+
+bldg:VAV_3_03_Rm_3001A_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_03_Rm_3001A ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_03_Rm_3001A_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_03_Rm_3001A ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_03_Rm_3001A_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_03_Rm_3001A ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_03_Rm_3001A_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_03_Rm_3001A ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_3_03_Rm_3001A_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -1322,13 +1850,41 @@ bldg:VAV_3_03_Rm_3001A_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_03_Rm_3001A .
 
+bldg:VAV_3_03_Rm_3001A_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_03_Rm_3001A ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_3_03_Rm_3001A_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_03_Rm_3001A .
 
+<http://buildsys.org/ontologies/bldg#VAV_3_03_Rm_3001A_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_3_03_Rm_3001A ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_3_03_Rm_3001A_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_3_03_Rm_3001A ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_3_03_Rm_3001A_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_03_Rm_3001A .
+
+bldg:VAV_3_04_Rm_3001_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_04_Rm_3001 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_04_Rm_3001_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_04_Rm_3001 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_04_Rm_3001_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_04_Rm_3001 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_04_Rm_3001_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_04_Rm_3001 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_3_04_Rm_3001_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -1338,13 +1894,41 @@ bldg:VAV_3_04_Rm_3001_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_04_Rm_3001 .
 
+bldg:VAV_3_04_Rm_3001_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_04_Rm_3001 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_3_04_Rm_3001_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_04_Rm_3001 .
 
+<http://buildsys.org/ontologies/bldg#VAV_3_04_Rm_3001_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_3_04_Rm_3001 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_3_04_Rm_3001_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_3_04_Rm_3001 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_3_04_Rm_3001_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_04_Rm_3001 .
+
+bldg:VAV_3_05_Rm_3007_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_05_Rm_3007 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_05_Rm_3007_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_05_Rm_3007 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_05_Rm_3007_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_05_Rm_3007 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_05_Rm_3007_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_05_Rm_3007 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_3_05_Rm_3007_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -1354,13 +1938,41 @@ bldg:VAV_3_05_Rm_3007_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_05_Rm_3007 .
 
+bldg:VAV_3_05_Rm_3007_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_05_Rm_3007 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_3_05_Rm_3007_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_05_Rm_3007 .
 
+<http://buildsys.org/ontologies/bldg#VAV_3_05_Rm_3007_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_3_05_Rm_3007 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_3_05_Rm_3007_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_3_05_Rm_3007 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_3_05_Rm_3007_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_05_Rm_3007 .
+
+bldg:VAV_3_06_Rm_3017_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_06_Rm_3017 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_06_Rm_3017_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_06_Rm_3017 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_06_Rm_3017_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_06_Rm_3017 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_06_Rm_3017_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_06_Rm_3017 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_3_06_Rm_3017_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -1370,13 +1982,41 @@ bldg:VAV_3_06_Rm_3017_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_06_Rm_3017 .
 
+bldg:VAV_3_06_Rm_3017_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_06_Rm_3017 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_3_06_Rm_3017_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_06_Rm_3017 .
 
+<http://buildsys.org/ontologies/bldg#VAV_3_06_Rm_3017_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_3_06_Rm_3017 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_3_06_Rm_3017_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_3_06_Rm_3017 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_3_06_Rm_3017_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_06_Rm_3017 .
+
+bldg:VAV_3_07_Rm_3011_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_07_Rm_3011 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_07_Rm_3011_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_07_Rm_3011 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_07_Rm_3011_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_07_Rm_3011 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_07_Rm_3011_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_07_Rm_3011 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_3_07_Rm_3011_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -1386,13 +2026,41 @@ bldg:VAV_3_07_Rm_3011_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_07_Rm_3011 .
 
+bldg:VAV_3_07_Rm_3011_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_07_Rm_3011 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_3_07_Rm_3011_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_07_Rm_3011 .
 
+<http://buildsys.org/ontologies/bldg#VAV_3_07_Rm_3011_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_3_07_Rm_3011 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_3_07_Rm_3011_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_3_07_Rm_3011 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_3_07_Rm_3011_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_07_Rm_3011 .
+
+bldg:VAV_3_08_Rm_3029_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_08_Rm_3029 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_08_Rm_3029_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_08_Rm_3029 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_08_Rm_3029_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_08_Rm_3029 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_08_Rm_3029_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_08_Rm_3029 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_3_08_Rm_3029_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -1402,13 +2070,41 @@ bldg:VAV_3_08_Rm_3029_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_08_Rm_3029 .
 
+bldg:VAV_3_08_Rm_3029_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_08_Rm_3029 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_3_08_Rm_3029_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_08_Rm_3029 .
 
+<http://buildsys.org/ontologies/bldg#VAV_3_08_Rm_3029_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_3_08_Rm_3029 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_3_08_Rm_3029_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_3_08_Rm_3029 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_3_08_Rm_3029_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_08_Rm_3029 .
+
+bldg:VAV_3_09_Rm_3023_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_09_Rm_3023 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_09_Rm_3023_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_09_Rm_3023 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_09_Rm_3023_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_09_Rm_3023 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_09_Rm_3023_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_09_Rm_3023 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_3_09_Rm_3023_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -1418,13 +2114,41 @@ bldg:VAV_3_09_Rm_3023_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_09_Rm_3023 .
 
+bldg:VAV_3_09_Rm_3023_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_09_Rm_3023 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_3_09_Rm_3023_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_09_Rm_3023 .
 
+<http://buildsys.org/ontologies/bldg#VAV_3_09_Rm_3023_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_3_09_Rm_3023 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_3_09_Rm_3023_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_3_09_Rm_3023 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_3_09_Rm_3023_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_09_Rm_3023 .
+
+bldg:VAV_3_10_Rm_3021_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_10_Rm_3021 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_10_Rm_3021_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_10_Rm_3021 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_10_Rm_3021_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_10_Rm_3021 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_10_Rm_3021_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_10_Rm_3021 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_3_10_Rm_3021_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -1434,13 +2158,41 @@ bldg:VAV_3_10_Rm_3021_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_10_Rm_3021 .
 
+bldg:VAV_3_10_Rm_3021_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_10_Rm_3021 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_3_10_Rm_3021_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_10_Rm_3021 .
 
+<http://buildsys.org/ontologies/bldg#VAV_3_10_Rm_3021_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_3_10_Rm_3021 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_3_10_Rm_3021_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_3_10_Rm_3021 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_3_10_Rm_3021_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_10_Rm_3021 .
+
+bldg:VAV_3_11_Rm_3000_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_11_Rm_3000 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_11_Rm_3000_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_11_Rm_3000 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_11_Rm_3000_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_11_Rm_3000 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_11_Rm_3000_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_11_Rm_3000 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_3_11_Rm_3000_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -1450,13 +2202,41 @@ bldg:VAV_3_11_Rm_3000_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_11_Rm_3000 .
 
+bldg:VAV_3_11_Rm_3000_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_11_Rm_3000 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_3_11_Rm_3000_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_11_Rm_3000 .
 
+<http://buildsys.org/ontologies/bldg#VAV_3_11_Rm_3000_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_3_11_Rm_3000 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_3_11_Rm_3000_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_3_11_Rm_3000 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_3_11_Rm_3000_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_11_Rm_3000 .
+
+bldg:VAV_3_12_Rm_2043_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_12_Rm_2043 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_12_Rm_2043_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_12_Rm_2043 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_12_Rm_2043_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_12_Rm_2043 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_12_Rm_2043_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_12_Rm_2043 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_3_12_Rm_2043_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -1466,13 +2246,41 @@ bldg:VAV_3_12_Rm_2043_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_12_Rm_2043 .
 
+bldg:VAV_3_12_Rm_2043_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_12_Rm_2043 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_3_12_Rm_2043_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_12_Rm_2043 .
 
+<http://buildsys.org/ontologies/bldg#VAV_3_12_Rm_2043_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_3_12_Rm_2043 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_3_12_Rm_2043_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_3_12_Rm_2043 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_3_12_Rm_2043_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_12_Rm_2043 .
+
+bldg:VAV_3_13_Rm_2049_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_13_Rm_2049 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_13_Rm_2049_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_13_Rm_2049 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_13_Rm_2049_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_13_Rm_2049 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_13_Rm_2049_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_13_Rm_2049 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_3_13_Rm_2049_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -1482,9 +2290,21 @@ bldg:VAV_3_13_Rm_2049_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_13_Rm_2049 .
 
+bldg:VAV_3_13_Rm_2049_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_13_Rm_2049 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_3_13_Rm_2049_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_13_Rm_2049 .
+
+<http://buildsys.org/ontologies/bldg#VAV_3_13_Rm_2049_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_3_13_Rm_2049 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_3_13_Rm_2049_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_3_13_Rm_2049 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_3_13_Rm_2049_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
@@ -1498,13 +2318,41 @@ bldg:VAV_3_14_Rm_2001A_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_14_Rm_2001A .
 
+bldg:VAV_3_14_Rm_2001A_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_14_Rm_2001A ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_3_14_Rm_2001A_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_14_Rm_2001A .
 
+<http://buildsys.org/ontologies/bldg#VAV_3_14_Rm_2001A_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_3_14_Rm_2001A ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_3_14_Rm_2001A_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_3_14_Rm_2001A ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_3_14_Rm_2001A_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_14_Rm_2001A .
+
+bldg:VAV_3_15_Rm_2001_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_15_Rm_2001 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_15_Rm_2001_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_15_Rm_2001 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_15_Rm_2001_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_15_Rm_2001 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_15_Rm_2001_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_15_Rm_2001 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_3_15_Rm_2001_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -1514,13 +2362,41 @@ bldg:VAV_3_15_Rm_2001_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_15_Rm_2001 .
 
+bldg:VAV_3_15_Rm_2001_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_15_Rm_2001 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_3_15_Rm_2001_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_15_Rm_2001 .
 
+<http://buildsys.org/ontologies/bldg#VAV_3_15_Rm_2001_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_3_15_Rm_2001 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_3_15_Rm_2001_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_3_15_Rm_2001 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_3_15_Rm_2001_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_15_Rm_2001 .
+
+bldg:VAV_3_16_Rm_2005_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_16_Rm_2005 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_16_Rm_2005_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_16_Rm_2005 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_16_Rm_2005_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_16_Rm_2005 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_16_Rm_2005_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_16_Rm_2005 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_3_16_Rm_2005_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -1530,13 +2406,41 @@ bldg:VAV_3_16_Rm_2005_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_16_Rm_2005 .
 
+bldg:VAV_3_16_Rm_2005_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_16_Rm_2005 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_3_16_Rm_2005_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_16_Rm_2005 .
 
+<http://buildsys.org/ontologies/bldg#VAV_3_16_Rm_2005_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_3_16_Rm_2005 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_3_16_Rm_2005_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_3_16_Rm_2005 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_3_16_Rm_2005_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_16_Rm_2005 .
+
+bldg:VAV_3_17_Rm_2009_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_17_Rm_2009 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_17_Rm_2009_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_17_Rm_2009 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_17_Rm_2009_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_17_Rm_2009 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_17_Rm_2009_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_17_Rm_2009 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_3_17_Rm_2009_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -1546,13 +2450,41 @@ bldg:VAV_3_17_Rm_2009_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_17_Rm_2009 .
 
+bldg:VAV_3_17_Rm_2009_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_17_Rm_2009 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_3_17_Rm_2009_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_17_Rm_2009 .
 
+<http://buildsys.org/ontologies/bldg#VAV_3_17_Rm_2009_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_3_17_Rm_2009 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_3_17_Rm_2009_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_3_17_Rm_2009 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_3_17_Rm_2009_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_17_Rm_2009 .
+
+bldg:VAV_3_18_Rm_2015_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_18_Rm_2015 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_18_Rm_2015_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_18_Rm_2015 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_18_Rm_2015_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_18_Rm_2015 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_18_Rm_2015_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_18_Rm_2015 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_3_18_Rm_2015_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -1562,13 +2494,41 @@ bldg:VAV_3_18_Rm_2015_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_18_Rm_2015 .
 
+bldg:VAV_3_18_Rm_2015_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_18_Rm_2015 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_3_18_Rm_2015_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_18_Rm_2015 .
 
+<http://buildsys.org/ontologies/bldg#VAV_3_18_Rm_2015_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_3_18_Rm_2015 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_3_18_Rm_2015_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_3_18_Rm_2015 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_3_18_Rm_2015_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_18_Rm_2015 .
+
+bldg:VAV_3_19_Rm_2027_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_19_Rm_2027 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_19_Rm_2027_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_19_Rm_2027 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_19_Rm_2027_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_19_Rm_2027 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_19_Rm_2027_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_19_Rm_2027 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_3_19_Rm_2027_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -1578,13 +2538,41 @@ bldg:VAV_3_19_Rm_2027_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_19_Rm_2027 .
 
+bldg:VAV_3_19_Rm_2027_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_19_Rm_2027 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_3_19_Rm_2027_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_19_Rm_2027 .
 
+<http://buildsys.org/ontologies/bldg#VAV_3_19_Rm_2027_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_3_19_Rm_2027 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_3_19_Rm_2027_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_3_19_Rm_2027 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_3_19_Rm_2027_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_19_Rm_2027 .
+
+bldg:VAV_3_20_Rm_2021_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_20_Rm_2021 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_20_Rm_2021_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_20_Rm_2021 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_20_Rm_2021_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_20_Rm_2021 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_20_Rm_2021_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_20_Rm_2021 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_3_20_Rm_2021_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -1594,13 +2582,41 @@ bldg:VAV_3_20_Rm_2021_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_20_Rm_2021 .
 
+bldg:VAV_3_20_Rm_2021_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_20_Rm_2021 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_3_20_Rm_2021_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_20_Rm_2021 .
 
+<http://buildsys.org/ontologies/bldg#VAV_3_20_Rm_2021_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_3_20_Rm_2021 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_3_20_Rm_2021_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_3_20_Rm_2021 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_3_20_Rm_2021_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_20_Rm_2021 .
+
+bldg:VAV_3_21_Rm_2019_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_21_Rm_2019 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_21_Rm_2019_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_21_Rm_2019 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_21_Rm_2019_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_21_Rm_2019 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_21_Rm_2019_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_21_Rm_2019 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_3_21_Rm_2019_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -1610,13 +2626,41 @@ bldg:VAV_3_21_Rm_2019_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_21_Rm_2019 .
 
+bldg:VAV_3_21_Rm_2019_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_21_Rm_2019 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_3_21_Rm_2019_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_21_Rm_2019 .
 
+<http://buildsys.org/ontologies/bldg#VAV_3_21_Rm_2019_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_3_21_Rm_2019 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_3_21_Rm_2019_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_3_21_Rm_2019 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_3_21_Rm_2019_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_21_Rm_2019 .
+
+bldg:VAV_3_22_Rm_2000_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_22_Rm_2000 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_22_Rm_2000_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_22_Rm_2000 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_22_Rm_2000_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_22_Rm_2000 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_3_22_Rm_2000_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_22_Rm_2000 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_3_22_Rm_2000_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -1626,13 +2670,37 @@ bldg:VAV_3_22_Rm_2000_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_22_Rm_2000 .
 
+bldg:VAV_3_22_Rm_2000_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_3_22_Rm_2000 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_3_22_Rm_2000_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_22_Rm_2000 .
 
+<http://buildsys.org/ontologies/bldg#VAV_3_22_Rm_2000_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_3_22_Rm_2000 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_3_22_Rm_2000_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_3_22_Rm_2000 .
+
+bldg:VAV_4_01_Rm_3101_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_01_Rm_3101 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_01_Rm_3101_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_01_Rm_3101 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_01_Rm_3101_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_01_Rm_3101 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_01_Rm_3101_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_01_Rm_3101 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_4_01_Rm_3101_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -1642,13 +2710,41 @@ bldg:VAV_4_01_Rm_3101_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_01_Rm_3101 .
 
+bldg:VAV_4_01_Rm_3101_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_01_Rm_3101 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_4_01_Rm_3101_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_01_Rm_3101 .
 
+<http://buildsys.org/ontologies/bldg#VAV_4_01_Rm_3101_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_4_01_Rm_3101 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_4_01_Rm_3101_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_4_01_Rm_3101 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_4_01_Rm_3101_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_01_Rm_3101 .
+
+bldg:VAV_4_02_Rm_3102B_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_02_Rm_3102B ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_02_Rm_3102B_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_02_Rm_3102B ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_02_Rm_3102B_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_02_Rm_3102B ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_02_Rm_3102B_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_02_Rm_3102B ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_4_02_Rm_3102B_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -1658,13 +2754,41 @@ bldg:VAV_4_02_Rm_3102B_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_02_Rm_3102B .
 
+bldg:VAV_4_02_Rm_3102B_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_02_Rm_3102B ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_4_02_Rm_3102B_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_02_Rm_3102B .
 
+<http://buildsys.org/ontologies/bldg#VAV_4_02_Rm_3102B_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_4_02_Rm_3102B ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_4_02_Rm_3102B_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_4_02_Rm_3102B ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_4_02_Rm_3102B_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_02_Rm_3102B .
+
+bldg:VAV_4_03_Rm_3160_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_03_Rm_3160 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_03_Rm_3160_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_03_Rm_3160 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_03_Rm_3160_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_03_Rm_3160 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_03_Rm_3160_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_03_Rm_3160 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_4_03_Rm_3160_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -1674,13 +2798,41 @@ bldg:VAV_4_03_Rm_3160_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_03_Rm_3160 .
 
+bldg:VAV_4_03_Rm_3160_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_03_Rm_3160 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_4_03_Rm_3160_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_03_Rm_3160 .
 
+<http://buildsys.org/ontologies/bldg#VAV_4_03_Rm_3160_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_4_03_Rm_3160 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_4_03_Rm_3160_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_4_03_Rm_3160 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_4_03_Rm_3160_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_03_Rm_3160 .
+
+bldg:VAV_4_04_Rm_3158_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_04_Rm_3158 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_04_Rm_3158_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_04_Rm_3158 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_04_Rm_3158_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_04_Rm_3158 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_04_Rm_3158_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_04_Rm_3158 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_4_04_Rm_3158_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -1690,13 +2842,41 @@ bldg:VAV_4_04_Rm_3158_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_04_Rm_3158 .
 
+bldg:VAV_4_04_Rm_3158_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_04_Rm_3158 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_4_04_Rm_3158_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_04_Rm_3158 .
 
+<http://buildsys.org/ontologies/bldg#VAV_4_04_Rm_3158_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_4_04_Rm_3158 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_4_04_Rm_3158_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_4_04_Rm_3158 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_4_04_Rm_3158_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_04_Rm_3158 .
+
+bldg:VAV_4_05_Rm_3109_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_05_Rm_3109 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_05_Rm_3109_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_05_Rm_3109 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_05_Rm_3109_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_05_Rm_3109 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_05_Rm_3109_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_05_Rm_3109 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_4_05_Rm_3109_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -1706,13 +2886,41 @@ bldg:VAV_4_05_Rm_3109_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_05_Rm_3109 .
 
+bldg:VAV_4_05_Rm_3109_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_05_Rm_3109 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_4_05_Rm_3109_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_05_Rm_3109 .
 
+<http://buildsys.org/ontologies/bldg#VAV_4_05_Rm_3109_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_4_05_Rm_3109 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_4_05_Rm_3109_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_4_05_Rm_3109 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_4_05_Rm_3109_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_05_Rm_3109 .
+
+bldg:VAV_4_06_Rm_3116_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_06_Rm_3116 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_06_Rm_3116_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_06_Rm_3116 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_06_Rm_3116_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_06_Rm_3116 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_06_Rm_3116_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_06_Rm_3116 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_4_06_Rm_3116_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -1722,13 +2930,41 @@ bldg:VAV_4_06_Rm_3116_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_06_Rm_3116 .
 
+bldg:VAV_4_06_Rm_3116_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_06_Rm_3116 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_4_06_Rm_3116_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_06_Rm_3116 .
 
+<http://buildsys.org/ontologies/bldg#VAV_4_06_Rm_3116_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_4_06_Rm_3116 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_4_06_Rm_3116_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_4_06_Rm_3116 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_4_06_Rm_3116_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_06_Rm_3116 .
+
+bldg:VAV_4_07_Rm_3121_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_07_Rm_3121 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_07_Rm_3121_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_07_Rm_3121 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_07_Rm_3121_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_07_Rm_3121 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_07_Rm_3121_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_07_Rm_3121 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_4_07_Rm_3121_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -1738,13 +2974,41 @@ bldg:VAV_4_07_Rm_3121_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_07_Rm_3121 .
 
+bldg:VAV_4_07_Rm_3121_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_07_Rm_3121 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_4_07_Rm_3121_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_07_Rm_3121 .
 
+<http://buildsys.org/ontologies/bldg#VAV_4_07_Rm_3121_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_4_07_Rm_3121 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_4_07_Rm_3121_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_4_07_Rm_3121 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_4_07_Rm_3121_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_07_Rm_3121 .
+
+bldg:VAV_4_08_Rm_3127_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_08_Rm_3127 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_08_Rm_3127_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_08_Rm_3127 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_08_Rm_3127_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_08_Rm_3127 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_08_Rm_3127_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_08_Rm_3127 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_4_08_Rm_3127_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -1754,13 +3018,41 @@ bldg:VAV_4_08_Rm_3127_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_08_Rm_3127 .
 
+bldg:VAV_4_08_Rm_3127_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_08_Rm_3127 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_4_08_Rm_3127_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_08_Rm_3127 .
 
+<http://buildsys.org/ontologies/bldg#VAV_4_08_Rm_3127_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_4_08_Rm_3127 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_4_08_Rm_3127_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_4_08_Rm_3127 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_4_08_Rm_3127_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_08_Rm_3127 .
+
+bldg:VAV_4_09_Rm_3133_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_09_Rm_3133 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_09_Rm_3133_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_09_Rm_3133 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_09_Rm_3133_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_09_Rm_3133 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_09_Rm_3133_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_09_Rm_3133 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_4_09_Rm_3133_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -1770,13 +3062,41 @@ bldg:VAV_4_09_Rm_3133_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_09_Rm_3133 .
 
+bldg:VAV_4_09_Rm_3133_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_09_Rm_3133 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_4_09_Rm_3133_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_09_Rm_3133 .
 
+<http://buildsys.org/ontologies/bldg#VAV_4_09_Rm_3133_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_4_09_Rm_3133 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_4_09_Rm_3133_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_4_09_Rm_3133 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_4_09_Rm_3133_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_09_Rm_3133 .
+
+bldg:VAV_4_10_Rm_3135_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_10_Rm_3135 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_10_Rm_3135_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_10_Rm_3135 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_10_Rm_3135_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_10_Rm_3135 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_10_Rm_3135_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_10_Rm_3135 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_4_10_Rm_3135_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -1786,13 +3106,41 @@ bldg:VAV_4_10_Rm_3135_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_10_Rm_3135 .
 
+bldg:VAV_4_10_Rm_3135_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_10_Rm_3135 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_4_10_Rm_3135_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_10_Rm_3135 .
 
+<http://buildsys.org/ontologies/bldg#VAV_4_10_Rm_3135_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_4_10_Rm_3135 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_4_10_Rm_3135_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_4_10_Rm_3135 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_4_10_Rm_3135_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_10_Rm_3135 .
+
+bldg:VAV_4_11_Rm_3136_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_11_Rm_3136 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_11_Rm_3136_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_11_Rm_3136 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_11_Rm_3136_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_11_Rm_3136 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_11_Rm_3136_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_11_Rm_3136 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_4_11_Rm_3136_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -1802,13 +3150,41 @@ bldg:VAV_4_11_Rm_3136_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_11_Rm_3136 .
 
+bldg:VAV_4_11_Rm_3136_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_11_Rm_3136 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_4_11_Rm_3136_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_11_Rm_3136 .
 
+<http://buildsys.org/ontologies/bldg#VAV_4_11_Rm_3136_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_4_11_Rm_3136 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_4_11_Rm_3136_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_4_11_Rm_3136 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_4_11_Rm_3136_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_11_Rm_3136 .
+
+bldg:VAV_4_12_Rm_3143_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_12_Rm_3143 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_12_Rm_3143_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_12_Rm_3143 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_12_Rm_3143_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_12_Rm_3143 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_12_Rm_3143_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_12_Rm_3143 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_4_12_Rm_3143_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -1818,13 +3194,41 @@ bldg:VAV_4_12_Rm_3143_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_12_Rm_3143 .
 
+bldg:VAV_4_12_Rm_3143_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_12_Rm_3143 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_4_12_Rm_3143_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_12_Rm_3143 .
 
+<http://buildsys.org/ontologies/bldg#VAV_4_12_Rm_3143_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_4_12_Rm_3143 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_4_12_Rm_3143_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_4_12_Rm_3143 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_4_12_Rm_3143_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_12_Rm_3143 .
+
+bldg:VAV_4_13_Rm_3147_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_13_Rm_3147 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_13_Rm_3147_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_13_Rm_3147 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_13_Rm_3147_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_13_Rm_3147 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_13_Rm_3147_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_13_Rm_3147 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_4_13_Rm_3147_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -1834,13 +3238,41 @@ bldg:VAV_4_13_Rm_3147_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_13_Rm_3147 .
 
+bldg:VAV_4_13_Rm_3147_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_13_Rm_3147 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_4_13_Rm_3147_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_13_Rm_3147 .
 
+<http://buildsys.org/ontologies/bldg#VAV_4_13_Rm_3147_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_4_13_Rm_3147 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_4_13_Rm_3147_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_4_13_Rm_3147 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_4_13_Rm_3147_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_13_Rm_3147 .
+
+bldg:VAV_4_14_Rm_3155_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_14_Rm_3155 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_14_Rm_3155_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_14_Rm_3155 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_14_Rm_3155_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_14_Rm_3155 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_14_Rm_3155_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_14_Rm_3155 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_4_14_Rm_3155_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -1850,13 +3282,41 @@ bldg:VAV_4_14_Rm_3155_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_14_Rm_3155 .
 
+bldg:VAV_4_14_Rm_3155_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_14_Rm_3155 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_4_14_Rm_3155_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_14_Rm_3155 .
 
+<http://buildsys.org/ontologies/bldg#VAV_4_14_Rm_3155_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_4_14_Rm_3155 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_4_14_Rm_3155_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_4_14_Rm_3155 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_4_14_Rm_3155_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_14_Rm_3155 .
+
+bldg:VAV_4_15_Rm_3163_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_15_Rm_3163 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_15_Rm_3163_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_15_Rm_3163 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_15_Rm_3163_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_15_Rm_3163 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_15_Rm_3163_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_15_Rm_3163 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_4_15_Rm_3163_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -1866,13 +3326,41 @@ bldg:VAV_4_15_Rm_3163_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_15_Rm_3163 .
 
+bldg:VAV_4_15_Rm_3163_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_15_Rm_3163 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_4_15_Rm_3163_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_15_Rm_3163 .
 
+<http://buildsys.org/ontologies/bldg#VAV_4_15_Rm_3163_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_4_15_Rm_3163 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_4_15_Rm_3163_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_4_15_Rm_3163 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_4_15_Rm_3163_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_15_Rm_3163 .
+
+bldg:VAV_4_16_Rm_3167_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_16_Rm_3167 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_16_Rm_3167_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_16_Rm_3167 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_16_Rm_3167_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_16_Rm_3167 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_16_Rm_3167_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_16_Rm_3167 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_4_16_Rm_3167_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -1882,13 +3370,41 @@ bldg:VAV_4_16_Rm_3167_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_16_Rm_3167 .
 
+bldg:VAV_4_16_Rm_3167_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_16_Rm_3167 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_4_16_Rm_3167_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_16_Rm_3167 .
 
+<http://buildsys.org/ontologies/bldg#VAV_4_16_Rm_3167_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_4_16_Rm_3167 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_4_16_Rm_3167_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_4_16_Rm_3167 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_4_16_Rm_3167_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_16_Rm_3167 .
+
+bldg:VAV_4_17_Rm_3102A_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_17_Rm_3102A ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_17_Rm_3102A_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_17_Rm_3102A ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_17_Rm_3102A_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_17_Rm_3102A ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_4_17_Rm_3102A_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_17_Rm_3102A ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_4_17_Rm_3102A_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -1898,13 +3414,41 @@ bldg:VAV_4_17_Rm_3102A_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_17_Rm_3102A .
 
+bldg:VAV_4_17_Rm_3102A_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_4_17_Rm_3102A ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_4_17_Rm_3102A_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_17_Rm_3102A .
 
+<http://buildsys.org/ontologies/bldg#VAV_4_17_Rm_3102A_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_4_17_Rm_3102A ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_4_17_Rm_3102A_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_4_17_Rm_3102A ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_4_17_Rm_3102A_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_4_17_Rm_3102A .
+
+bldg:VAV_5_01_Rm_3034_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_01_Rm_3034 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_5_01_Rm_3034_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_01_Rm_3034 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_5_01_Rm_3034_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_01_Rm_3034 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_5_01_Rm_3034_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_01_Rm_3034 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_5_01_Rm_3034_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -1914,13 +3458,41 @@ bldg:VAV_5_01_Rm_3034_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_5_01_Rm_3034 .
 
+bldg:VAV_5_01_Rm_3034_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_01_Rm_3034 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_5_01_Rm_3034_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_5_01_Rm_3034 .
 
+<http://buildsys.org/ontologies/bldg#VAV_5_01_Rm_3034_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_5_01_Rm_3034 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_5_01_Rm_3034_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_5_01_Rm_3034 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_5_01_Rm_3034_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_5_01_Rm_3034 .
+
+bldg:VAV_5_02_Rm_3032_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_02_Rm_3032 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_5_02_Rm_3032_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_02_Rm_3032 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_5_02_Rm_3032_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_02_Rm_3032 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_5_02_Rm_3032_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_02_Rm_3032 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_5_02_Rm_3032_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -1930,13 +3502,41 @@ bldg:VAV_5_02_Rm_3032_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_5_02_Rm_3032 .
 
+bldg:VAV_5_02_Rm_3032_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_02_Rm_3032 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_5_02_Rm_3032_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_5_02_Rm_3032 .
 
+<http://buildsys.org/ontologies/bldg#VAV_5_02_Rm_3032_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_5_02_Rm_3032 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_5_02_Rm_3032_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_5_02_Rm_3032 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_5_02_Rm_3032_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_5_02_Rm_3032 .
+
+bldg:VAV_5_03_Rm_3030_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_03_Rm_3030 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_5_03_Rm_3030_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_03_Rm_3030 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_5_03_Rm_3030_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_03_Rm_3030 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_5_03_Rm_3030_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_03_Rm_3030 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_5_03_Rm_3030_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -1946,13 +3546,41 @@ bldg:VAV_5_03_Rm_3030_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_5_03_Rm_3030 .
 
+bldg:VAV_5_03_Rm_3030_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_03_Rm_3030 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_5_03_Rm_3030_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_5_03_Rm_3030 .
 
+<http://buildsys.org/ontologies/bldg#VAV_5_03_Rm_3030_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_5_03_Rm_3030 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_5_03_Rm_3030_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_5_03_Rm_3030 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_5_03_Rm_3030_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_5_03_Rm_3030 .
+
+bldg:VAV_5_04_Rm_2030_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_04_Rm_2030 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_5_04_Rm_2030_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_04_Rm_2030 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_5_04_Rm_2030_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_04_Rm_2030 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_5_04_Rm_2030_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_04_Rm_2030 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_5_04_Rm_2030_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -1962,13 +3590,41 @@ bldg:VAV_5_04_Rm_2030_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_5_04_Rm_2030 .
 
+bldg:VAV_5_04_Rm_2030_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_04_Rm_2030 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_5_04_Rm_2030_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_5_04_Rm_2030 .
 
+<http://buildsys.org/ontologies/bldg#VAV_5_04_Rm_2030_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_5_04_Rm_2030 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_5_04_Rm_2030_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_5_04_Rm_2030 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_5_04_Rm_2030_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_5_04_Rm_2030 .
+
+bldg:VAV_5_05_Rm_2010_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_05_Rm_2010 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_5_05_Rm_2010_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_05_Rm_2010 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_5_05_Rm_2010_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_05_Rm_2010 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_5_05_Rm_2010_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_05_Rm_2010 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_5_05_Rm_2010_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -1978,13 +3634,41 @@ bldg:VAV_5_05_Rm_2010_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_5_05_Rm_2010 .
 
+bldg:VAV_5_05_Rm_2010_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_05_Rm_2010 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_5_05_Rm_2010_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_5_05_Rm_2010 .
 
+<http://buildsys.org/ontologies/bldg#VAV_5_05_Rm_2010_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_5_05_Rm_2010 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_5_05_Rm_2010_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_5_05_Rm_2010 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_5_05_Rm_2010_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_5_05_Rm_2010 .
+
+bldg:VAV_5_06_Rm_1043_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_06_Rm_1043 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_5_06_Rm_1043_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_06_Rm_1043 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_5_06_Rm_1043_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_06_Rm_1043 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_5_06_Rm_1043_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_06_Rm_1043 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_5_06_Rm_1043_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -1994,13 +3678,41 @@ bldg:VAV_5_06_Rm_1043_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_5_06_Rm_1043 .
 
+bldg:VAV_5_06_Rm_1043_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_06_Rm_1043 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_5_06_Rm_1043_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_5_06_Rm_1043 .
 
+<http://buildsys.org/ontologies/bldg#VAV_5_06_Rm_1043_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_5_06_Rm_1043 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_5_06_Rm_1043_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_5_06_Rm_1043 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_5_06_Rm_1043_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_5_06_Rm_1043 .
+
+bldg:VAV_5_07_Rm_1000_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_07_Rm_1000 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_5_07_Rm_1000_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_07_Rm_1000 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_5_07_Rm_1000_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_07_Rm_1000 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_5_07_Rm_1000_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_07_Rm_1000 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_5_07_Rm_1000_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -2010,9 +3722,21 @@ bldg:VAV_5_07_Rm_1000_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_5_07_Rm_1000 .
 
+bldg:VAV_5_07_Rm_1000_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_07_Rm_1000 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_5_07_Rm_1000_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_5_07_Rm_1000 .
+
+<http://buildsys.org/ontologies/bldg#VAV_5_07_Rm_1000_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_5_07_Rm_1000 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_5_07_Rm_1000_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_5_07_Rm_1000 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_5_07_Rm_1000_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
@@ -2026,13 +3750,41 @@ bldg:VAV_5_08_Rm_1039_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_5_08_Rm_1039 .
 
+bldg:VAV_5_08_Rm_1039_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_08_Rm_1039 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_5_08_Rm_1039_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_5_08_Rm_1039 .
 
+<http://buildsys.org/ontologies/bldg#VAV_5_08_Rm_1039_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_5_08_Rm_1039 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_5_08_Rm_1039_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_5_08_Rm_1039 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_5_08_Rm_1039_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_5_08_Rm_1039 .
+
+bldg:VAV_5_09_Rm_1001_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_09_Rm_1001 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_5_09_Rm_1001_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_09_Rm_1001 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_5_09_Rm_1001_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_09_Rm_1001 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_5_09_Rm_1001_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_09_Rm_1001 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_5_09_Rm_1001_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -2042,13 +3794,41 @@ bldg:VAV_5_09_Rm_1001_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_5_09_Rm_1001 .
 
+bldg:VAV_5_09_Rm_1001_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_09_Rm_1001 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_5_09_Rm_1001_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_5_09_Rm_1001 .
 
+<http://buildsys.org/ontologies/bldg#VAV_5_09_Rm_1001_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_5_09_Rm_1001 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_5_09_Rm_1001_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_5_09_Rm_1001 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_5_09_Rm_1001_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_5_09_Rm_1001 .
+
+bldg:VAV_5_10_Rm_1014A_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_10_Rm_1014A ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_5_10_Rm_1014A_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_10_Rm_1014A ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_5_10_Rm_1014A_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_10_Rm_1014A ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_5_10_Rm_1014A_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_10_Rm_1014A ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_5_10_Rm_1014A_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -2058,13 +3838,41 @@ bldg:VAV_5_10_Rm_1014A_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_5_10_Rm_1014A .
 
+bldg:VAV_5_10_Rm_1014A_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_10_Rm_1014A ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_5_10_Rm_1014A_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_5_10_Rm_1014A .
 
+<http://buildsys.org/ontologies/bldg#VAV_5_10_Rm_1014A_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_5_10_Rm_1014A ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_5_10_Rm_1014A_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_5_10_Rm_1014A ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_5_10_Rm_1014A_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_5_10_Rm_1014A .
+
+bldg:VAV_5_11_Rm_1013_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_11_Rm_1013 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_5_11_Rm_1013_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_11_Rm_1013 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_5_11_Rm_1013_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_11_Rm_1013 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_5_11_Rm_1013_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_11_Rm_1013 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_5_11_Rm_1013_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -2074,13 +3882,41 @@ bldg:VAV_5_11_Rm_1013_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_5_11_Rm_1013 .
 
+bldg:VAV_5_11_Rm_1013_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_11_Rm_1013 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_5_11_Rm_1013_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_5_11_Rm_1013 .
 
+<http://buildsys.org/ontologies/bldg#VAV_5_11_Rm_1013_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_5_11_Rm_1013 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_5_11_Rm_1013_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_5_11_Rm_1013 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_5_11_Rm_1013_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_5_11_Rm_1013 .
+
+bldg:VAV_5_12_Rm_1011_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_12_Rm_1011 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_5_12_Rm_1011_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_12_Rm_1011 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_5_12_Rm_1011_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_12_Rm_1011 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_5_12_Rm_1011_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_12_Rm_1011 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_5_12_Rm_1011_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -2090,13 +3926,41 @@ bldg:VAV_5_12_Rm_1011_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_5_12_Rm_1011 .
 
+bldg:VAV_5_12_Rm_1011_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_12_Rm_1011 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_5_12_Rm_1011_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_5_12_Rm_1011 .
 
+<http://buildsys.org/ontologies/bldg#VAV_5_12_Rm_1011_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_5_12_Rm_1011 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_5_12_Rm_1011_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_5_12_Rm_1011 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_5_12_Rm_1011_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_5_12_Rm_1011 .
+
+bldg:VAV_5_13_Rm_1007_Clg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_13_Rm_1007 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_5_13_Rm_1007_Clg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_13_Rm_1007 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_5_13_Rm_1007_Htg_Air_Flow_Sp_Max a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_13_Rm_1007 ;
+    bf:isPointOf bldg:Room_1043 .
+
+bldg:VAV_5_13_Rm_1007_Htg_Air_Flow_Sp_Min a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_13_Rm_1007 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_5_13_Rm_1007_Occupancy_Sensor a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:Room_1043 ;
@@ -2106,9 +3970,21 @@ bldg:VAV_5_13_Rm_1007_Supply_Air_Flow a brick:Discharge_Air_Flow_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_5_13_Rm_1007 .
 
+bldg:VAV_5_13_Rm_1007_Supply_Air_Flow_Percent_Setpoint a brick:VAV_Supply_Air_Flow_Setpoint ;
+    bf:controls bldg:VAV_5_13_Rm_1007 ;
+    bf:isPointOf bldg:Room_1043 .
+
 bldg:VAV_5_13_Rm_1007_Supply_Air_Temp a brick:Discharge_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:VAV_5_13_Rm_1007 .
+
+<http://buildsys.org/ontologies/bldg#VAV_5_13_Rm_1007_Zone_Air_Cooling_Sp_(C)> a brick:VAV_Cooling_Temperature_Setpoint ;
+    bf:controls bldg:VAV_5_13_Rm_1007 ;
+    bf:isPointOf bldg:Room_1043 .
+
+<http://buildsys.org/ontologies/bldg#VAV_5_13_Rm_1007_Zone_Air_Heating_Sp_(C)> a brick:VAV_Heating_Temperature_Setpoint ;
+    bf:controls bldg:VAV_5_13_Rm_1007 ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:VAV_5_13_Rm_1007_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
@@ -2117,6 +3993,9 @@ bldg:VAV_5_13_Rm_1007_Zone_Air_Temp a brick:Zone_Air_Temperature_Sensor ;
 bldg:Weather_Outside_Air_Temp a brick:Outside_Air_Temperature_Sensor ;
     bf:isPointOf bldg:Room_1043,
         bldg:Weather .
+
+bldg:equipRef_Zone_Air_Temp_Sp a brick:Zone_Air_Temperature_Setpoint ;
+    bf:isPointOf bldg:Room_1043 .
 
 bldg:floor_1 a brick:Floor ;
     bf:hasPart <http://buildsys.org/ontologies/bldg#1041>,
@@ -3182,355 +5061,43 @@ bldg:VAV_4_09_Rm_3133_zone a brick:HVAC_Zone .
 
 bldg:VAV_5_06_Rm_1043_zone a brick:HVAC_Zone .
 
-bldg:VAV_3_01_Rm_3043 a brick:VAV ;
-    bf:feeds bldg:VAV_3_01_Rm_3043_zone ;
-    bf:hasPart bldg:VAV_3_01_Rm_3043_damper,
-        bldg:VAV_3_01_Rm_3043_rh_vlv ;
-    bf:isFedBy bldg:AHU_03 .
-
 bldg:VAV_3_01_Rm_3043_zone a brick:HVAC_Zone .
-
-bldg:VAV_3_02_Rm_3049 a brick:VAV ;
-    bf:feeds bldg:VAV_3_02_Rm_3049_zone ;
-    bf:hasPart bldg:VAV_3_02_Rm_3049_damper,
-        bldg:VAV_3_02_Rm_3049_rh_vlv ;
-    bf:isFedBy bldg:AHU_03 .
-
-bldg:VAV_3_03_Rm_3001A a brick:VAV ;
-    bf:feeds bldg:VAV_3_03_Rm_3001A_zone ;
-    bf:hasPart bldg:VAV_3_03_Rm_3001A_damper,
-        bldg:VAV_3_03_Rm_3001A_rh_vlv ;
-    bf:isFedBy bldg:AHU_03 .
-
-bldg:VAV_3_04_Rm_3001 a brick:VAV ;
-    bf:feeds bldg:VAV_3_04_Rm_3001_zone ;
-    bf:hasPart bldg:VAV_3_04_Rm_3001_damper,
-        bldg:VAV_3_04_Rm_3001_rh_vlv ;
-    bf:isFedBy bldg:AHU_03 .
-
-bldg:VAV_3_05_Rm_3007 a brick:VAV ;
-    bf:feeds bldg:VAV_3_05_Rm_3007_zone ;
-    bf:hasPart bldg:VAV_3_05_Rm_3007_damper,
-        bldg:VAV_3_05_Rm_3007_rh_vlv ;
-    bf:isFedBy bldg:AHU_03 .
 
 bldg:VAV_3_05_Rm_3007_zone a brick:HVAC_Zone .
 
-bldg:VAV_3_06_Rm_3017 a brick:VAV ;
-    bf:feeds bldg:VAV_3_06_Rm_3017_zone ;
-    bf:hasPart bldg:VAV_3_06_Rm_3017_damper,
-        bldg:VAV_3_06_Rm_3017_rh_vlv ;
-    bf:isFedBy bldg:AHU_03 .
-
-bldg:VAV_3_07_Rm_3011 a brick:VAV ;
-    bf:feeds bldg:VAV_3_07_Rm_3011_zone ;
-    bf:hasPart bldg:VAV_3_07_Rm_3011_damper,
-        bldg:VAV_3_07_Rm_3011_rh_vlv ;
-    bf:isFedBy bldg:AHU_03 .
-
-bldg:VAV_3_08_Rm_3029 a brick:VAV ;
-    bf:feeds bldg:VAV_3_08_Rm_3029_zone ;
-    bf:hasPart bldg:VAV_3_08_Rm_3029_damper,
-        bldg:VAV_3_08_Rm_3029_rh_vlv ;
-    bf:isFedBy bldg:AHU_03 .
-
-bldg:VAV_3_09_Rm_3023 a brick:VAV ;
-    bf:feeds bldg:VAV_3_09_Rm_3023_zone ;
-    bf:hasPart bldg:VAV_3_09_Rm_3023_damper,
-        bldg:VAV_3_09_Rm_3023_rh_vlv ;
-    bf:isFedBy bldg:AHU_03 .
-
-bldg:VAV_3_10_Rm_3021 a brick:VAV ;
-    bf:feeds bldg:VAV_3_10_Rm_3021_zone ;
-    bf:hasPart bldg:VAV_3_10_Rm_3021_damper,
-        bldg:VAV_3_10_Rm_3021_rh_vlv ;
-    bf:isFedBy bldg:AHU_03 .
-
-bldg:VAV_3_11_Rm_3000 a brick:VAV ;
-    bf:feeds bldg:VAV_3_11_Rm_3000_zone ;
-    bf:hasPart bldg:VAV_3_11_Rm_3000_damper,
-        bldg:VAV_3_11_Rm_3000_rh_vlv ;
-    bf:isFedBy bldg:AHU_03 .
-
-bldg:VAV_3_12_Rm_2043 a brick:VAV ;
-    bf:feeds bldg:VAV_3_12_Rm_2043_zone ;
-    bf:hasPart bldg:VAV_3_12_Rm_2043_damper,
-        bldg:VAV_3_12_Rm_2043_rh_vlv ;
-    bf:isFedBy bldg:AHU_03 .
-
 bldg:VAV_3_12_Rm_2043_zone a brick:HVAC_Zone .
-
-bldg:VAV_3_13_Rm_2049 a brick:VAV ;
-    bf:feeds bldg:VAV_3_13_Rm_2049_zone ;
-    bf:hasPart bldg:VAV_3_13_Rm_2049_damper,
-        bldg:VAV_3_13_Rm_2049_rh_vlv ;
-    bf:isFedBy bldg:AHU_03 .
-
-bldg:VAV_3_14_Rm_2001A a brick:VAV ;
-    bf:feeds bldg:VAV_3_14_Rm_2001A_zone ;
-    bf:hasPart bldg:VAV_3_14_Rm_2001A_damper,
-        bldg:VAV_3_14_Rm_2001A_rh_vlv ;
-    bf:isFedBy bldg:AHU_03 .
-
-bldg:VAV_3_15_Rm_2001 a brick:VAV ;
-    bf:feeds bldg:VAV_3_15_Rm_2001_zone ;
-    bf:hasPart bldg:VAV_3_15_Rm_2001_damper,
-        bldg:VAV_3_15_Rm_2001_rh_vlv ;
-    bf:isFedBy bldg:AHU_03 .
-
-bldg:VAV_3_16_Rm_2005 a brick:VAV ;
-    bf:feeds bldg:VAV_3_16_Rm_2005_zone ;
-    bf:hasPart bldg:VAV_3_16_Rm_2005_damper,
-        bldg:VAV_3_16_Rm_2005_rh_vlv ;
-    bf:isFedBy bldg:AHU_03 .
 
 bldg:VAV_3_16_Rm_2005_zone a brick:HVAC_Zone .
 
-bldg:VAV_3_17_Rm_2009 a brick:VAV ;
-    bf:feeds bldg:VAV_3_17_Rm_2009_zone ;
-    bf:hasPart bldg:VAV_3_17_Rm_2009_damper,
-        bldg:VAV_3_17_Rm_2009_rh_vlv ;
-    bf:isFedBy bldg:AHU_03 .
-
 bldg:VAV_3_17_Rm_2009_zone a brick:HVAC_Zone .
-
-bldg:VAV_3_18_Rm_2015 a brick:VAV ;
-    bf:feeds bldg:VAV_3_18_Rm_2015_zone ;
-    bf:hasPart bldg:VAV_3_18_Rm_2015_damper,
-        bldg:VAV_3_18_Rm_2015_rh_vlv ;
-    bf:isFedBy bldg:AHU_03 .
-
-bldg:VAV_3_19_Rm_2027 a brick:VAV ;
-    bf:feeds bldg:VAV_3_19_Rm_2027_zone ;
-    bf:hasPart bldg:VAV_3_19_Rm_2027_damper,
-        bldg:VAV_3_19_Rm_2027_rh_vlv ;
-    bf:isFedBy bldg:AHU_03 .
 
 bldg:VAV_3_19_Rm_2027_zone a brick:HVAC_Zone .
 
-bldg:VAV_3_20_Rm_2021 a brick:VAV ;
-    bf:feeds bldg:VAV_3_20_Rm_2021_zone ;
-    bf:hasPart bldg:VAV_3_20_Rm_2021_damper,
-        bldg:VAV_3_20_Rm_2021_rh_vlv ;
-    bf:isFedBy bldg:AHU_03 .
-
 bldg:VAV_3_20_Rm_2021_zone a brick:HVAC_Zone .
-
-bldg:VAV_3_21_Rm_2019 a brick:VAV ;
-    bf:feeds bldg:VAV_3_21_Rm_2019_zone ;
-    bf:hasPart bldg:VAV_3_21_Rm_2019_damper,
-        bldg:VAV_3_21_Rm_2019_rh_vlv ;
-    bf:isFedBy bldg:AHU_03 .
-
-bldg:VAV_3_22_Rm_2000 a brick:VAV ;
-    bf:feeds bldg:VAV_3_22_Rm_2000_zone ;
-    bf:hasPart bldg:VAV_3_22_Rm_2000_damper,
-        bldg:VAV_3_22_Rm_2000_rh_vlv ;
-    bf:isFedBy bldg:AHU_03 .
-
-bldg:VAV_4_01_Rm_3101 a brick:VAV ;
-    bf:feeds bldg:VAV_4_01_Rm_3101_zone ;
-    bf:hasPart bldg:VAV_4_01_Rm_3101_damper,
-        bldg:VAV_4_01_Rm_3101_rh_vlv ;
-    bf:isFedBy bldg:AHU_04 .
-
-bldg:VAV_4_02_Rm_3102B a brick:VAV ;
-    bf:feeds bldg:VAV_4_02_Rm_3102B_zone ;
-    bf:hasPart bldg:VAV_4_02_Rm_3102B_damper,
-        bldg:VAV_4_02_Rm_3102B_rh_vlv ;
-    bf:isFedBy bldg:AHU_04 .
-
-bldg:VAV_4_03_Rm_3160 a brick:VAV ;
-    bf:feeds bldg:VAV_4_03_Rm_3160_zone ;
-    bf:hasPart bldg:VAV_4_03_Rm_3160_damper,
-        bldg:VAV_4_03_Rm_3160_rh_vlv ;
-    bf:isFedBy bldg:AHU_04 .
 
 bldg:VAV_4_03_Rm_3160_zone a brick:HVAC_Zone .
 
-bldg:VAV_4_04_Rm_3158 a brick:VAV ;
-    bf:feeds bldg:VAV_4_04_Rm_3158_zone ;
-    bf:hasPart bldg:VAV_4_04_Rm_3158_damper,
-        bldg:VAV_4_04_Rm_3158_rh_vlv ;
-    bf:isFedBy bldg:AHU_04 .
-
 bldg:VAV_4_04_Rm_3158_zone a brick:HVAC_Zone .
-
-bldg:VAV_4_05_Rm_3109 a brick:VAV ;
-    bf:feeds bldg:VAV_4_05_Rm_3109_zone ;
-    bf:hasPart bldg:VAV_4_05_Rm_3109_damper,
-        bldg:VAV_4_05_Rm_3109_rh_vlv ;
-    bf:isFedBy bldg:AHU_04 .
 
 bldg:VAV_4_05_Rm_3109_zone a brick:HVAC_Zone .
 
-bldg:VAV_4_06_Rm_3116 a brick:VAV ;
-    bf:feeds bldg:VAV_4_06_Rm_3116_zone ;
-    bf:hasPart bldg:VAV_4_06_Rm_3116_damper,
-        bldg:VAV_4_06_Rm_3116_rh_vlv ;
-    bf:isFedBy bldg:AHU_04 .
-
 bldg:VAV_4_06_Rm_3116_zone a brick:HVAC_Zone .
-
-bldg:VAV_4_07_Rm_3121 a brick:VAV ;
-    bf:feeds bldg:VAV_4_07_Rm_3121_zone ;
-    bf:hasPart bldg:VAV_4_07_Rm_3121_damper,
-        bldg:VAV_4_07_Rm_3121_rh_vlv ;
-    bf:isFedBy bldg:AHU_04 .
 
 bldg:VAV_4_07_Rm_3121_zone a brick:HVAC_Zone .
 
-bldg:VAV_4_08_Rm_3127 a brick:VAV ;
-    bf:feeds bldg:VAV_4_08_Rm_3127_zone ;
-    bf:hasPart bldg:VAV_4_08_Rm_3127_damper,
-        bldg:VAV_4_08_Rm_3127_rh_vlv ;
-    bf:isFedBy bldg:AHU_04 .
-
 bldg:VAV_4_08_Rm_3127_zone a brick:HVAC_Zone .
-
-bldg:VAV_4_09_Rm_3133 a brick:VAV ;
-    bf:feeds bldg:VAV_4_09_Rm_3133_zone ;
-    bf:hasPart bldg:VAV_4_09_Rm_3133_damper,
-        bldg:VAV_4_09_Rm_3133_rh_vlv ;
-    bf:isFedBy bldg:AHU_04 .
-
-bldg:VAV_4_10_Rm_3135 a brick:VAV ;
-    bf:feeds bldg:VAV_4_10_Rm_3135_zone ;
-    bf:hasPart bldg:VAV_4_10_Rm_3135_damper,
-        bldg:VAV_4_10_Rm_3135_rh_vlv ;
-    bf:isFedBy bldg:AHU_04 .
 
 bldg:VAV_4_10_Rm_3135_zone a brick:HVAC_Zone .
 
-bldg:VAV_4_11_Rm_3136 a brick:VAV ;
-    bf:feeds bldg:VAV_4_11_Rm_3136_zone ;
-    bf:hasPart bldg:VAV_4_11_Rm_3136_damper,
-        bldg:VAV_4_11_Rm_3136_rh_vlv ;
-    bf:isFedBy bldg:AHU_04 .
-
 bldg:VAV_4_11_Rm_3136_zone a brick:HVAC_Zone .
-
-bldg:VAV_4_12_Rm_3143 a brick:VAV ;
-    bf:feeds bldg:VAV_4_12_Rm_3143_zone ;
-    bf:hasPart bldg:VAV_4_12_Rm_3143_damper,
-        bldg:VAV_4_12_Rm_3143_rh_vlv ;
-    bf:isFedBy bldg:AHU_04 .
 
 bldg:VAV_4_12_Rm_3143_zone a brick:HVAC_Zone .
 
-bldg:VAV_4_13_Rm_3147 a brick:VAV ;
-    bf:feeds bldg:VAV_4_13_Rm_3147_zone ;
-    bf:hasPart bldg:VAV_4_13_Rm_3147_damper,
-        bldg:VAV_4_13_Rm_3147_rh_vlv ;
-    bf:isFedBy bldg:AHU_04 .
-
 bldg:VAV_4_13_Rm_3147_zone a brick:HVAC_Zone .
-
-bldg:VAV_4_14_Rm_3155 a brick:VAV ;
-    bf:feeds bldg:VAV_4_14_Rm_3155_zone ;
-    bf:hasPart bldg:VAV_4_14_Rm_3155_damper,
-        bldg:VAV_4_14_Rm_3155_rh_vlv ;
-    bf:isFedBy bldg:AHU_04 .
-
-bldg:VAV_4_15_Rm_3163 a brick:VAV ;
-    bf:feeds bldg:VAV_4_15_Rm_3163_zone ;
-    bf:hasPart bldg:VAV_4_15_Rm_3163_damper,
-        bldg:VAV_4_15_Rm_3163_rh_vlv ;
-    bf:isFedBy bldg:AHU_04 .
 
 bldg:VAV_4_15_Rm_3163_zone a brick:HVAC_Zone .
 
-bldg:VAV_4_16_Rm_3167 a brick:VAV ;
-    bf:feeds bldg:VAV_4_16_Rm_3167_zone ;
-    bf:hasPart bldg:VAV_4_16_Rm_3167_damper,
-        bldg:VAV_4_16_Rm_3167_rh_vlv ;
-    bf:isFedBy bldg:AHU_04 .
-
 bldg:VAV_4_16_Rm_3167_zone a brick:HVAC_Zone .
-
-bldg:VAV_4_17_Rm_3102A a brick:VAV ;
-    bf:feeds bldg:VAV_4_17_Rm_3102A_zone ;
-    bf:hasPart bldg:VAV_4_17_Rm_3102A_damper,
-        bldg:VAV_4_17_Rm_3102A_rh_vlv ;
-    bf:isFedBy bldg:AHU_04 .
-
-bldg:VAV_5_01_Rm_3034 a brick:VAV ;
-    bf:feeds bldg:VAV_5_01_Rm_3034_zone ;
-    bf:hasPart bldg:VAV_5_01_Rm_3034_damper,
-        bldg:VAV_5_01_Rm_3034_rh_vlv ;
-    bf:isFedBy bldg:AHU_05 .
-
-bldg:VAV_5_02_Rm_3032 a brick:VAV ;
-    bf:feeds bldg:VAV_5_02_Rm_3032_zone ;
-    bf:hasPart bldg:VAV_5_02_Rm_3032_damper,
-        bldg:VAV_5_02_Rm_3032_rh_vlv ;
-    bf:isFedBy bldg:AHU_05 .
-
-bldg:VAV_5_03_Rm_3030 a brick:VAV ;
-    bf:feeds bldg:VAV_5_03_Rm_3030_zone ;
-    bf:hasPart bldg:VAV_5_03_Rm_3030_damper,
-        bldg:VAV_5_03_Rm_3030_rh_vlv ;
-    bf:isFedBy bldg:AHU_05 .
-
-bldg:VAV_5_04_Rm_2030 a brick:VAV ;
-    bf:feeds bldg:VAV_5_04_Rm_2030_zone ;
-    bf:hasPart bldg:VAV_5_04_Rm_2030_damper,
-        bldg:VAV_5_04_Rm_2030_rh_vlv ;
-    bf:isFedBy bldg:AHU_05 .
-
-bldg:VAV_5_05_Rm_2010 a brick:VAV ;
-    bf:feeds bldg:VAV_5_05_Rm_2010_zone ;
-    bf:hasPart bldg:VAV_5_05_Rm_2010_damper,
-        bldg:VAV_5_05_Rm_2010_rh_vlv ;
-    bf:isFedBy bldg:AHU_05 .
-
-bldg:VAV_5_06_Rm_1043 a brick:VAV ;
-    bf:feeds bldg:VAV_5_06_Rm_1043_zone ;
-    bf:hasPart bldg:VAV_5_06_Rm_1043_damper,
-        bldg:VAV_5_06_Rm_1043_rh_vlv ;
-    bf:isFedBy bldg:AHU_05 .
-
-bldg:VAV_5_07_Rm_1000 a brick:VAV ;
-    bf:feeds bldg:VAV_5_07_Rm_1000_zone ;
-    bf:hasPart bldg:VAV_5_07_Rm_1000_damper,
-        bldg:VAV_5_07_Rm_1000_rh_vlv ;
-    bf:isFedBy bldg:AHU_05 .
-
-bldg:VAV_5_08_Rm_1039 a brick:VAV ;
-    bf:feeds bldg:VAV_5_08_Rm_1039_zone ;
-    bf:hasPart bldg:VAV_5_08_Rm_1039_damper,
-        bldg:VAV_5_08_Rm_1039_rh_vlv ;
-    bf:isFedBy bldg:AHU_05 .
-
-bldg:VAV_5_09_Rm_1001 a brick:VAV ;
-    bf:feeds bldg:VAV_5_09_Rm_1001_zone ;
-    bf:hasPart bldg:VAV_5_09_Rm_1001_damper,
-        bldg:VAV_5_09_Rm_1001_rh_vlv ;
-    bf:isFedBy bldg:AHU_05 .
-
-bldg:VAV_5_10_Rm_1014A a brick:VAV ;
-    bf:feeds bldg:VAV_5_10_Rm_1014A_zone ;
-    bf:hasPart bldg:VAV_5_10_Rm_1014A_damper,
-        bldg:VAV_5_10_Rm_1014A_rh_vlv ;
-    bf:isFedBy bldg:AHU_05 .
-
-bldg:VAV_5_11_Rm_1013 a brick:VAV ;
-    bf:feeds bldg:VAV_5_11_Rm_1013_zone ;
-    bf:hasPart bldg:VAV_5_11_Rm_1013_damper,
-        bldg:VAV_5_11_Rm_1013_rh_vlv ;
-    bf:isFedBy bldg:AHU_05 .
-
-bldg:VAV_5_12_Rm_1011 a brick:VAV ;
-    bf:feeds bldg:VAV_5_12_Rm_1011_zone ;
-    bf:hasPart bldg:VAV_5_12_Rm_1011_damper,
-        bldg:VAV_5_12_Rm_1011_rh_vlv ;
-    bf:isFedBy bldg:AHU_05 .
-
-bldg:VAV_5_13_Rm_1007 a brick:VAV ;
-    bf:feeds bldg:VAV_5_13_Rm_1007_zone ;
-    bf:hasPart bldg:VAV_5_13_Rm_1007_damper,
-        bldg:VAV_5_13_Rm_1007_rh_vlv ;
-    bf:isFedBy bldg:AHU_05 .
 
 bldg:VAV_3_02_Rm_3049_zone a brick:HVAC_Zone .
 
@@ -3544,11 +5111,29 @@ bldg:VAV_4_01_Rm_3101_zone a brick:HVAC_Zone .
 
 bldg:VAV_4_14_Rm_3155_zone a brick:HVAC_Zone .
 
+bldg:VAV_3_14_Rm_2001A a brick:VAV ;
+    bf:feeds bldg:VAV_3_14_Rm_2001A_zone ;
+    bf:hasPart bldg:VAV_3_14_Rm_2001A_damper,
+        bldg:VAV_3_14_Rm_2001A_rh_vlv ;
+    bf:isFedBy bldg:AHU_03 .
+
+bldg:VAV_5_08_Rm_1039 a brick:VAV ;
+    bf:feeds bldg:VAV_5_08_Rm_1039_zone ;
+    bf:hasPart bldg:VAV_5_08_Rm_1039_damper,
+        bldg:VAV_5_08_Rm_1039_rh_vlv ;
+    bf:isFedBy bldg:AHU_05 .
+
 bldg:VAV_1_01_Rm_1105 a brick:VAV ;
     bf:feeds bldg:VAV_1_01_Rm_1105_zone ;
     bf:hasPart bldg:VAV_1_01_Rm_1105_damper,
         bldg:VAV_1_01_Rm_1105_rh_vlv ;
     bf:isFedBy bldg:AHU_01 .
+
+bldg:VAV_3_22_Rm_2000 a brick:VAV ;
+    bf:feeds bldg:VAV_3_22_Rm_2000_zone ;
+    bf:hasPart bldg:VAV_3_22_Rm_2000_damper,
+        bldg:VAV_3_22_Rm_2000_rh_vlv ;
+    bf:isFedBy bldg:AHU_03 .
 
 bldg:VAV_1_02_Rm_1113 a brick:VAV ;
     bf:feeds bldg:VAV_1_02_Rm_1113_zone ;
@@ -3699,6 +5284,300 @@ bldg:VAV_2_17_Rm_2126 a brick:VAV ;
     bf:hasPart bldg:VAV_2_17_Rm_2126_damper,
         bldg:VAV_2_17_Rm_2126_rh_vlv ;
     bf:isFedBy bldg:AHU_02 .
+
+bldg:VAV_3_01_Rm_3043 a brick:VAV ;
+    bf:feeds bldg:VAV_3_01_Rm_3043_zone ;
+    bf:hasPart bldg:VAV_3_01_Rm_3043_damper,
+        bldg:VAV_3_01_Rm_3043_rh_vlv ;
+    bf:isFedBy bldg:AHU_03 .
+
+bldg:VAV_3_02_Rm_3049 a brick:VAV ;
+    bf:feeds bldg:VAV_3_02_Rm_3049_zone ;
+    bf:hasPart bldg:VAV_3_02_Rm_3049_damper,
+        bldg:VAV_3_02_Rm_3049_rh_vlv ;
+    bf:isFedBy bldg:AHU_03 .
+
+bldg:VAV_3_03_Rm_3001A a brick:VAV ;
+    bf:feeds bldg:VAV_3_03_Rm_3001A_zone ;
+    bf:hasPart bldg:VAV_3_03_Rm_3001A_damper,
+        bldg:VAV_3_03_Rm_3001A_rh_vlv ;
+    bf:isFedBy bldg:AHU_03 .
+
+bldg:VAV_3_04_Rm_3001 a brick:VAV ;
+    bf:feeds bldg:VAV_3_04_Rm_3001_zone ;
+    bf:hasPart bldg:VAV_3_04_Rm_3001_damper,
+        bldg:VAV_3_04_Rm_3001_rh_vlv ;
+    bf:isFedBy bldg:AHU_03 .
+
+bldg:VAV_3_05_Rm_3007 a brick:VAV ;
+    bf:feeds bldg:VAV_3_05_Rm_3007_zone ;
+    bf:hasPart bldg:VAV_3_05_Rm_3007_damper,
+        bldg:VAV_3_05_Rm_3007_rh_vlv ;
+    bf:isFedBy bldg:AHU_03 .
+
+bldg:VAV_3_06_Rm_3017 a brick:VAV ;
+    bf:feeds bldg:VAV_3_06_Rm_3017_zone ;
+    bf:hasPart bldg:VAV_3_06_Rm_3017_damper,
+        bldg:VAV_3_06_Rm_3017_rh_vlv ;
+    bf:isFedBy bldg:AHU_03 .
+
+bldg:VAV_3_07_Rm_3011 a brick:VAV ;
+    bf:feeds bldg:VAV_3_07_Rm_3011_zone ;
+    bf:hasPart bldg:VAV_3_07_Rm_3011_damper,
+        bldg:VAV_3_07_Rm_3011_rh_vlv ;
+    bf:isFedBy bldg:AHU_03 .
+
+bldg:VAV_3_08_Rm_3029 a brick:VAV ;
+    bf:feeds bldg:VAV_3_08_Rm_3029_zone ;
+    bf:hasPart bldg:VAV_3_08_Rm_3029_damper,
+        bldg:VAV_3_08_Rm_3029_rh_vlv ;
+    bf:isFedBy bldg:AHU_03 .
+
+bldg:VAV_3_09_Rm_3023 a brick:VAV ;
+    bf:feeds bldg:VAV_3_09_Rm_3023_zone ;
+    bf:hasPart bldg:VAV_3_09_Rm_3023_damper,
+        bldg:VAV_3_09_Rm_3023_rh_vlv ;
+    bf:isFedBy bldg:AHU_03 .
+
+bldg:VAV_3_10_Rm_3021 a brick:VAV ;
+    bf:feeds bldg:VAV_3_10_Rm_3021_zone ;
+    bf:hasPart bldg:VAV_3_10_Rm_3021_damper,
+        bldg:VAV_3_10_Rm_3021_rh_vlv ;
+    bf:isFedBy bldg:AHU_03 .
+
+bldg:VAV_3_11_Rm_3000 a brick:VAV ;
+    bf:feeds bldg:VAV_3_11_Rm_3000_zone ;
+    bf:hasPart bldg:VAV_3_11_Rm_3000_damper,
+        bldg:VAV_3_11_Rm_3000_rh_vlv ;
+    bf:isFedBy bldg:AHU_03 .
+
+bldg:VAV_3_12_Rm_2043 a brick:VAV ;
+    bf:feeds bldg:VAV_3_12_Rm_2043_zone ;
+    bf:hasPart bldg:VAV_3_12_Rm_2043_damper,
+        bldg:VAV_3_12_Rm_2043_rh_vlv ;
+    bf:isFedBy bldg:AHU_03 .
+
+bldg:VAV_3_13_Rm_2049 a brick:VAV ;
+    bf:feeds bldg:VAV_3_13_Rm_2049_zone ;
+    bf:hasPart bldg:VAV_3_13_Rm_2049_damper,
+        bldg:VAV_3_13_Rm_2049_rh_vlv ;
+    bf:isFedBy bldg:AHU_03 .
+
+bldg:VAV_3_15_Rm_2001 a brick:VAV ;
+    bf:feeds bldg:VAV_3_15_Rm_2001_zone ;
+    bf:hasPart bldg:VAV_3_15_Rm_2001_damper,
+        bldg:VAV_3_15_Rm_2001_rh_vlv ;
+    bf:isFedBy bldg:AHU_03 .
+
+bldg:VAV_3_16_Rm_2005 a brick:VAV ;
+    bf:feeds bldg:VAV_3_16_Rm_2005_zone ;
+    bf:hasPart bldg:VAV_3_16_Rm_2005_damper,
+        bldg:VAV_3_16_Rm_2005_rh_vlv ;
+    bf:isFedBy bldg:AHU_03 .
+
+bldg:VAV_3_17_Rm_2009 a brick:VAV ;
+    bf:feeds bldg:VAV_3_17_Rm_2009_zone ;
+    bf:hasPart bldg:VAV_3_17_Rm_2009_damper,
+        bldg:VAV_3_17_Rm_2009_rh_vlv ;
+    bf:isFedBy bldg:AHU_03 .
+
+bldg:VAV_3_18_Rm_2015 a brick:VAV ;
+    bf:feeds bldg:VAV_3_18_Rm_2015_zone ;
+    bf:hasPart bldg:VAV_3_18_Rm_2015_damper,
+        bldg:VAV_3_18_Rm_2015_rh_vlv ;
+    bf:isFedBy bldg:AHU_03 .
+
+bldg:VAV_3_19_Rm_2027 a brick:VAV ;
+    bf:feeds bldg:VAV_3_19_Rm_2027_zone ;
+    bf:hasPart bldg:VAV_3_19_Rm_2027_damper,
+        bldg:VAV_3_19_Rm_2027_rh_vlv ;
+    bf:isFedBy bldg:AHU_03 .
+
+bldg:VAV_3_20_Rm_2021 a brick:VAV ;
+    bf:feeds bldg:VAV_3_20_Rm_2021_zone ;
+    bf:hasPart bldg:VAV_3_20_Rm_2021_damper,
+        bldg:VAV_3_20_Rm_2021_rh_vlv ;
+    bf:isFedBy bldg:AHU_03 .
+
+bldg:VAV_3_21_Rm_2019 a brick:VAV ;
+    bf:feeds bldg:VAV_3_21_Rm_2019_zone ;
+    bf:hasPart bldg:VAV_3_21_Rm_2019_damper,
+        bldg:VAV_3_21_Rm_2019_rh_vlv ;
+    bf:isFedBy bldg:AHU_03 .
+
+bldg:VAV_4_01_Rm_3101 a brick:VAV ;
+    bf:feeds bldg:VAV_4_01_Rm_3101_zone ;
+    bf:hasPart bldg:VAV_4_01_Rm_3101_damper,
+        bldg:VAV_4_01_Rm_3101_rh_vlv ;
+    bf:isFedBy bldg:AHU_04 .
+
+bldg:VAV_4_02_Rm_3102B a brick:VAV ;
+    bf:feeds bldg:VAV_4_02_Rm_3102B_zone ;
+    bf:hasPart bldg:VAV_4_02_Rm_3102B_damper,
+        bldg:VAV_4_02_Rm_3102B_rh_vlv ;
+    bf:isFedBy bldg:AHU_04 .
+
+bldg:VAV_4_03_Rm_3160 a brick:VAV ;
+    bf:feeds bldg:VAV_4_03_Rm_3160_zone ;
+    bf:hasPart bldg:VAV_4_03_Rm_3160_damper,
+        bldg:VAV_4_03_Rm_3160_rh_vlv ;
+    bf:isFedBy bldg:AHU_04 .
+
+bldg:VAV_4_04_Rm_3158 a brick:VAV ;
+    bf:feeds bldg:VAV_4_04_Rm_3158_zone ;
+    bf:hasPart bldg:VAV_4_04_Rm_3158_damper,
+        bldg:VAV_4_04_Rm_3158_rh_vlv ;
+    bf:isFedBy bldg:AHU_04 .
+
+bldg:VAV_4_05_Rm_3109 a brick:VAV ;
+    bf:feeds bldg:VAV_4_05_Rm_3109_zone ;
+    bf:hasPart bldg:VAV_4_05_Rm_3109_damper,
+        bldg:VAV_4_05_Rm_3109_rh_vlv ;
+    bf:isFedBy bldg:AHU_04 .
+
+bldg:VAV_4_06_Rm_3116 a brick:VAV ;
+    bf:feeds bldg:VAV_4_06_Rm_3116_zone ;
+    bf:hasPart bldg:VAV_4_06_Rm_3116_damper,
+        bldg:VAV_4_06_Rm_3116_rh_vlv ;
+    bf:isFedBy bldg:AHU_04 .
+
+bldg:VAV_4_07_Rm_3121 a brick:VAV ;
+    bf:feeds bldg:VAV_4_07_Rm_3121_zone ;
+    bf:hasPart bldg:VAV_4_07_Rm_3121_damper,
+        bldg:VAV_4_07_Rm_3121_rh_vlv ;
+    bf:isFedBy bldg:AHU_04 .
+
+bldg:VAV_4_08_Rm_3127 a brick:VAV ;
+    bf:feeds bldg:VAV_4_08_Rm_3127_zone ;
+    bf:hasPart bldg:VAV_4_08_Rm_3127_damper,
+        bldg:VAV_4_08_Rm_3127_rh_vlv ;
+    bf:isFedBy bldg:AHU_04 .
+
+bldg:VAV_4_09_Rm_3133 a brick:VAV ;
+    bf:feeds bldg:VAV_4_09_Rm_3133_zone ;
+    bf:hasPart bldg:VAV_4_09_Rm_3133_damper,
+        bldg:VAV_4_09_Rm_3133_rh_vlv ;
+    bf:isFedBy bldg:AHU_04 .
+
+bldg:VAV_4_10_Rm_3135 a brick:VAV ;
+    bf:feeds bldg:VAV_4_10_Rm_3135_zone ;
+    bf:hasPart bldg:VAV_4_10_Rm_3135_damper,
+        bldg:VAV_4_10_Rm_3135_rh_vlv ;
+    bf:isFedBy bldg:AHU_04 .
+
+bldg:VAV_4_11_Rm_3136 a brick:VAV ;
+    bf:feeds bldg:VAV_4_11_Rm_3136_zone ;
+    bf:hasPart bldg:VAV_4_11_Rm_3136_damper,
+        bldg:VAV_4_11_Rm_3136_rh_vlv ;
+    bf:isFedBy bldg:AHU_04 .
+
+bldg:VAV_4_12_Rm_3143 a brick:VAV ;
+    bf:feeds bldg:VAV_4_12_Rm_3143_zone ;
+    bf:hasPart bldg:VAV_4_12_Rm_3143_damper,
+        bldg:VAV_4_12_Rm_3143_rh_vlv ;
+    bf:isFedBy bldg:AHU_04 .
+
+bldg:VAV_4_13_Rm_3147 a brick:VAV ;
+    bf:feeds bldg:VAV_4_13_Rm_3147_zone ;
+    bf:hasPart bldg:VAV_4_13_Rm_3147_damper,
+        bldg:VAV_4_13_Rm_3147_rh_vlv ;
+    bf:isFedBy bldg:AHU_04 .
+
+bldg:VAV_4_14_Rm_3155 a brick:VAV ;
+    bf:feeds bldg:VAV_4_14_Rm_3155_zone ;
+    bf:hasPart bldg:VAV_4_14_Rm_3155_damper,
+        bldg:VAV_4_14_Rm_3155_rh_vlv ;
+    bf:isFedBy bldg:AHU_04 .
+
+bldg:VAV_4_15_Rm_3163 a brick:VAV ;
+    bf:feeds bldg:VAV_4_15_Rm_3163_zone ;
+    bf:hasPart bldg:VAV_4_15_Rm_3163_damper,
+        bldg:VAV_4_15_Rm_3163_rh_vlv ;
+    bf:isFedBy bldg:AHU_04 .
+
+bldg:VAV_4_16_Rm_3167 a brick:VAV ;
+    bf:feeds bldg:VAV_4_16_Rm_3167_zone ;
+    bf:hasPart bldg:VAV_4_16_Rm_3167_damper,
+        bldg:VAV_4_16_Rm_3167_rh_vlv ;
+    bf:isFedBy bldg:AHU_04 .
+
+bldg:VAV_4_17_Rm_3102A a brick:VAV ;
+    bf:feeds bldg:VAV_4_17_Rm_3102A_zone ;
+    bf:hasPart bldg:VAV_4_17_Rm_3102A_damper,
+        bldg:VAV_4_17_Rm_3102A_rh_vlv ;
+    bf:isFedBy bldg:AHU_04 .
+
+bldg:VAV_5_01_Rm_3034 a brick:VAV ;
+    bf:feeds bldg:VAV_5_01_Rm_3034_zone ;
+    bf:hasPart bldg:VAV_5_01_Rm_3034_damper,
+        bldg:VAV_5_01_Rm_3034_rh_vlv ;
+    bf:isFedBy bldg:AHU_05 .
+
+bldg:VAV_5_02_Rm_3032 a brick:VAV ;
+    bf:feeds bldg:VAV_5_02_Rm_3032_zone ;
+    bf:hasPart bldg:VAV_5_02_Rm_3032_damper,
+        bldg:VAV_5_02_Rm_3032_rh_vlv ;
+    bf:isFedBy bldg:AHU_05 .
+
+bldg:VAV_5_03_Rm_3030 a brick:VAV ;
+    bf:feeds bldg:VAV_5_03_Rm_3030_zone ;
+    bf:hasPart bldg:VAV_5_03_Rm_3030_damper,
+        bldg:VAV_5_03_Rm_3030_rh_vlv ;
+    bf:isFedBy bldg:AHU_05 .
+
+bldg:VAV_5_04_Rm_2030 a brick:VAV ;
+    bf:feeds bldg:VAV_5_04_Rm_2030_zone ;
+    bf:hasPart bldg:VAV_5_04_Rm_2030_damper,
+        bldg:VAV_5_04_Rm_2030_rh_vlv ;
+    bf:isFedBy bldg:AHU_05 .
+
+bldg:VAV_5_05_Rm_2010 a brick:VAV ;
+    bf:feeds bldg:VAV_5_05_Rm_2010_zone ;
+    bf:hasPart bldg:VAV_5_05_Rm_2010_damper,
+        bldg:VAV_5_05_Rm_2010_rh_vlv ;
+    bf:isFedBy bldg:AHU_05 .
+
+bldg:VAV_5_06_Rm_1043 a brick:VAV ;
+    bf:feeds bldg:VAV_5_06_Rm_1043_zone ;
+    bf:hasPart bldg:VAV_5_06_Rm_1043_damper,
+        bldg:VAV_5_06_Rm_1043_rh_vlv ;
+    bf:isFedBy bldg:AHU_05 .
+
+bldg:VAV_5_07_Rm_1000 a brick:VAV ;
+    bf:feeds bldg:VAV_5_07_Rm_1000_zone ;
+    bf:hasPart bldg:VAV_5_07_Rm_1000_damper,
+        bldg:VAV_5_07_Rm_1000_rh_vlv ;
+    bf:isFedBy bldg:AHU_05 .
+
+bldg:VAV_5_09_Rm_1001 a brick:VAV ;
+    bf:feeds bldg:VAV_5_09_Rm_1001_zone ;
+    bf:hasPart bldg:VAV_5_09_Rm_1001_damper,
+        bldg:VAV_5_09_Rm_1001_rh_vlv ;
+    bf:isFedBy bldg:AHU_05 .
+
+bldg:VAV_5_10_Rm_1014A a brick:VAV ;
+    bf:feeds bldg:VAV_5_10_Rm_1014A_zone ;
+    bf:hasPart bldg:VAV_5_10_Rm_1014A_damper,
+        bldg:VAV_5_10_Rm_1014A_rh_vlv ;
+    bf:isFedBy bldg:AHU_05 .
+
+bldg:VAV_5_11_Rm_1013 a brick:VAV ;
+    bf:feeds bldg:VAV_5_11_Rm_1013_zone ;
+    bf:hasPart bldg:VAV_5_11_Rm_1013_damper,
+        bldg:VAV_5_11_Rm_1013_rh_vlv ;
+    bf:isFedBy bldg:AHU_05 .
+
+bldg:VAV_5_12_Rm_1011 a brick:VAV ;
+    bf:feeds bldg:VAV_5_12_Rm_1011_zone ;
+    bf:hasPart bldg:VAV_5_12_Rm_1011_damper,
+        bldg:VAV_5_12_Rm_1011_rh_vlv ;
+    bf:isFedBy bldg:AHU_05 .
+
+bldg:VAV_5_13_Rm_1007 a brick:VAV ;
+    bf:feeds bldg:VAV_5_13_Rm_1007_zone ;
+    bf:hasPart bldg:VAV_5_13_Rm_1007_damper,
+        bldg:VAV_5_13_Rm_1007_rh_vlv ;
+    bf:isFedBy bldg:AHU_05 .
 
 bldg:AHU_01 a brick:AHU .
 

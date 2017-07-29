@@ -1,4 +1,5 @@
 from rdflib import Graph, Namespace, URIRef, Literal
+import sys
 import rdflib
 import pandas as pd
 import json
@@ -19,7 +20,8 @@ g.bind('brick', BRICK)
 g.bind('bf', BRICKFRAME)
 g.bind('bldg', BLDG)
 
-siteref = 'Ghausi'
+if len(sys.argv) > 1: siteref = sys.argv[1]
+else: siteref = 'Ghausi'
 
 ahu_filename = 'ahu.json'
 ahus = json.load(open(ahu_filename))
@@ -46,6 +48,9 @@ def instantiate_vav(doc):
     if not doc['vav']:
         return triples
     vavname = fix(doc['id'])
+    if vavname is None:
+        print doc
+        sys.exit(1)
     zonename = vavname+"_zone"
     ahuname = fix(doc['equipRef'])
     triples.append((BLDG[vavname], RDF.type, BRICK.VAV))
@@ -113,6 +118,7 @@ sensortags = [
 
     {'sensor','power'},
     {'sensor','speed'},
+
 ]
 
 sensortypes = [
@@ -140,43 +146,154 @@ sensortypes = [
     BRICK.Occupancy_Sensor,
     BRICK.Power_Meter,
     BRICK.Speed_Sensor,
+
 ]
 
+sptags = [
+    {'sp', 'temp', 'air', 'heat', 'unocc'},
+    {'sp', 'temp', 'air', 'cool', 'unocc'},
+    {'sp', 'temp', 'air', 'heat', 'occ'},
+    {'sp', 'temp', 'air', 'cool', 'occ'},
+    {'sp', 'temp', 'air', 'heat'},
+    {'sp', 'temp', 'air', 'cool'},
+    {'sp', 'temp', 'air', 'mixed'},
+    {'sp', 'temp', 'air', 'supply'},
+    {'sp', 'temp', 'air', 'discharge'},
+    {'sp', 'temp', 'air', 'zone.1'},
+    {'sp', 'air', 'mixed'},
+
+    {'sp', 'air', 'flow', 'discharge'},
+    {'sp', 'air', 'flow', 'supply'},
+    {'sp', 'air', 'flow', 'differential','unocc'},
+    {'sp', 'air', 'flow', 'differential','occ'},
+    {'sp', 'air', 'flow', 'differential'},
+    {'sp', 'air', 'flow', 'exhaust', 'spMin'},
+    {'sp', 'air', 'flow', 'exhaust', 'spMax'},
+    {'sp', 'air', 'flow', 'exhaust'},
+    {'sp', 'air', 'flow', 'spMin'},
+    {'sp', 'air', 'flow', 'spMax'},
+
+    {'sp', 'air', 'pressure', 'discharge'},
+
+    {'sp', 'cmd', 'air', 'damper', 'position'},
+
+    {'sp', 'cmd', 'valve', 'cool', 'position'},
+    {'sp', 'cmd', 'valve', 'heat', 'position'},
+    {'sp', 'cmd', 'air', 'fan', 'speed'},
+]
+sptypes = [
+    BRICK.VAV_Unoccupied_Heating_Temperature_Setpoint,
+    BRICK.VAV_Unoccupied_Cooling_Temperature_Setpoint,
+    BRICK.VAV_Occupied_Heating_Temperature_Setpoint,
+    BRICK.VAV_Occupied_Cooling_Temperature_Setpoint,
+    BRICK.VAV_Heating_Temperature_Setpoint,
+    BRICK.VAV_Cooling_Temperature_Setpoint,
+    BRICK.Mixed_Air_Temperature_Setpoint,
+    BRICK.Supply_Air_Temperature_Setpoint,
+    BRICK.Supply_Air_Temperature_Setpoint,
+    BRICK.Zone_Air_Temperature_Setpoint,
+    BRICK.Mixed_Air_Setpoint,
+
+    BRICK.VAV_Discharge_Air_Flow_Setpoint,
+    BRICK.VAV_Supply_Air_Flow_Setpoint,
+    BRICK.VAV_Unoccupied_Air_Flow_Differential_Setpoint,
+    BRICK.VAV_Occupied_Air_Flow_Differential_Setpoint,
+    BRICK.VAV_Air_Flow_Differential_Setpoint,
+    BRICK.VAV_Exhaust_Air_Flow_Min_Setpoint,
+    BRICK.VAV_Exhaust_Air_Flow_Max_Setpoint,
+    BRICK.VAV_Exhaust_Air_Flow_Setpoint,
+    BRICK.VAV_Air_Flow_Min_Setpoint,
+    BRICK.VAV_Air_Flow_Max_Setpoint,
+
+    BRICK.Discharge_Air_Static_Pressure_Setpoint,
+
+    BRICK.VAV_Damper_Position_Command,
+
+    BRICK.Cooling_Valve_Command,
+    BRICK.Heating_Valve_Command,
+    BRICK.AHU_Supply_Fan_VFD_Speed_Command,
+]
 
 def get_sensors():
     triples = []
     print len(points)
-    sensors = points[points['sensor'].notnull()]
+    sensors = points[(points['sensor'].notnull())]
     print len(sensors)
     for row in sensors.iterrows():
         row = row[1] # get the actual Series
         tags = set(row[row=='M'].keys())
         a = False
-        if 'Lab Zone Air Temp' in row['id']:
-            print row[row.notnull()]
         for idx, ts in enumerate(sensortags):
             if ts.intersection(tags) == ts:
                 kls = sensortypes[idx]
                 sensorname = fix(row['id'])
+                if sensorname is None:
+                    print row['id']
+                    sys.exit(1)
                 triples.append((BLDG[sensorname], RDF.type, kls))
-                equipname = fix(row['equipRef']) 
-                triples.append((BLDG[sensorname], BF.isPointOf, BLDG[equipname]))
-                if 'power' in tags:
-                    triples.append((BLDG[sensorname], BF.measures, BLDG[equipname]))
                 if 'Rm' in doc['id']:
                     roomname = fix(parse_room(doc['id']))
                     if 'occ' in tags:
                         triples.append((BLDG[sensorname], BF.isLocatedIn, BLDG[roomname]))
                     else:
                         triples.append((BLDG[sensorname], BF.isPointOf, BLDG[roomname]))
+
+                equipname = fix(row['equipRef']) 
+                if equipname is None:
+                    continue
+                triples.append((BLDG[sensorname], BF.isPointOf, BLDG[equipname]))
+                if 'power' in tags:
+                    triples.append((BLDG[sensorname], BF.measures, BLDG[equipname]))
                 a = True
                 break
         if not a:
+            if 'sp' in tags:
+                print tags
+                print row[row.notnull()]
+            #print tags, fix(row['id'])
+    return triples
+
+def get_setpoints():
+    triples = []
+    print len(points)
+    setpoints = points[(points['sp'].notnull())]
+    print len(setpoints)
+    for row in setpoints.iterrows():
+        row = row[1] # get the actual Series
+        tags = set(row[row=='M'].keys())
+        a = False
+        for idx, ts in enumerate(sptags):
+            if ts.intersection(tags) == ts:
+                kls = sptypes[idx]
+                sensorname = fix(row['id'])
+                triples.append((BLDG[sensorname], RDF.type, kls))
+                if 'Rm' in doc['id']:
+                    roomname = fix(parse_room(doc['id']))
+                    if 'occ' in tags:
+                        triples.append((BLDG[sensorname], BF.isLocatedIn, BLDG[roomname]))
+                    else:
+                        triples.append((BLDG[sensorname], BF.isPointOf, BLDG[roomname]))
+                equipname = fix(row['equipRef']) 
+                if equipname is None:
+                    continue
+                triples.append((BLDG[sensorname], BF.controls, BLDG[equipname]))
+                a = True
+                break
+        if not a:
+            #if 'sp' in tags:
+            #    print tags
+            #    print row[row.notnull()]
             print tags, fix(row['id'])
     return triples
 
 
+
 def fix(s):
+    if not (isinstance(s, str) or isinstance(s, unicode)):
+        print type(s)
+        return None
+    if '\$' in s:
+        s = s.replace('\$','')
     if s.startswith('@'):
         s = ' '.join(s.split(' ')[1:])[1:-1]
     return s.replace(' ','_')
@@ -196,6 +313,8 @@ for doc in vavs:
     alltriples.extend(instantiate_vav(doc))
 # handle sensors
 alltriples.extend(get_sensors())
+# handle setpoints
+alltriples.extend(get_setpoints())
 
 
 
