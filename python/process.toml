@@ -1,10 +1,10 @@
 [config]
 # XBOS namespace and filename
-namespace = "my-test-namespace"
+namespace = "my-site-name"
 # ontology URI to use for model
-ontology = "http://xbos.io/ontologies/my-test-namespace"
+ontology = "http://xbos.io/ontologies/my-site-name"
 # Turtle file containing extra classes we want to use
-extra_classes = "extra.ttl"
+extra_classes = "extra_classes.ttl"
 
 [xbos]
     [xbos.config]
@@ -13,20 +13,20 @@ extra_classes = "extra.ttl"
 
     # Adds Green Button meter
     [xbos.GreenButton]
-    driver  = "driver.greenbutton"
+    driver  = "mason.driver.greenbutton"
     # account number
-    subid = 123456
+    subid = 111111
     # meter identifier
-    uuid = 123456789
+    uuid = 1111111111
 
-    # Adds NWS data
+    ## Adds NWS data
     [xbos.NationalWeatherService]
-    driver = "driver.nws"
+    driver = "mason.driver.nationalweatherservice"
     stations = [
-        "AT465",
+        "AT565",
         "KTLC1",
     ]
 
     [xbos.Revit]
-    driver = "driver.revit"
-    revit_schedule = "my-test-namespace.txt"
+    driver = "mason.driver.revit"
+    revit_schedule = "my-site-name.txt"
