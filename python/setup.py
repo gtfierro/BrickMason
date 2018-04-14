@@ -9,16 +9,11 @@ setup(name='mason',
       packages=find_packages(),
       scripts=['bin/mason'],
       #include_package_data=True,
-      #install_requires=[
-      #  'docker==2.5.1',
-      #  'delorean==0.6.0',
-      #  'msgpack-python==0.4.2',
-      #  'bw2python>=0.6.1',
-      #  'requests>=2.12.2',
-      #  'python-dateutil>=2.4.2',
-      #  'pandas>=0.20.1',
-      #  'pycapnp>=0.6.3',
-      #],
+      install_requires=[
+        'pytoml>=0.1.14',
+        'xbos>=0.0.28',
+        'rdflib',
+      ],
       zip_safe=False)
 
 
