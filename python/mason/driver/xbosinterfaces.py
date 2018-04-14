@@ -117,6 +117,29 @@ class Generator(object):
             for tstat in thermostats.values():
                 G.add((tstat, BF.hasPoint, self.BLDG[meter_name]))
 
+        logging.info("Querying for lights")
+        result = self.client.query('select path where uri like "{0}" and originaluri like "i.xbos.light" and name = "brightness";'.format(self.namespace))
+        for doc in result['metadata']:
+            path = doc['path']
+            # extract light name
+            light_name = re.match(r'.*/([^/]+)/i.xbos.light', path)
+            if light_name is not None:
+                light_name = light_name.groups()[0]
+            else:
+                logging.warning("No lighting name found for {0}".format(path))
+                continue
+            logging.info('Lighting Name: {0}'.format(light_name))
+
+            urisuffix = re.match(r'[^/]+(/.*/i.xbos.light)', path)
+            if urisuffix is not None:
+                urisuffix = urisuffix.groups()[0]
+            else:
+                logging.warning("No URI suffix found for {0}".format(light_name))
+                continue
+            logging.info('Lighting URI: {0}'.format(urisuffix))
+            for t in self.add_xbos_light(self.BLDG['light_'+light_name], self.namespace+urisuffix):
+                G.add(t)
+
     def add_xbos_thermostat(self, node, uri, controls=None):
         rest_of_uri = '/'.join(uri.split("/")[1:])
         self.namespace = uri.split("/")[0]
