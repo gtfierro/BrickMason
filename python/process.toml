@@ -30,3 +30,7 @@ extra_classes = "extra_classes.ttl"
     [xbos.Revit]
     driver = "mason.driver.revit"
     revit_schedule = "my-site-name.txt"
+
+    ## Add devices + URIs from archived data about XBOS interfaces
+    [xbos.XBOSInterfaces]
+    driver = "mason.driver.xbosinterfaces"

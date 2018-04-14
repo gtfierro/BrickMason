@@ -2,7 +2,7 @@ from rdflib import Namespace, URIRef, Literal
 from xbos.services.pundat import DataClient
 import coloredlogs, logging
 logger = logging.getLogger(__name__)
-coloredlogs.install(level='DEBUG')
+coloredlogs.install(level='DEBUG', fmt='%(asctime)s %(filename)s:%(lineno)s %(levelname)s %(message)s')
 
 RDF = Namespace('http://www.w3.org/1999/02/22-rdf-syntax-ns#')
 RDFS = Namespace('http://www.w3.org/2000/01/rdf-schema#')

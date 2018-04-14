@@ -4,7 +4,7 @@ from xbos.services.pundat import DataClient
 from xbos.services.brick import Generator as XBOSGenerator
 import coloredlogs, logging
 logger = logging.getLogger(__name__)
-coloredlogs.install(level='DEBUG')
+coloredlogs.install(level='DEBUG', fmt='%(asctime)s %(filename)s:%(lineno)s %(levelname)s %(message)s')
 
 RDF = Namespace('http://www.w3.org/1999/02/22-rdf-syntax-ns#')
 RDFS = Namespace('http://www.w3.org/2000/01/rdf-schema#')
@@ -66,7 +66,7 @@ class Generator(object):
             else:
                 logging.warning("No URI suffix found for {0}".format(zone_name))
                 continue
-            logging.info('Tstat URI: '.format(urisuffix))
+            logging.info('Tstat URI: {0}'.format(urisuffix))
 
             rtu_name = zone_name+"_RTU"
             G.add((self.BLDG[rtu_name], RDF.type, BRICK.RTU))
@@ -92,7 +92,7 @@ class Generator(object):
             else:
                 logging.warning("No URI suffix found for {0}".format(zone_name))
                 continue
-            logging.info('Tstat URI: '.format(urisuffix))
+            logging.info('Tstat URI: {0}'.format(urisuffix))
             G.add((self.BLDG[meter_name], BF.uri, Literal(self.namespace + urisuffix)))
             for tstat in thermostats.values():
                 G.add((tstat, BF.hasPoint, self.BLDG[meter_name]))
@@ -112,7 +112,7 @@ class Generator(object):
             else:
                 logging.warning("No URI suffix found for {0}".format(zone_name))
                 continue
-            logging.info('Tstat URI: '.format(urisuffix))
+            logging.info('Tstat URI: {0}'.format(urisuffix))
             G.add((self.BLDG[meter_name], BF.uri, Literal(self.namespace + urisuffix)))
             for tstat in thermostats.values():
                 G.add((tstat, BF.hasPoint, self.BLDG[meter_name]))
