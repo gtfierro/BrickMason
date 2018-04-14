@@ -13,6 +13,7 @@ setup(name='mason',
         'pytoml>=0.1.14',
         'xbos>=0.0.28',
         'rdflib',
+        'coloredlogs'
       ],
       zip_safe=False)
 

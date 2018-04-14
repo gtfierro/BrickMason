@@ -1,10 +1,12 @@
 [config]
 # XBOS namespace and filename
-namespace = "my-site-name"
+namespace = "my-building-namespace"
 # ontology URI to use for model
-ontology = "http://xbos.io/ontologies/my-site-name"
+ontology = "http://xbos.io/ontologies/my-building-namespace"
 # Turtle file containing extra classes we want to use
 extra_classes = "extra_classes.ttl"
+# output directory for brick models
+output = "brick_models/"
 
 [xbos]
     [xbos.config]
@@ -29,7 +31,7 @@ extra_classes = "extra_classes.ttl"
 
     [xbos.Revit]
     driver = "mason.driver.revit"
-    revit_schedule = "my-site-name.txt"
+    revit_schedule = "my-building-namespace.txt"
 
     ## Add devices + URIs from archived data about XBOS interfaces
     [xbos.XBOSInterfaces]
