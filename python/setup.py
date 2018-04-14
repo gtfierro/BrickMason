@@ -7,7 +7,7 @@ setup(name='mason',
       author='Gabe Fierro',
       author_email='gtfierro@cs.berkeley.edu',
       packages=find_packages(),
-      #data_files=[('xbos/services', ['xbos/services/data.capnp'])],
+      scripts=['bin/mason'],
       #include_package_data=True,
       #install_requires=[
       #  'docker==2.5.1',
