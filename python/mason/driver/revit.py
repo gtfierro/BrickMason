@@ -27,7 +27,7 @@ class Generator(object):
         self.G = G
         filename = cfg['revit_schedule']
         BLDG = cfg['BLDG']
-        df = pd.read_csv(filename, delimiter='\t')
+        df = pd.read_csv(filename, delimiter='\t', dtype=object)
 
         logging.info("Adding rooms and floors")
         for tup in df[df['Room: Number'].notnull()].iterrows():
