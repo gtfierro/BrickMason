@@ -64,6 +64,7 @@ class Generator(object):
                 room = clean(fixture[1]['Room: Number'])
                 zone = str(fixture[1]['Space: Zone']).replace(' ','_')
                 # add lighting and link to room
+                logging.info("Adding light {0}".format(name))
                 self.G.add((BLDG[name], RDF.type, BRICK.Lighting_System))
                 self.G.add((BLDG[name], RDF.label, Literal(fixture[1]['Mark'])))
                 self.G.add((BLDG[name], BF.feeds, BLDG[room]))
@@ -119,3 +120,27 @@ class Generator(object):
             self.G.add((BLDG[tstatname], RDF.type, BRICK.Thermostat))
             self.G.add((BLDG[tstatname], BF.controls, BLDG[rtuname]))
             self.G.add((BLDG[tstatname], BF.isLocatedIn, BLDG[roomname]))
+
+        logging.info('Adding Hamilton sensor')
+        for item in df[(df['Family'] == 'Hamilton_Simple')].iterrows():
+            item = item[1]
+            hamilton_id = str(item['Comments'])[1:] # remove leading x
+            room = str(item['Room: Number'])
+            logging.warning("Hamilton> {0}".format(hamilton_id))
+            name = "hamilton_{0}".format(hamilton_id)
+            G.add((BLDG[name]+"_air_temp", RDF.type, BRICK.Zone_Temperature_Sensor))
+            G.add((BLDG[name]+"_air_temp", BF.hasLocation, BLDG[room]))
+            G.add((BLDG[name]+"_air_temp", BF.isPointOf, BLDG[room]))
+
+            G.add((BLDG[name]+"_pir", RDF.type, BRICK.Occupancy_Sensor))
+            G.add((BLDG[name]+"_pir", BF.hasLocation, BLDG[room]))
+            G.add((BLDG[name]+"_pir", BF.isPointOf, BLDG[room]))
+
+            G.add((BLDG[name]+"_air_rh", RDF.type, BRICK.Relative_Humidity_Sensor))
+            G.add((BLDG[name]+"_air_rh", BF.hasLocation, BLDG[room]))
+            G.add((BLDG[name]+"_air_rh", BF.isPointOf, BLDG[room]))
+
+            G.add((BLDG[name]+"_lux", RDF.type, BRICK.Illumination_Sensor))
+            G.add((BLDG[name]+"_lux", BF.hasLocation, BLDG[room]))
+            G.add((BLDG[name]+"_lux", BF.isPointOf, BLDG[room]))
+
