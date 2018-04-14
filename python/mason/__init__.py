@@ -1,3 +1,4 @@
+import os
 import pytoml
 import importlib
 import coloredlogs, logging
@@ -37,6 +38,13 @@ def execute(cfg):
 
     # global config
     config = cfg.pop('config')
+
+    # configure output dir
+    output_dir = config.get('output')
+    if output_dir and not os.path.exists(output_dir):
+        logging.info("Making output directory {0}".format(output_dir))
+        os.mkdir(output_dir)
+
     # configure BLDG namespace
     BLDG = Namespace('http://xbos.io/ontologies/{0}#'.format(config['namespace']))
     config['BLDG'] = BLDG
@@ -57,6 +65,6 @@ def execute(cfg):
             # add triples from generator
             generator(G, sscfg)
 
-    G.serialize(config['namespace'] + '.ttl',format='turtle')
+    G.serialize(config.get('output','.')+'/'+config['namespace'] + '.ttl',format='turtle')
     print len(G)
     
