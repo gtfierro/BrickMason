@@ -55,7 +55,7 @@ def execute(cfg):
         G.load(config['extra_classes'],format='turtle')
 
     for name, section in cfg.items():
-        scfg = section.pop('config')
+        scfg = section.pop('config') if 'config' in section else {}
         scfg = merge_config(config, scfg)
         logger.info("Running section {0}".format(name))
         for ssname, sscfg in section.items():
