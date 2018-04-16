@@ -1,0 +1,14 @@
+[config]
+# XBOS namespace and filename
+namespace = "ciee"
+# ontology URI to use for model
+ontology = "http://xbos.io/ontologies/ciee"
+# Turtle file containing extra classes we want to use
+extra_classes = "extra_classes.ttl"
+# output directory for brick models
+output = "brick_models/"
+
+[revit]
+    [revit.convert]
+    driver = "mason.driver.revit"
+    revit_schedule = "ciee.txt"
