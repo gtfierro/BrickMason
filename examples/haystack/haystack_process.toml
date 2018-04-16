@@ -1,0 +1,58 @@
+[config]
+# XBOS namespace and filename
+namespace = "my-building-namespace"
+# ontology URI to use for model
+ontology = "http://xbos.io/ontologies/my-building-namespace"
+# Turtle file containing extra classes we want to use
+extra_classes = "extra_classes.ttl"
+# output directory for brick models
+output = "brick_models/"
+
+#[xbos]
+#    [xbos.config]
+#    # base URI of XBOS archiver
+#    archiver = "ucberkeley"
+#
+#    # Adds Green Button meter
+#    [xbos.GreenButton]
+#    driver  = "mason.driver.greenbutton"
+#    # account number
+#    subid = 111111
+#    # meter identifier
+#    uuid = 1111111111
+#
+#    ## Adds NWS data
+#    [xbos.NationalWeatherService]
+#    driver = "mason.driver.nationalweatherservice"
+#    stations = [
+#        "AT565",
+#        "KTLC1",
+#    ]
+#
+#    ## Add devices + URIs from archived data about XBOS interfaces
+#    [xbos.XBOSInterfaces]
+#    driver = "mason.driver.xbosinterfaces"
+
+#[revit]
+#    [revit.config]
+#
+#    [revit.convert]
+#    driver = "mason.driver.revit"
+#    revit_schedule = "my-building-namespace.txt"
+
+#[ifc]
+#    [ifc.config]
+#
+#    [ifc.convert]
+#    driver = "mason.driver.ifc"
+#    ifc_file = "CIEE_2087_Addison.ifc"
+#    ifc_schema = "IFC2X3_TC1.exp"
+
+[haystack]
+    [haystack.convert]
+    driver = "mason.driver.haystack"
+    siteref = 'Ghausi'
+    ahu_filename = 'ahu.json'
+    vav_filename = 'vav.json'
+    points = 'points.csv'
+    haystack_file = "haystack.csv"
