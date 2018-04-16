@@ -1,0 +1,15 @@
+[config]
+# XBOS namespace and filename
+namespace = "ciee"
+# ontology URI to use for model
+ontology = "http://xbos.io/ontologies/ciee"
+# Turtle file containing extra classes we want to use
+extra_classes = "extra_classes.ttl"
+# output directory for brick models
+output = "brick_models/"
+
+[ifc]
+    [ifc.convert]
+    driver = "mason.driver.ifc"
+    ifc_file = "CIEE.ifc"
+    ifc_schema = "IFC2X3_TC1.exp"
