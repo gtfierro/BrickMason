@@ -25,16 +25,12 @@ class Generator(object):
     def __init__(self, G, cfg):
         self.G = G
         schema = IfcSchema(cfg['ifc_schema'])
-        print schema
         ifc_file = IfcFile(cfg['ifc_file'], schema)
-        print ifc_file
         BLDG = cfg['BLDG']
-        #schema = IfcSchema("IFC2X3_TC1.exp")
 
         # zones
         logging.info("Read HVAC zones")
         _zones = ifc_file.entsByName["IFCZONE"]
-        print _zones
         zones = {}
         for zone in _zones:
             z = ifc_file.getEntityById(int(zone))
