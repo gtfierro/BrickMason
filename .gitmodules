@@ -1,0 +1,3 @@
+[submodule "python/mason/driver/python-ifc"]
+	path = python/mason/driver/pythonifc
+	url = https://github.com/mvaerle/python-ifc
