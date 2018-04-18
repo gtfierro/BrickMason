@@ -28,25 +28,28 @@ g.add((BRICK.Site, RDFS.subClassOf, BRICK.Location))
 g.add((BRICK.Site, RDF.type, OWL.Class))
 
 # add properties for sites
-g.add((BRICKFRAME.HumanName, RDF.type, OWL.ObjectProperty))
-g.add((BRICKFRAME.HumanName, RDFS.range, BRICKFRAME.Label))
+g.add((BRICKFRAME.humanName, RDF.type, OWL.ObjectProperty))
+g.add((BRICKFRAME.humanName, RDFS.range, BRICKFRAME.Label))
 
-g.add((BRICKFRAME.ZipCode, RDF.type, OWL.ObjectProperty))
-g.add((BRICKFRAME.ZipCode, RDFS.range, BRICKFRAME.Label))
+g.add((BRICKFRAME.hasSite, RDF.type, OWL.ObjectProperty))
+g.add((BRICKFRAME.hasSite, RDFS.range, BRICK.Site))
 
-g.add((BRICKFRAME.Timezone, RDF.type, OWL.ObjectProperty))
-g.add((BRICKFRAME.Timezone, RDFS.range, BRICKFRAME.Label))
+g.add((BRICKFRAME.zipCode, RDF.type, OWL.ObjectProperty))
+g.add((BRICKFRAME.zipCode, RDFS.range, BRICKFRAME.Label))
 
-g.add((BRICKFRAME.AreaSquareFeet, RDF.type, OWL.ObjectProperty))
-g.add((BRICKFRAME.AreaSquareFeet, RDFS.range, BRICKFRAME.Label))
+g.add((BRICKFRAME.timezone, RDF.type, OWL.ObjectProperty))
+g.add((BRICKFRAME.timezone, RDFS.range, BRICKFRAME.Label))
 
-g.add((BRICKFRAME.AreaSquareMeters, RDF.type, OWL.ObjectProperty))
-g.add((BRICKFRAME.AreaSquareMeters, RDFS.range, BRICKFRAME.Label))
+g.add((BRICKFRAME.areaSquareFeet, RDF.type, OWL.ObjectProperty))
+g.add((BRICKFRAME.areaSquareFeet, RDFS.range, BRICKFRAME.Label))
 
-g.add((BRICKFRAME.NumFloors, RDF.type, OWL.ObjectProperty))
-g.add((BRICKFRAME.NumFloors, RDFS.range, BRICKFRAME.Label))
+g.add((BRICKFRAME.areaSquareMeters, RDF.type, OWL.ObjectProperty))
+g.add((BRICKFRAME.areaSquareMeters, RDFS.range, BRICKFRAME.Label))
 
-g.add((BRICKFRAME.PrimaryFunction, RDF.type, OWL.ObjectProperty))
-g.add((BRICKFRAME.PrimaryFunction, RDFS.range, BRICKFRAME.Label))
+g.add((BRICKFRAME.numFloors, RDF.type, OWL.ObjectProperty))
+g.add((BRICKFRAME.numFloors, RDFS.range, BRICKFRAME.Label))
+
+g.add((BRICKFRAME.primaryFunction, RDF.type, OWL.ObjectProperty))
+g.add((BRICKFRAME.primaryFunction, RDFS.range, BRICKFRAME.Label))
 
 g.serialize('extra_classes.ttl',format='turtle')

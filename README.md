@@ -1,4 +1,4 @@
-# Brick Mason 
+# Brick Mason
 This is a little tool for building Brick models from a variety of data sources.
 
 To generate a Brick model for a site, we need to write a `process.toml` file, which contains configuration information about the constructed model, and a set of drivers to configure and invoke in order to generate that model.
@@ -21,6 +21,8 @@ output = "brick_models/"
 * `namespace`: Because a Brick model uses the RDF data model, we need a namespace to collect all of the building's entities. This is specified as a RDF-style URI.
 * `output`: This is the output directory for the generated TTL file. If it does not exist, it will be created.
 
+The `extra` section gets run last!
+
 ## Drivers
 
 A driver is a Python file that contains a class called `Generator` whose constructor takes a reference to the current RDF graph (nominally called `G`) and a dictionary of configuration options (nominally called `cfg`). The constructor of the class uses RDFlib to add triples to the graph instance.
@@ -38,6 +40,34 @@ Configuration options:
 - `ttlfile`: relative path to a Turtle file containing triples to be added to the graph
 
 This driver is intended to be used if there is a pre-existing Brick model that needs to be augmented, or if there are triples containing extensions to Brick that have not yet been folded into the current release. This driver simply adds the triples contained in the specified Turtle file to the Brick graph.
+
+### Site Attributes: `mason.driver.site`
+
+
+```toml
+[extra]
+    [extra.siteattributes]
+    driver = "mason.driver.site"
+    human_name = "My Building"
+    country = "US"
+    zip_code = "123456"
+    timezone = "America/Los_Angeles"
+    square_feet = "7000"
+    num_floors = "3"
+    primary_function = "Small Commercial"
+```
+
+Configuration options:
+- `human_name`: human-readable name for the site. Can be an arbitrary string rather than a URL-safe encoding (`brickframe:humanName`)
+- `country`: country code for the site (`brickframe:country`)
+- `zip_code`: zip code of the site (`brickframe:zipCode`)
+- `timezone`: IANA timezone code for the site (`brickframe:timezone`)
+- `square_feet`: the area of the building in sq ft (`brickframe:areaSquareFeet`)
+- `square_meters`: the area of the building in sq meters (`brickframe:areaSquareMeters`)
+- `num_floors`: the number of floors in the building (`brickframe:numFloors`)
+- `primary_function`: the primary function of the building (e.g. "Apartment", "Butcher Shop", "Movie Theatre"). Right now this is an arbitrary string (`brickframe:primaryFunction`)
+
+This adds the site object and all of its attributes to the model. This also adds the `bf:hasSite` edge to all objects in the model. For this reason, its considered good practice to put this driver in the `extra` section of the `process.toml` file so that it runs on the full Brick model.
 
 ### Revit Driver: `mason.driver.revit`
 
@@ -97,7 +127,7 @@ XBOS drivers require additional configuration which is placed in a special `conf
 [xbos]
     [xbos.config]
     archiver = "ucberkeley"
-    namespace = my-building-namespace
+    namespace = "my-building-namespace"
 ```
 
 Configuration options:
@@ -147,7 +177,7 @@ Configuration options:
 [xbos]
     [xbos.config]
     # ...
-    
+
     [xbos.XBOSInterfaces]
     driver = "mason.driver.xbosinterfaces"
 ```
