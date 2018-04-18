@@ -50,6 +50,8 @@ def execute(cfg):
     config['BLDG'] = BLDG
     G.bind('bldg', BLDG)
 
+    extra_section = cfg.pop('extra')
+
     for name, section in cfg.items():
         scfg = section.pop('config') if 'config' in section else {}
         scfg = merge_config(config, scfg)
@@ -61,6 +63,18 @@ def execute(cfg):
             # add triples from generator
             generator(G, sscfg)
 
+    # run extra_section
+    logging.info("Running EXTRA section last")
+    scfg = extra_section.pop('config') if 'config' in extra_section else {}
+    scfg = merge_config(config, scfg)
+    logger.info("Running section {0}".format(name))
+    for ssname, sscfg in extra_section.items():
+        logger.info("Running subsection {0}.{1}".format(name, ssname))
+        sscfg = merge_config(scfg, sscfg)
+        generator = import_string(sscfg['driver'])
+        # add triples from generator
+        generator(G, sscfg)
+
     G.serialize(config.get('output','.')+'/'+config['filename'] + '.ttl',format='turtle')
-    print len(G)
+    logging.info("Generated {0} triples!".format(len(G)))
     
