@@ -14,6 +14,30 @@ brick:Illumination_Sensor a <http://www.w3.org/2002/07/owl#Class> ;
 brick:RTU a <http://www.w3.org/2002/07/owl#Class> ;
     rdfs:subClassOf brick:AHU .
 
+brick:Site a <http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:subClassOf brick:Location .
+
+bf:AreaSquareFeet a <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+    rdfs:range bf:Label .
+
+bf:AreaSquareMeters a <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+    rdfs:range bf:Label .
+
+bf:HumanName a <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+    rdfs:range bf:Label .
+
+bf:NumFloors a <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+    rdfs:range bf:Label .
+
+bf:PrimaryFunction a <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+    rdfs:range bf:Label .
+
+bf:Timezone a <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+    rdfs:range bf:Label .
+
+bf:ZipCode a <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+    rdfs:range bf:Label .
+
 brick:Building_Electric_Meter a <http://www.w3.org/2002/07/owl#Class> ;
     rdfs:subClassOf brick:Electric_Meter .
 
