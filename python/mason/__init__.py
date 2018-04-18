@@ -46,13 +46,9 @@ def execute(cfg):
         os.mkdir(output_dir)
 
     # configure BLDG namespace
-    BLDG = Namespace('http://xbos.io/ontologies/{0}#'.format(config['namespace']))
+    BLDG = Namespace('http://xbos.io/ontologies/{0}#'.format(config['rdf_namespace']))
     config['BLDG'] = BLDG
     G.bind('bldg', BLDG)
-    # add extra classes
-    if config.get('extra_classes'):
-        #TODO: add!
-        G.load(config['extra_classes'],format='turtle')
 
     for name, section in cfg.items():
         scfg = section.pop('config') if 'config' in section else {}
@@ -65,6 +61,6 @@ def execute(cfg):
             # add triples from generator
             generator(G, sscfg)
 
-    G.serialize(config.get('output','.')+'/'+config['namespace'] + '.ttl',format='turtle')
+    G.serialize(config.get('output','.')+'/'+config['filename'] + '.ttl',format='turtle')
     print len(G)
     
