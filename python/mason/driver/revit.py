@@ -126,25 +126,33 @@ class Generator(object):
             self.G.add((BLDG[tstatname], BF.isLocatedIn, BLDG[roomname]))
 
         logging.info('Adding Hamilton sensor')
+        sensors = []
         for item in df[(df['Family'] == 'Hamilton_Simple')].iterrows():
             item = item[1]
             hamilton_id = str(item['Comments'])[1:] # remove leading x
             room = str(item['Room: Number'])
             logging.warning("Hamilton> {0}".format(hamilton_id))
-            name = "hamilton_{0}".format(hamilton_id)
-            G.add((BLDG[name]+"_air_temp", RDF.type, BRICK.Zone_Temperature_Sensor))
-            G.add((BLDG[name]+"_air_temp", BF.hasLocation, BLDG[room]))
-            G.add((BLDG[name]+"_air_temp", BF.isPointOf, BLDG[room]))
+            name = "hamilton_{0}".format(hamilton_id).lower()
+            #print basename, name
+            sensors.append((BLDG[name+'_air_temp'], RDF.type, BRICK.Zone_Temperature_Sensor))
+            sensors.append((BLDG[name+'_air_temp'], BF.hasLocation, BLDG[room]))
+            sensors.append((BLDG[name+'_air_temp'], BF.isPointOf, BLDG[room]))
 
-            G.add((BLDG[name]+"_pir", RDF.type, BRICK.Occupancy_Sensor))
-            G.add((BLDG[name]+"_pir", BF.hasLocation, BLDG[room]))
-            G.add((BLDG[name]+"_pir", BF.isPointOf, BLDG[room]))
+            #name = find(G, BRICK.Occupancy_Sensor, basename)
+            sensors.append((BLDG[name+'_pir'], RDF.type, BRICK.Occupancy_Sensor))
+            sensors.append((BLDG[name+'_pir'], BF.hasLocation, BLDG[room]))
+            sensors.append((BLDG[name+'_pir'], BF.isPointOf, BLDG[room]))
 
-            G.add((BLDG[name]+"_air_rh", RDF.type, BRICK.Relative_Humidity_Sensor))
-            G.add((BLDG[name]+"_air_rh", BF.hasLocation, BLDG[room]))
-            G.add((BLDG[name]+"_air_rh", BF.isPointOf, BLDG[room]))
+            #name = find(G, BRICK.Relative_Humidity_Sensor, basename)
+            sensors.append((BLDG[name+'_air_rh'], RDF.type, BRICK.Relative_Humidity_Sensor))
+            sensors.append((BLDG[name+'_air_rh'], BF.hasLocation, BLDG[room]))
+            sensors.append((BLDG[name+'_air_rh'], BF.isPointOf, BLDG[room]))
 
-            G.add((BLDG[name]+"_lux", RDF.type, BRICK.Illumination_Sensor))
-            G.add((BLDG[name]+"_lux", BF.hasLocation, BLDG[room]))
-            G.add((BLDG[name]+"_lux", BF.isPointOf, BLDG[room]))
+            #name = find(G, BRICK.Illumination_Sensor, basename)
+            sensors.append((BLDG[name+'_lux'], RDF.type, BRICK.Illumination_Sensor))
+            sensors.append((BLDG[name+'_lux'], BF.hasLocation, BLDG[room]))
+            sensors.append((BLDG[name+'_lux'], BF.isPointOf, BLDG[room]))
+
+        for triple in sensors:
+            self.G.add(triple)
 

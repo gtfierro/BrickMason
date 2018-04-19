@@ -39,6 +39,7 @@ i_xbos_plug_points = {
 
 class Generator(object):
     def __init__(self, G, cfg):
+        self.G = G
         self.BLDG = cfg['BLDG']
         self.namespace = cfg['namespace']
         self.client = DataClient(archivers=[cfg['archiver']])
@@ -226,23 +227,23 @@ class Generator(object):
         md = self.client.query("select name, uuid where namespace = '{0}' and originaluri like '{1}'".format(namespace, rest_of_uri)).get('metadata')
         triples = []
         for doc in md:
-            name = doc.get('name')
-            if not name: continue
-            if name == 'air_temp':
+            basename = doc.get('name')
+            if not basename: continue
+            sensorname = 'hamilton_{0}'.format(sensorname[-4:]).lower()
+            if basename == 'air_temp':
                 triples.append((self.BLDG[sensorname+'_air_temp'], RDF.type, BRICK.Zone_Temperature_Sensor))
                 triples.append((self.BLDG[sensorname+'_air_temp'], BF.uri, Literal(uri)))
                 triples.append((self.BLDG[sensorname+'_air_temp'], BF.uuid, Literal(doc.get('uuid'))))
-            elif name == 'lux':
+            elif basename == 'lux':
                 triples.append((self.BLDG[sensorname+'_lux'], RDF.type, BRICK.Illumination_Sensor))
                 triples.append((self.BLDG[sensorname+'_lux'], BF.uri, Literal(uri)))
                 triples.append((self.BLDG[sensorname+'_lux'], BF.uuid, Literal(doc.get('uuid'))))
-            elif name == 'air_rh':
+            elif basename == 'air_rh':
                 triples.append((self.BLDG[sensorname+'_air_rh'], RDF.type, BRICK.Relative_Humidity_Sensor))
                 triples.append((self.BLDG[sensorname+'_air_rh'], BF.uri, Literal(uri)))
                 triples.append((self.BLDG[sensorname+'_air_rh'], BF.uuid, Literal(doc.get('uuid'))))
-            elif name == 'pir':
+            elif basename == 'pir':
                 triples.append((self.BLDG[sensorname+'_pir'], RDF.type, BRICK.Occupancy_Sensor))
                 triples.append((self.BLDG[sensorname+'_pir'], BF.uri, Literal(uri)))
                 triples.append((self.BLDG[sensorname+'_pir'], BF.uuid, Literal(doc.get('uuid'))))
         return triples
-
