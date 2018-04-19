@@ -140,6 +140,29 @@ class Generator(object):
             for t in self.add_xbos_light(self.BLDG['light_'+light_name], self.namespace+urisuffix):
                 G.add(t)
 
+        logging.info("Querying for Hamilton sensors")
+        result = self.client.query('select path where uri like "{0}" and originaluri like "i.temperature" and name = "air_temp";'.format(self.namespace))
+        for doc in result['metadata']:
+            path = doc['path']
+            # extract hamilton name
+            sensor_name = re.match(r'.*/([^/]+)/i.temperature', path)
+            if sensor_name is not None:
+                sensor_name = sensor_name.groups()[0]
+            else:
+                logging.warning("No sensor name found for {0}".format(path))
+                continue
+
+            urisuffix = re.match(r'[^/]+(/.*/i.temperature)', path)
+            if urisuffix is not None:
+                urisuffix = urisuffix.groups()[0]
+            else:
+                logging.warning("No URI suffix found for {0}".format(light_name))
+                continue
+            logging.info('Sensor Name: {0} ({1})'.format(sensor_name, self.namespace+urisuffix))
+            for t in self.add_hamilton_sensor(sensor_name, self.namespace+urisuffix):
+                G.add(t)
+
+
     def add_xbos_thermostat(self, node, uri, controls=None):
         rest_of_uri = '/'.join(uri.split("/")[1:])
         self.namespace = uri.split("/")[0]
@@ -196,3 +219,30 @@ class Generator(object):
                 triples.append((node, BF.hasPoint, pointname))
                 triples.append((pointname, BF.uuid, Literal(doc['uuid'])))
         return triples
+
+    def add_hamilton_sensor(self, sensorname, uri):
+        rest_of_uri = '/'.join(uri.split("/")[1:])
+        namespace = uri.split("/")[0]
+        md = self.client.query("select name, uuid where namespace = '{0}' and originaluri like '{1}'".format(namespace, rest_of_uri)).get('metadata')
+        triples = []
+        for doc in md:
+            name = doc.get('name')
+            if not name: continue
+            if name == 'air_temp':
+                triples.append((self.BLDG[sensorname+'_air_temp'], RDF.type, BRICK.Zone_Temperature_Sensor))
+                triples.append((self.BLDG[sensorname+'_air_temp'], BF.uri, Literal(uri)))
+                triples.append((self.BLDG[sensorname+'_air_temp'], BF.uuid, Literal(doc.get('uuid'))))
+            elif name == 'lux':
+                triples.append((self.BLDG[sensorname+'_lux'], RDF.type, BRICK.Illumination_Sensor))
+                triples.append((self.BLDG[sensorname+'_lux'], BF.uri, Literal(uri)))
+                triples.append((self.BLDG[sensorname+'_lux'], BF.uuid, Literal(doc.get('uuid'))))
+            elif name == 'air_rh':
+                triples.append((self.BLDG[sensorname+'_air_rh'], RDF.type, BRICK.Relative_Humidity_Sensor))
+                triples.append((self.BLDG[sensorname+'_air_rh'], BF.uri, Literal(uri)))
+                triples.append((self.BLDG[sensorname+'_air_rh'], BF.uuid, Literal(doc.get('uuid'))))
+            elif name == 'pir':
+                triples.append((self.BLDG[sensorname+'_pir'], RDF.type, BRICK.Occupancy_Sensor))
+                triples.append((self.BLDG[sensorname+'_pir'], BF.uri, Literal(uri)))
+                triples.append((self.BLDG[sensorname+'_pir'], BF.uuid, Literal(doc.get('uuid'))))
+        return triples
+
