@@ -38,10 +38,12 @@ class Generator(object):
 
             # add floor and room
             self.G.add((BLDG[name], RDF.type, BRICK.Room))
-            self.G.add((BLDG[floor], RDF.type, BRICK.Floor))
-            self.G.add((BLDG[floor], RDF.label, Literal(room['Level'])))
-            self.G.add((BLDG[floor], BF.hasPart, BLDG[name]))
             self.G.add((BLDG[name], RDF.label, Literal(room['Room: Name'])))
+
+            if floor != 'nan':
+                self.G.add((BLDG[floor], RDF.type, BRICK.Floor))
+                self.G.add((BLDG[floor], RDF.label, Literal(room['Level'])))
+                self.G.add((BLDG[floor], BF.hasPart, BLDG[name]))
 
             # link room to HVAC zone
             if not zone:
@@ -63,12 +65,14 @@ class Generator(object):
                 name = clean(fixture[1]['Mark'])
                 room = clean(fixture[1]['Room: Number'])
                 zone = str(fixture[1]['Space: Zone']).replace(' ','_')
-                # add lighting and link to room
-                logging.info("Adding light {0}".format(name))
-                self.G.add((BLDG[name], RDF.type, BRICK.Lighting_System))
-                self.G.add((BLDG[name], RDF.label, Literal(fixture[1]['Mark'])))
-                self.G.add((BLDG[name], BF.feeds, BLDG[room]))
-                self.G.add((BLDG[name], BF.isLocatedIn, BLDG[room]))
+
+                if name != 'nan':
+                    # add lighting and link to room
+                    logging.info("Adding light {0}".format(name))
+                    self.G.add((BLDG[name], RDF.type, BRICK.Lighting_System))
+                    self.G.add((BLDG[name], RDF.label, Literal(fixture[1]['Mark'])))
+                    self.G.add((BLDG[name], BF.feeds, BLDG[room]))
+                    self.G.add((BLDG[name], BF.isLocatedIn, BLDG[room]))
                 if not zone:
                     logging.error('No zone information found')
                     continue
