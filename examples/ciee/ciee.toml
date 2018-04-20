@@ -1,0 +1,44 @@
+[config]
+# XBOS namespace and filename
+filename = "ciee"
+# ontology URI to use for model
+rdf_namespace = "http://xbos.io/ontologies/ciee"
+output = 'brick_models/'
+
+[extra]
+    [extra.ttlfile]
+    driver = "mason.driver.ttlfile"
+    ttlfile = "extra_classes.ttl"
+
+    [extra.siteattributes]
+    driver = "mason.driver.site"
+    human_name = "California Institute for Energy and Environment Office"
+    country = "US"
+    zip_code = "94704"
+    timezone = "America/Los_Angeles"
+    square_feet = "8424"
+    num_floors = "2"
+    primary_function = "Office"
+
+[xbos]
+    [xbos.config]
+    # base URI of XBOS archiver
+    archiver = "ucberkeley"
+    namespace = "ciee"
+
+    ## Adds NWS data
+    [xbos.NationalWeatherService]
+    driver = "mason.driver.nationalweatherservice"
+    stations = [
+        "KOAK",
+        "LBNL1",
+    ]
+
+    ## Add devices + URIs from archived data about XBOS interfaces
+    [xbos.XBOSInterfaces]
+    driver = "mason.driver.xbosinterfaces"
+
+[revit]
+    [revit.revit]
+    driver = "mason.driver.revit"
+    revit_schedule = "ciee.txt"
