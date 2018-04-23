@@ -6,7 +6,7 @@ import coloredlogs, logging
 logger = logging.getLogger(__name__)
 coloredlogs.install(level='DEBUG', fmt='%(asctime)s %(filename)s:%(lineno)s %(levelname)s %(message)s')
 
-__all__ = ['driver','driver.revit']
+__all__ = ['driver']
 
 def import_string(name):
     mod = importlib.import_module(name)

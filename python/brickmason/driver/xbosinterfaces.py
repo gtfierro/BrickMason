@@ -59,6 +59,9 @@ class Generator(object):
             else:
                 logging.warning("No zone found")
                 continue
+            tstat_mapping = cfg.get('tstat_mapping')
+            if tstat_mapping is not None:
+                zone_name =  'HVAC_Zone_'+tstat_mapping.get(zone_name, zone_name)
             logging.info('HVAC Zone: {0}'.format(zone_name))
 
             urisuffix = re.match(r'[^/]+(/.*/i.xbos.thermostat)', path)

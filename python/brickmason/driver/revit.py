@@ -72,7 +72,7 @@ class Generator(object):
                     self.G.add((BLDG[name], RDF.type, BRICK.Lighting_System))
                     self.G.add((BLDG[name], RDF.label, Literal(fixture[1]['Mark'])))
                     self.G.add((BLDG[name], BF.feeds, BLDG[room]))
-                    self.G.add((BLDG[name], BF.isLocatedIn, BLDG[room]))
+                    self.G.add((BLDG[name], BF.hasLocation, BLDG[room]))
                 if not zone:
                     logging.error('No zone information found')
                     continue
@@ -117,13 +117,13 @@ class Generator(object):
                 logging.error('No zone information found')
                 continue
             zonename = 'HVAC_Zone_'+zone
-            tstatname = 'thermostat_' + zonename
+            tstatname = zonename + '_tstat'
             rtuname = 'RTU_'+zonename
             roomname = clean(item['Room: Number'])
             self.G.add((BLDG[zonename], RDF.type, BRICK.HVAC_Zone))
             self.G.add((BLDG[tstatname], RDF.type, BRICK.Thermostat))
             self.G.add((BLDG[tstatname], BF.controls, BLDG[rtuname]))
-            self.G.add((BLDG[tstatname], BF.isLocatedIn, BLDG[roomname]))
+            self.G.add((BLDG[tstatname], BF.hasLocation, BLDG[roomname]))
 
         logging.info('Adding Hamilton sensor')
         sensors = []
