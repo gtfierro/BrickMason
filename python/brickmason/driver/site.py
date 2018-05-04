@@ -2,14 +2,12 @@ from rdflib import Graph, Namespace, URIRef, Literal
 from collections import defaultdict
 from .pythonifc.ifcfilereader import *
 import coloredlogs, logging
+from ..ontologies import *
 logger = logging.getLogger(__name__)
 coloredlogs.install(level='DEBUG', fmt='%(asctime)s %(filename)s:%(lineno)s %(levelname)s %(message)s')
 
 RDF = Namespace('http://www.w3.org/1999/02/22-rdf-syntax-ns#')
 RDFS = Namespace('http://www.w3.org/2000/01/rdf-schema#')
-BRICK = Namespace('https://brickschema.org/schema/1.0.1/Brick#')
-BRICKFRAME = Namespace('https://brickschema.org/schema/1.0.1/BrickFrame#')
-BF = BRICKFRAME
 OWL = Namespace('http://www.w3.org/2002/07/owl#')
 
 class Generator(object):
@@ -52,11 +50,20 @@ class Generator(object):
             G.add((site, BF.PrimaryFunction, Literal(primary_function)))
 
         logging.info("Adding bf:site to all objects...")
-        G.bind('rdf', RDF)
-        G.bind('owl', OWL)
+
+        _g = Graph()
+        _g.parse('Brick.ttl', format='turtle')
+        _g.parse('BrickFrame.ttl', format='turtle')
+        _g.bind('rdf', RDF)
+        _g.bind('owl', OWL)
+        _g += G
+        
+
         q = """PREFIX rdf: <{0}>
 PREFIX owl: <{1}>
-SELECT DISTINCT ?x WHERE {{ ?x rdf:type/rdf:type owl:Class }}""".format(RDF,OWL)
-        res = G.query(q)
+SELECT DISTINCT ?x ?class WHERE {{ ?x rdf:type/rdf:type owl:Class . ?x rdf:type ?class }}""".format(RDF,OWL)
+        res = _g.query(q)
         for row in res:
+            if row[1].split('#')[-1] == 'Site':
+                continue
             G.add((row[0], BF.hasSite, site))

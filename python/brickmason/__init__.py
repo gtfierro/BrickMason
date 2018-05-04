@@ -2,11 +2,12 @@ import os
 import pytoml
 import importlib
 import coloredlogs, logging
+from ontologies import *
 
 logger = logging.getLogger(__name__)
 coloredlogs.install(level='DEBUG', fmt='%(asctime)s %(filename)s:%(lineno)s %(levelname)s %(message)s')
 
-__all__ = ['driver']
+__all__ = ['driver','ontologies']
 
 def import_string(name):
     mod = importlib.import_module(name)
@@ -26,8 +27,6 @@ from rdflib import Graph, Namespace, URIRef, Literal
 def execute(cfg):
     RDF = Namespace('http://www.w3.org/1999/02/22-rdf-syntax-ns#')
     RDFS = Namespace('http://www.w3.org/2000/01/rdf-schema#')
-    BRICK = Namespace('https://brickschema.org/schema/1.0.1/Brick#')
-    BRICKFRAME = Namespace('https://brickschema.org/schema/1.0.1/BrickFrame#')
     BF = BRICKFRAME
     OWL = Namespace('http://www.w3.org/2002/07/owl#')
     G = Graph()
@@ -46,7 +45,13 @@ def execute(cfg):
         os.mkdir(output_dir)
 
     # configure BLDG namespace
-    BLDG = Namespace('http://xbos.io/ontologies/{0}#'.format(config['rdf_namespace']))
+    rdfns = config.get('rdf_namespace')
+    if rdfns is None:
+        logging.error("NEED rdf_namespace")    
+        return
+    if not rdfns.endswith('#'):
+        rdfns += '#'
+    BLDG = Namespace(rdfns)
     config['BLDG'] = BLDG
     G.bind('bldg', BLDG)
 
@@ -55,9 +60,15 @@ def execute(cfg):
     for name, section in cfg.items():
         scfg = section.pop('config') if 'config' in section else {}
         scfg = merge_config(config, scfg)
-        logger.info("Running section {0}".format(name))
+        title = "Running section {0}".format(name)
+        logger.info('#'*len(title))
+        logger.info(title)
+        logger.info('#'*len(title))
         for ssname, sscfg in section.items():
-            logger.info("Running subsection {0}.{1}".format(name, ssname))
+            title = "Running subsection {0}.{1}".format(name, ssname)
+            logger.info('#'*len(title))
+            logger.info(title)
+            logger.info('#'*len(title))
             sscfg = merge_config(scfg, sscfg)
             generator = import_string(sscfg['driver'])
             # add triples from generator

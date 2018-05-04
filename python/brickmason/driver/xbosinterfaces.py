@@ -3,13 +3,12 @@ from rdflib import Namespace, URIRef, Literal
 from xbos.services.pundat import DataClient
 from xbos.services.brick import Generator as XBOSGenerator
 import coloredlogs, logging
+from ..ontologies import *
 logger = logging.getLogger(__name__)
 coloredlogs.install(level='DEBUG', fmt='%(asctime)s %(filename)s:%(lineno)s %(levelname)s %(message)s')
 
 RDF = Namespace('http://www.w3.org/1999/02/22-rdf-syntax-ns#')
 RDFS = Namespace('http://www.w3.org/2000/01/rdf-schema#')
-BRICK = Namespace('https://brickschema.org/schema/1.0.1/Brick#')
-BF = Namespace('https://brickschema.org/schema/1.0.1/BrickFrame#')
 OWL = Namespace('http://www.w3.org/2002/07/owl#')
 
 
@@ -45,9 +44,9 @@ class Generator(object):
         self.client = DataClient(archivers=[cfg['archiver']])
         generator = XBOSGenerator(self.BLDG, self.client)
 
-        logging.info("Querying for Thermostats")
+        logging.info(">>Querying for Thermostats")
         thermostats = {}
-        result = self.client.query('select path where uri like "{0}" and uri like "thermostat" and name = "state";'.format(self.namespace))
+        result = self.client.query('select path where uri like "^{0}" and uri like "thermostat" and name = "state";'.format(self.namespace))
 
         for doc in result['metadata']:
             path = doc['path']
@@ -72,7 +71,7 @@ class Generator(object):
                 continue
             logging.info('Tstat URI: {0}'.format(urisuffix))
 
-            rtu_name = zone_name+"_RTU"
+            rtu_name = "RTU_"+zone_name
             G.add((self.BLDG[rtu_name], RDF.type, BRICK.RTU))
             G.add((self.BLDG[rtu_name], BF.feeds, self.BLDG[zone_name]))
             G.add((self.BLDG[zone_name], RDF.type, BRICK.HVAC_Zone))

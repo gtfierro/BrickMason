@@ -6,14 +6,12 @@ from IPython import embed
 from xbos.services.brick import Generator
 
 import coloredlogs, logging
+from ..ontologies import *
 logger = logging.getLogger(__name__)
 coloredlogs.install(level='DEBUG', fmt='%(asctime)s %(filename)s:%(lineno)s %(levelname)s %(message)s')
 
 RDF = Namespace('http://www.w3.org/1999/02/22-rdf-syntax-ns#')
 RDFS = Namespace('http://www.w3.org/2000/01/rdf-schema#')
-BRICK = Namespace('https://brickschema.org/schema/1.0.1/Brick#')
-BRICKFRAME = Namespace('https://brickschema.org/schema/1.0.1/BrickFrame#')
-BF = BRICKFRAME
 OWL = Namespace('http://www.w3.org/2002/07/owl#')
 
 def clean(s):
@@ -32,7 +30,7 @@ class Generator(object):
         logging.info("Adding rooms and floors")
         for tup in df[df['Room: Number'].notnull()].iterrows():
             room = tup[1]
-            name = clean(room['Room: Number'])
+            name = 'Room_'+clean(room['Room: Number'])
             floor = clean(room['Level'])
             zone = str(room['Space: Zone']).replace(' ','_')
 
@@ -46,7 +44,7 @@ class Generator(object):
                 self.G.add((BLDG[floor], BF.hasPart, BLDG[name]))
 
             # link room to HVAC zone
-            if not zone:
+            if not zone or zone in ['nan','Default']:
                 logging.error('No zone information found')
                 continue
             zonename = 'HVAC_Zone_'+zone
@@ -63,7 +61,7 @@ class Generator(object):
         for fixture in fixtures.iterrows():
             if fixture[1]['Mark'] and 'Sensor' in str(fixture[1]['Mark']):
                 name = clean(fixture[1]['Mark'])
-                room = clean(fixture[1]['Room: Number'])
+                room = 'Room_'+clean(fixture[1]['Room: Number'])
                 zone = str(fixture[1]['Space: Zone']).replace(' ','_')
 
                 if name != 'nan':
@@ -73,7 +71,7 @@ class Generator(object):
                     self.G.add((BLDG[name], RDF.label, Literal(fixture[1]['Mark'])))
                     self.G.add((BLDG[name], BF.feeds, BLDG[room]))
                     self.G.add((BLDG[name], BF.hasLocation, BLDG[room]))
-                if not zone:
+                if not zone or zone in ['nan','Default']:
                     logging.error('No zone information found')
                     continue
                 zonename = 'HVAC_Zone_'+zone
@@ -83,7 +81,7 @@ class Generator(object):
         logging.info('Adding dampers')
         for item in df[df['Category'] == 'Air Terminals'].iterrows():
             item = item[1]
-            room = clean(item['Room: Number'])
+            room = 'Room_'+clean(item['Room: Number'])
             if item['Family'] == 'Return Diffuser':
                 dmp_id = 'return_damper_' + str(item['Mark'])
                 self.G.add((BLDG[dmp_id], RDF.type, BRICK.Return_Air_Damper))
@@ -102,7 +100,7 @@ class Generator(object):
             rtuname = 'RTU_'+zone
             self.G.add((BLDG[rtuname], RDF.type, BRICK.Rooftop_Unit))
 
-            if not zone:
+            if not zone or zone in ['nan','Default']:
                 logging.error('No zone information found')
                 continue
             zonename = 'HVAC_Zone_'+zone
@@ -113,13 +111,13 @@ class Generator(object):
         for item in df[(df['Family'] == 'Thermostat_573')].iterrows():
             item = item[1]
             zone = str(item['Space: Zone']).replace(' ','_')
-            if not zone:
+            if not zone or zone in ['nan','Default']:
                 logging.error('No zone information found')
                 continue
             zonename = 'HVAC_Zone_'+zone
             tstatname = zonename + '_tstat'
             rtuname = 'RTU_'+zonename
-            roomname = clean(item['Room: Number'])
+            roomname = 'Room_'+clean(item['Room: Number'])
             self.G.add((BLDG[zonename], RDF.type, BRICK.HVAC_Zone))
             self.G.add((BLDG[tstatname], RDF.type, BRICK.Thermostat))
             self.G.add((BLDG[tstatname], BF.controls, BLDG[rtuname]))
@@ -130,7 +128,7 @@ class Generator(object):
         for item in df[(df['Family'] == 'Hamilton_Simple')].iterrows():
             item = item[1]
             hamilton_id = str(item['Comments'])[1:] # remove leading x
-            room = str(item['Room: Number'])
+            room = 'Room_'+clean(item['Room: Number'])
             logging.warning("Hamilton> {0}".format(hamilton_id))
             name = "hamilton_{0}".format(hamilton_id).lower()
             #print basename, name
@@ -139,9 +137,9 @@ class Generator(object):
             sensors.append((BLDG[name+'_air_temp'], BF.isPointOf, BLDG[room]))
 
             #name = find(G, BRICK.Occupancy_Sensor, basename)
-            sensors.append((BLDG[name+'_pir'], RDF.type, BRICK.Occupancy_Sensor))
-            sensors.append((BLDG[name+'_pir'], BF.hasLocation, BLDG[room]))
-            sensors.append((BLDG[name+'_pir'], BF.isPointOf, BLDG[room]))
+            sensors.append((BLDG[name+'_presence'], RDF.type, BRICK.Occupancy_Sensor))
+            sensors.append((BLDG[name+'_presence'], BF.hasLocation, BLDG[room]))
+            sensors.append((BLDG[name+'_presence'], BF.isPointOf, BLDG[room]))
 
             #name = find(G, BRICK.Relative_Humidity_Sensor, basename)
             sensors.append((BLDG[name+'_air_rh'], RDF.type, BRICK.Relative_Humidity_Sensor))
