@@ -78,9 +78,9 @@ def execute(cfg):
     logging.info("Running EXTRA section last")
     scfg = extra_section.pop('config') if 'config' in extra_section else {}
     scfg = merge_config(config, scfg)
-    logger.info("Running section {0}".format(name))
+    logger.info("Running section {0}".format('extra'))
     for ssname, sscfg in extra_section.items():
-        logger.info("Running subsection {0}.{1}".format(name, ssname))
+        logger.info("Running subsection {0}".format(ssname))
         sscfg = merge_config(scfg, sscfg)
         generator = import_string(sscfg['driver'])
         # add triples from generator
