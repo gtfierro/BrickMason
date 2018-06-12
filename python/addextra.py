@@ -48,6 +48,11 @@ g.add((BRICKFRAME.isSiteOf, RDF.type, OWL.ObjectProperty))
 g.add((BRICKFRAME.isSiteOf, RDFS.domain, BRICK.Site))
 g.add((BRICKFRAME.isSiteOf, OWL.inverseOf, BRICKFRAME.hasSite))
 
+g.add((BRICKFRAME.adjacentTo, RDF.type, OWL.ObjectProperty))
+g.add((BRICKFRAME.adjacentTo, OWL.inverseOf, BRICKFRAME.adjacentTo))
+g.add((BRICKFRAME.adjacentTo, RDFS.range, BRICK.Location))
+g.add((BRICKFRAME.adjacentTo, RDFS.domain, BRICK.Location))
+
 g.add((BRICKFRAME.zipCode, RDF.type, OWL.ObjectProperty))
 g.add((BRICKFRAME.zipCode, RDFS.range, BRICKFRAME.Label))
 
