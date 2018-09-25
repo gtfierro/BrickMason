@@ -62,7 +62,7 @@ class Generator(object):
                     archive_request = yaml.load(open(archiverequestfile))
                     # generate uuids
                     for aspect in archive_request['Archive']:
-                        if aspect['Name'] != 'demand': continue
+                        if not (aspect['Name'] == 'demand' or aspect['Name'] == 'current_demand'): continue
                         match =  re.match(aspect['URIMatch'], meteruri)
                         newURItemplate = aspect['URIReplace']
                         if match is None: continue

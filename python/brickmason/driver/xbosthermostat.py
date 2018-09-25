@@ -75,6 +75,7 @@ class Generator(object):
                     zone_name =  'HVAC_Zone_'+tstat_mapping.get(zone_name, zone_name)
                 else:
                     zone_name = 'HVAC_Zone_'+zone_name
+                zone_name = zone_name.replace('-','_')
                 logging.info('HVAC Zone: {0}'.format(zone_name))
 
 

@@ -1,4 +1,5 @@
 import os
+import sys
 import pytoml
 import importlib
 import coloredlogs, logging
@@ -79,7 +80,9 @@ def execute(cfg):
     scfg = extra_section.pop('config') if 'config' in extra_section else {}
     scfg = merge_config(config, scfg)
     logger.info("Running section {0}".format('extra'))
-    for ssname, sscfg in extra_section.items():
+    for ssname in ['ttlfile','siteattributes']:
+        sscfg = extra_section[ssname]
+    #for ssname, sscfg in extra_section.items():
         logger.info("Running subsection {0}".format(ssname))
         sscfg = merge_config(scfg, sscfg)
         generator = import_string(sscfg['driver'])

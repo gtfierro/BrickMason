@@ -48,13 +48,12 @@ class Generator(object):
                 logging.error('No zone information found')
                 continue
             zonename = 'HVAC_Zone_'+zone
+            logging.debug('zone> {0}'.format(zonename))
             self.G.add((BLDG[name], BF.isPartOf, BLDG[zonename]))
             self.G.add((BLDG[zonename], RDF.type, BRICK.HVAC_Zone))
 
         logging.info("Adding HVAC Zones")
         zones = df['Space: Zone'].unique()
-        for zone in zones:
-            logging.debug('zone> {0}'.format(zone))
 
         logging.info("Adding lights")
         fixtures = df[df['Category'] == 'Lighting Fixtures']
@@ -98,7 +97,7 @@ class Generator(object):
 
             # add RTU
             rtuname = 'RTU_'+zone
-            self.G.add((BLDG[rtuname], RDF.type, BRICK.Rooftop_Unit))
+            self.G.add((BLDG[rtuname], RDF.type, BRICK.RTU))
 
             if not zone or zone in ['nan','Default']:
                 logging.error('No zone information found')
