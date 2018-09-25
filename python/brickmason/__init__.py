@@ -5,6 +5,8 @@ import importlib
 import coloredlogs, logging
 from ontologies import *
 
+anonymize = False
+
 logger = logging.getLogger(__name__)
 coloredlogs.install(level='DEBUG', fmt='%(asctime)s %(filename)s:%(lineno)s %(levelname)s %(message)s')
 
@@ -87,6 +89,10 @@ def execute(cfg):
         sscfg = merge_config(scfg, sscfg)
         generator = import_string(sscfg['driver'])
         # add triples from generator
+        generator(G, sscfg)
+    
+    if anonymize:
+        generator = import_string('brickmason.driver.anonymize')
         generator(G, sscfg)
 
     G.serialize(config.get('output','.')+'/'+config['filename'] + '.ttl',format='turtle')
