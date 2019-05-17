@@ -55,6 +55,7 @@ class Generator(object):
             zone_name = re.match(r'.*/([^/]+)/i.xbos.thermostat', path)
             if zone_name is not None:
                 zone_name = zone_name.groups()[0]
+                zone_name = zone_name.replace('-','_').replace(' ','_').lower()
             else:
                 logging.warning("No zone found")
                 continue
@@ -62,6 +63,7 @@ class Generator(object):
             if tstat_mapping is not None:
                 zone_name =  'HVAC_Zone_'+tstat_mapping.get(zone_name, zone_name)
             logging.info('HVAC Zone: {0}'.format(zone_name))
+                zone_name = zone_name.replace('-','_').replace(' ','_').lower()
 
             urisuffix = re.match(r'[^/]+(/.*/i.xbos.thermostat)', path)
             if urisuffix is not None:

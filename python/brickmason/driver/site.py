@@ -17,14 +17,14 @@ class Generator(object):
         site = BLDG[cfg.get('filename')]
         G.add((site, RDF.type, BRICK.Site))
 
-        human_name = cfg.get('human_name')
-        if human_name:
-            G.add((site, BF.HumanName, Literal(human_name)))
-
-        zip_code = cfg.get('zip_code')
-        if zip_code:
-            G.add((site, BF.ZipCode, Literal(zip_code)))
-
+#        human_name = cfg.get('human_name')
+#        if human_name:
+#            G.add((site, BF.HumanName, Literal(human_name)))
+#
+#        zip_code = cfg.get('zip_code')
+#        if zip_code:
+#            G.add((site, BF.ZipCode, Literal(zip_code)))
+#
         country = cfg.get('country')
         if country:
             G.add((site, BF.Country, Literal(country)))

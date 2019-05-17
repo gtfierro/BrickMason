@@ -32,7 +32,7 @@ class Generator(object):
             room = tup[1]
             name = 'Room_'+clean(room['Room: Number'])
             floor = clean(room['Level'])
-            zone = str(room['Space: Zone']).replace(' ','_')
+            zone = str(room['Space: Zone']).replace(' ','_').replace('-','_').lower()
 
             # add floor and room
             self.G.add((BLDG[name], RDF.type, BRICK.Room))
@@ -93,7 +93,7 @@ class Generator(object):
         logging.info("Adding RTUs and Zones")
         for item in df[(df['Category'].astype('str') == 'Mechanical Equipment') & (df['Type Mark'].astype('str') == 'RTU')].iterrows():
             item = item[1]
-            zone = str(item['Mark']).replace(' ','_')
+            zone = str(item['Mark']).replace('-','_').replace(' ','_').lower()
 
             # add RTU
             rtuname = 'RTU_'+zone
@@ -109,7 +109,7 @@ class Generator(object):
         logging.info('Adding thermostat')
         for item in df[(df['Family'] == 'Thermostat_573')].iterrows():
             item = item[1]
-            zone = str(item['Space: Zone']).replace(' ','_')
+            zone = str(item['Space: Zone']).replace('-','_').replace(' ','_').lower()
             if not zone or zone in ['nan','Default']:
                 logging.error('No zone information found')
                 continue

@@ -6,6 +6,7 @@ import coloredlogs, logging
 from ontologies import *
 
 anonymize = False
+print("ANON?",anonymize)
 
 logger = logging.getLogger(__name__)
 coloredlogs.install(level='DEBUG', fmt='%(asctime)s %(filename)s:%(lineno)s %(levelname)s %(message)s')

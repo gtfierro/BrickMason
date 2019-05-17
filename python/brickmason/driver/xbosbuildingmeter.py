@@ -75,6 +75,7 @@ class Generator(object):
 
         for meteruri in meters:
             # i.meter
+            logging.warning(meteruri)
             meter_name = re.match(r'.*/([^/]+)/i.meter', meteruri)
             if meter_name is not None:
                 meter_name = meter_name.groups()[0]

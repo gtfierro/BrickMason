@@ -120,6 +120,7 @@ class Generator(object):
                                 newURItemplate = newURItemplate.replace('${0}'.format(i+1), match.groups()[i])
                             pointname = light_name+'_occupancy'
                             pointuuid = uuid.uuid3(ns_uuid, str(newURItemplate + name))
+                            print '>',pointuuid
                             self.G.add((self.BLDG[pointname], BF.uuid, Literal(pointuuid)))
                             self.G.add((self.BLDG[pointname], BF.uri, uri))
 
